@@ -7,12 +7,14 @@ export default function Layout({ children }) {
         <React.Fragment>
             <header className={styles.mainHeader}>
                 <logo className={styles.mainHeaderLogo}>
-                    Logo
+                    Andrew Braun
                 </logo>
                 <nav className={styles.mainNav}>
                     <ul className={styles.mainNavList}>
                         <li className={styles.mainNavItem}>
-                            <Link to="/">
+                            <Link 
+                                to="/"
+                                className={styles.mainNavLink}>
                                 Home
                             </Link>
                         </li>

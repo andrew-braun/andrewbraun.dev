@@ -1,13 +1,31 @@
+/* Header */
 .main-header {
     display: flex;
     justify-content: space-between;
+    background-color: var(--dark-2);
+}
+
+.main-nav {
+    margin-right: 5%;
 }
 
 .main-nav-item {
     list-style: none;
 }
 
+.main-nav-link {
+    padding: .5em;
+    font-size: 1.2em;
+}
+
+.main-header-logo {
+    padding: 1em;
+    color: var(--light-1);
+
+}
+/* Footer */
 .main-footer {
     display: flex;
     justify-content: center;
+    background-color: var(--mid-3);
 }
