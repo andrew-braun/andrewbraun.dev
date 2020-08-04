@@ -1,0 +1,13 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav-item {
+    list-style: none;
+}
+
+.main-footer {
+    display: flex;
+    justify-content: center;
+}
