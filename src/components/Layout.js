@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Logo from "../components/logo/Logo.js"
 import styles from "./layout.module.css"
 
 export default function Layout({ children }) {
@@ -7,8 +8,9 @@ export default function Layout({ children }) {
         <React.Fragment>
             <header className={styles.mainHeader}>
                 <logo className={styles.mainHeaderLogo}>
-                    Andrew Braun
+                    <Logo />
                 </logo>
+                
                 <nav className={styles.mainNav}>
                     <ul className={styles.mainNavList}>
                         <li className={styles.mainNavItem}>

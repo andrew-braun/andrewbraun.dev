@@ -1,0 +1,16 @@
+.main-header-logo {
+}
+
+.logo-img {
+    width: 10vw;
+    max-width: 150px;
+    border-radius: 30%;
+    opacity: 0.90;
+    transition: opacity .2s ease-in-out, border-radius .8s ease-in-out;
+}
+
+.logo-img:hover {
+    border-radius: 1% 50% 1% 40%;
+    opacity: 1;
+    cursor: pointer;
+}
