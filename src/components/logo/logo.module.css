@@ -1,12 +1,13 @@
 .main-header-logo {
+
 }
 
 .logo-img {
     width: 10vw;
-    max-width: 150px;
+    max-width: 100px;
     border-radius: 30%;
     opacity: 0.90;
-    transition: opacity .2s ease-in-out, border-radius .8s ease-in-out;
+    transition: opacity .2s ease-in-out, border-radius .6s ease-in-out;
 }
 
 .logo-img:hover {

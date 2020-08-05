@@ -10,7 +10,6 @@ export default function Home() {
         <div className="home-entry">
           <Hero />
         </div>
-
       </main>
     </Layout>
   )

@@ -2,6 +2,7 @@
 .main-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--dark-2);
 }
 
@@ -19,10 +20,10 @@
 }
 
 .main-header-logo {
-    padding: 1em;
-    color: var(--light-1);
+    margin: .5em 0 0 .5em;
 
 }
+
 /* Footer */
 .main-footer {
     display: flex;
