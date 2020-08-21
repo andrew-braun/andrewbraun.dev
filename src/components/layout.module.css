@@ -24,6 +24,13 @@
 
 }
 
+/* Main */
+.main-layout {
+    padding: .5em;
+    background-color: var(--dark-2);
+    color: var(--light-1);
+}
+
 /* Footer */
 .main-footer {
     display: flex;

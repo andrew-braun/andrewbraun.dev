@@ -23,7 +23,9 @@ export default function Layout({ children }) {
                     </ul>
                 </nav>
             </header>
-            {children}
+            <main className={styles.mainLayout}>
+                {children}
+            </main>
             <footer className={styles.mainFooter}>
                 Made by Andrew Braun
             </footer>
