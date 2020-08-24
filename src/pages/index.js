@@ -1,16 +1,22 @@
 import React from "react"
 import Layout from "../components/Layout"
 import Hero from "../components/hero/Hero"
-import "./index.css"
+import styles from "./index.module.css"
+import SocialButtons from "../components/socialButtons/socialButtons"
 
 export default function Home() {
-  return (
-    <Layout>
-      <main className="home-main">
-        <div className="home-entry">
-          <Hero />
-        </div>
-      </main>
-    </Layout>
-  )
+	return (
+		<Layout>
+			<main className={styles.homeMain}>
+				<div className={styles.homeEntry}>
+          <div className={styles.heroContainer}>
+					  <Hero />
+          </div>
+					<div className={styles.socialContainer}>
+						<SocialButtons />
+					</div>
+				</div>
+			</main>
+		</Layout>
+	)
 }

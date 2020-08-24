@@ -1,0 +1,21 @@
+.home-entry {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-areas:
+    "hero"
+    "social";
+    justify-items: center;
+    min-height: 80vh;
+    max-height: 90vh;
+    background: var(--dark-2);
+}
+
+.hero-container {
+  grid-area: hero;
+  width: 100%;
+
+}
+
+.social-container {
+  grid-area: social;
+}

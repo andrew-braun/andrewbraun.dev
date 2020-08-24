@@ -1,0 +1,24 @@
+[
+	{
+		"facebook": {
+			"name": "Facebook",
+			"link": "https://www.facebook.com/andrewbraun.dev"
+		},
+		"twitter": {
+			"name": "Twitter",
+			"link": "https://www.twitter.com/braunecon"
+		},
+		"github": {
+			"name": "GitHub",
+			"link": "https://www.github.com/andrew-braun"
+		},
+		"codepen": {
+			"name": "CodePen",
+			"link": "https://codepen.io/andrewbraun/"
+		},
+		"linkedin": {
+			"name": "LinkedIn",
+			"link": "https://www.linkedin.com/in/andrewwestonbraun/"
+		}
+	}
+]
