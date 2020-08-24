@@ -7,9 +7,9 @@ export default function Layout({ children }) {
     return (
         <React.Fragment>
             <header className={styles.mainHeader}>
-                <logo className={styles.mainHeaderLogo}>
+                <div className={styles.mainHeaderLogo}>
                     <Logo />
-                </logo>
+                </div>
                 
                 <nav className={styles.mainNav}>
                     <ul className={styles.mainNavList}>
