@@ -7,6 +7,7 @@ import {
 	SiTwitter as TwitterIcon,
 	SiLinkedin as LinkedInIcon,
 } from "react-icons/si"
+import { RiMailSendLine as EmailIcon } from "react-icons/ri"
 import styles from "./socialbuttons.module.css"
 
 export default function SocialButtons() {
@@ -32,6 +33,10 @@ export default function SocialButtons() {
 							name
 						}
 						twitter {
+							link
+							name
+						}
+						email {
 							link
 							name
 						}
@@ -66,6 +71,10 @@ export default function SocialButtons() {
 					) : item.name === "LinkedIn" ? (
 						<span className={styles.linkedinIcon}>
 							<LinkedInIcon />
+						</span>
+					) : item.name === "Email" ? (
+						<span className={styles.emailIcon}>
+							<EmailIcon />
 						</span>
 					) : null}
 				</a>

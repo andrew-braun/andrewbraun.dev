@@ -19,6 +19,10 @@
 		"linkedin": {
 			"name": "LinkedIn",
 			"link": "https://www.linkedin.com/in/andrewwestonbraun/"
+		},
+		"email": {
+			"name": "Email",
+			"link": "mailto:andrew@andrewbraun.dev"
 		}
 	}
 ]
