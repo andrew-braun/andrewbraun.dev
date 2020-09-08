@@ -1,20 +1,26 @@
+.home-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
 .home-entry {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-areas:
-    "hero"
-    "social";
-    justify-items: center;
-    min-height: 80vh;
-    background: var(--dark-2);
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  background: var(--dark-2);
 }
 
 .hero-container {
-  grid-area: hero;
+  display: flex;
+  flex: 1 1 auto;
   width: 100%;
-  min-height: max-content;
 }
 
 .social-container {
-  grid-area: social;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }

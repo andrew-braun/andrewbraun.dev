@@ -1,11 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 import Logo from "../components/logo/Logo.js"
+import "../styles/global.css"
 import styles from "./layout.module.css"
 
 export default function Layout({ children }) {
     return (
-        <React.Fragment>
+        <div className={styles.siteLayout}>
             <header className={styles.mainHeader}>
                 <div className={styles.mainHeaderLogo}>
                     <Logo />
@@ -23,12 +24,12 @@ export default function Layout({ children }) {
                     </ul>
                 </nav>
             </header>
-            <main className={styles.mainLayout}>
+            <div className={styles.mainContent}>
                 {children}
-            </main>
+            </div>
             <footer className={styles.mainFooter}>
                 Made by Andrew Braun
             </footer>
-        </React.Fragment>
+        </div>
     )
 }
