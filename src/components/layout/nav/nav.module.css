@@ -1,0 +1,13 @@
+.main-nav {
+	margin-right: 5%;
+}
+
+.main-nav-item {
+	list-style: none;
+}
+
+.main-nav-link {
+  display: block;
+	padding: 0.5em;
+	font-size: 1.2em;
+}
