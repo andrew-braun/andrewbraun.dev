@@ -8,7 +8,7 @@
     max-width: 300px;
     height: max-content;
     margin: auto;
-    padding: 8% 0.5em 8% 0.5em;
+    padding: 5% 0;
     text-align: center;
     background: var(--dark-1);
     box-shadow: 0 -.5rem 1rem .25rem var(--light-1);
@@ -49,24 +49,34 @@
 .hero-header {
     font-size: 1.8rem;
     margin: 0;
+    padding: .3rem;
     color: var(--light-1);
 }
 
 .hero-text {
-    margin: 0.2em;
+    margin: 0.2rem;
     font-size: 1rem;
     color: var(--light-1);
-    max-width: 90%;
+    max-width: 80%;
 }
 
 @media (max-width: 600px) {
     .hero {
-        padding: 2%;
-    }
-    .hero-header {
-        font-size: 2rem;
+        max-width: 50%;
     }
     .hero-text {
-        font-size: 1.1rem;
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero {
+        max-width: 80%;
+    }
+    .hero-header {
+        font-size: 1.5rem;
+    }
+    .hero-text {
+        font-size: .9rem;
     }
 }
