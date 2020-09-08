@@ -1,13 +1,13 @@
 .social-buttons {
     display: flex;
-    gap: 2rem;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    margin: 1rem 0;
 }
 
 .social-link {
-    margin: 0;
+    margin: 0 1rem;
     padding: 0;
     font-size: 4rem;
 }

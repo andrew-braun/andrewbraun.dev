@@ -2,8 +2,8 @@ import React from "react"
 import "../styles/global.css"
 import Layout from "../components/layout/Layout"
 import Hero from "../components/hero/Hero"
-import styles from "./index.module.css"
 import SocialButtons from "../components/socialbuttons/SocialButtons"
+import styles from "./index.module.css"
 
 export default function Home() {
 	return (
