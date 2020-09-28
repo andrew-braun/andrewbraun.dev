@@ -5,7 +5,8 @@ import {
 	SiGithub as GitHubIcon,
 	SiFacebook as FacebookIcon,
 	SiTwitter as TwitterIcon,
-	SiLinkedin as LinkedInIcon
+	SiLinkedin as LinkedInIcon,
+	SiCodewars as CodewarsIcon
 } from "react-icons/si"
 import { 
 	RiMailSendLine as EmailIcon, 
@@ -81,8 +82,12 @@ export default function SocialButtons() {
 							<LinkedInIcon />
 						</span>
 					) : item.name === "StackShare" ? (
-						<span className={styles.StackShareIcon}>
+						<span className={styles.stackShareIcon}>
 							<StackShareIcon />
+						</span>
+					) : item.name === "Codewars" ? (
+						<span className={styles.codewarsIcon}>
+							<CodewarsIcon />
 						</span>
 					) : item.name === "Email" ? (
 						<span className={styles.emailIcon}>
