@@ -14,7 +14,7 @@ export default function Layout({ children }) {
                 <Nav />
 			</header>
 			<div className={styles.mainContent}>{children}</div>
-		
+			<footer className={styles.mainFooter}>Made by Andrew Braun</footer>
 		</div>
 	)
 }

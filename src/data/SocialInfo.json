@@ -14,23 +14,27 @@
 		},
 		"codepen": {
 			"name": "CodePen",
-			"link": "https://codepen.io/andrewbraun/"
+			"link": "https://codepen.io/andrewbraun"
 		},
 		"stackshare": {
 			"name": "StackShare",
 			"link": "https://stackshare.io/andrew-braun"
 		},
-		"stackshare": {
-			"name": "Codewars",
-			"link": "https://www.codewars.com/users/andrewbraun"
-		},
 		"linkedin": {
 			"name": "LinkedIn",
-			"link": "https://www.linkedin.com/in/andrewwestonbraun/"
+			"link": "https://www.linkedin.com/in/andrewwestonbraun"
 		},
 		"email": {
 			"name": "Email",
 			"link": "mailto:andrew@andrewbraun.dev"
+		},
+		"udemy": {
+			"name": "Udemy",
+			"link": "https://www.udemy.com/user/andrewbraun2"
+		},
+		"codewars": {
+			"name": "Codewars",
+			"link": "https://www.codewars.com/users/andrewbraun"
 		}
 	}
 ]

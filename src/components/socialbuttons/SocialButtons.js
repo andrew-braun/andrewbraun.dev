@@ -6,11 +6,12 @@ import {
 	SiFacebook as FacebookIcon,
 	SiTwitter as TwitterIcon,
 	SiLinkedin as LinkedInIcon,
-	SiCodewars as CodewarsIcon
+	SiCodewars as CodewarsIcon,
+	SiUdemy as UdemyIcon,
 } from "react-icons/si"
-import { 
-	RiMailSendLine as EmailIcon, 
-	RiStackshareLine as StackShareIcon 
+import {
+	RiMailSendLine as EmailIcon,
+	RiStackshareLine as StackShareIcon,
 } from "react-icons/ri"
 
 import styles from "./socialbuttons.module.css"
@@ -42,6 +43,14 @@ export default function SocialButtons() {
 							name
 						}
 						twitter {
+							link
+							name
+						}
+						udemy {
+							link
+							name
+						}
+						codewars {
 							link
 							name
 						}
@@ -85,6 +94,10 @@ export default function SocialButtons() {
 						<span className={styles.stackShareIcon}>
 							<StackShareIcon />
 						</span>
+					) : item.name === "Udemy" ? (
+						<span className={styles.socialIcon}>
+							<UdemyIcon />
+						</span>
 					) : item.name === "Codewars" ? (
 						<span className={styles.codewarsIcon}>
 							<CodewarsIcon />
@@ -99,5 +112,5 @@ export default function SocialButtons() {
 		)
 	})
 
-	return (<div className={styles.socialButtons}>{socialElements}</div>)
+	return <div className={styles.socialButtons}>{socialElements}</div>
 }
