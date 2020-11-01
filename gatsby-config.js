@@ -3,7 +3,7 @@ const path = require(`path`)
 module.exports = {
 	plugins: [
 		{
-			resolve: "gatsby-source-filesystem",
+			resolve: `gatsby-source-filesystem`,
 			options: {
 				path: `${__dirname}/gatsby-config.js`,
 			},
@@ -28,12 +28,12 @@ module.exports = {
 		`gatsby-plugin-react-helmet`,
 	],
 	siteMetadata: {
-		title: "AndrewBraun.dev",
-		titleTemplate: "%s · Web Developer",
-		author: "Andrew Braun",
-		description: "I build fast, modern sites that work.",
-		url: "https://www.andrewbraun.dev", // No trailing slash allowed!
-		image: "/assets/brand/logo.svg", // Path to your image you placed in the 'static' folder
-		twitterUsername: "@braunecon",
+		title: `AndrewBraun.dev`,
+		titleTemplate: `%s · Web Developer`,
+		author: `Andrew Braun`,
+		description: `I build fast, modern sites that work.`,
+		url: `https://www.andrewbraun.dev`, // No trailing slash allowed!
+		image: `/assets/brand/logo.svg`, // Path to your image you placed in the 'static' folder
+		twitterUsername: `@braunecon`,
 	},
 }
