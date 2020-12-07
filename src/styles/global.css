@@ -1,28 +1,39 @@
 /* Global styles */
 :root {
-    --light-1: #EDF2EF;
-    --mid-1: #2c2c2c;
-    --mid-2: #C99554;
-    --mid-3: #C1432E;
-    --dark-1: #476171;
-    --dark-2: #292929;
-    --dark-3: #3C034E;
+	--light-1: #edf2ef;
+	--mid-1: #2c2c2c;
+	--mid-2: #c99554;
+	--mid-3: #c1432e;
+	--dark-1: #476171;
+	--dark-2: #292929;
+	--dark-3: #3c034e;
+	--primary-bg: hsla(0, 0%, 20%, 1);
+	--secondary-bg: hsla(0, 0%, 96%, 1);
+	--tertiary-bg: hsla(217, 48%, 32%, 1);
+	--primary-text: white;
+	--contrast-text: black;
+	--primary-link: hsla(15, 100%, 52%, 1);
+	--primary-link-hover: hsla(205, 94%, 56%, 1);
+	--primary-button: hsla(15, 100%, 52%, 1);
+	--primary-button-hover: hsla(205, 94%, 56%, 1);
+	--accent-1: hsla(15, 100%, 52%, 1);
+	--accent-2: hsla(205, 94%, 56%, 1);
 }
 
 html {
-    font-family: 'Courier New', Courier, monospace;
+	font-family: "Courier New", Courier, monospace;
 }
 
 body {
-    margin: 0;
+	margin: 0;
 }
 
 a {
-    color: var(--mid-2);
-    transition: color .2s ease-in-out;
-    text-decoration: none;
+	color: var(--mid-2);
+	transition: color 0.2s ease-in-out;
+	text-decoration: none;
 }
 
 a:hover {
-    color: var(--light-1);
+	color: var(--light-1);
 }
