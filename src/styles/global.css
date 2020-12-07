@@ -7,14 +7,17 @@
 	--dark-1: #476171;
 	--dark-2: #292929;
 	--dark-3: #3c034e;
-	--primary-bg: #3c034e;
-	--secondary-bg: #3c034e;
-	--primary-text: #3c034e;
-	--contrast-text: #3c034e;
-	--primary-link: #3c034e;
-	--primary-link-hover: #3c034e;
-	--primary-button: #3c034e;
-	--primary-button-hover: #3c034e;
+	--primary-bg: hsla(0, 0%, 20%, 1);
+	--secondary-bg: hsla(0, 0%, 96%, 1);
+	--tertiary-bg: hsla(217, 48%, 32%, 1);
+	--primary-text: white;
+	--contrast-text: black;
+	--primary-link: hsla(15, 100%, 52%, 1);
+	--primary-link-hover: hsla(205, 94%, 56%, 1);
+	--primary-button: hsla(15, 100%, 52%, 1);
+	--primary-button-hover: hsla(205, 94%, 56%, 1);
+	--accent-1: hsla(15, 100%, 52%, 1);
+	--accent-2: hsla(205, 94%, 56%, 1);
 }
 
 html {
