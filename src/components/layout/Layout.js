@@ -9,7 +9,7 @@ export default function Layout({ children }) {
 		<div className={styles.siteLayout}>
 			<Header />
 			<div className={styles.mainContent}>{children}</div>
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	)
 }
