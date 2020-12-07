@@ -29,11 +29,11 @@ module.exports = {
 	],
 	siteMetadata: {
 		title: `AndrewBraun.dev`,
-		titleTemplate: `%s · Web Developer`,
+		titleTemplate: `%s · Andrew Braun`,
 		author: `Andrew Braun`,
 		description: `I build fast, modern sites that work.`,
 		url: `https://www.andrewbraun.dev`, // No trailing slash allowed!
-		image: `/assets/brand/logo.svg`, // Path to your image you placed in the 'static' folder
+		image: `/assets/brand/logo.svg`,
 		twitterUsername: `@braunecon`,
 	},
 }
