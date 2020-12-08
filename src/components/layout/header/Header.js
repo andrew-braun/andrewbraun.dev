@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import Nav from "../nav/Nav"
 import Logo from "../logo/Logo.js"
 import "../../../styles/global.css"
@@ -10,7 +11,7 @@ export default function Header() {
 			<header className={styles.mainHeader}>
 				<div className={styles.mainHeaderLogo}>
 					{/* <Logo /> */}
-					AndrewBraun.dev
+					<Link to="/">AndrewBraun.dev</Link>
 				</div>
 				<Nav />
 			</header>

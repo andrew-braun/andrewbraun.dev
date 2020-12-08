@@ -20,3 +20,14 @@
 	border-color: var(--primary-bg-text);
 	border-width: 0 1px 0 1px;
 }
+
+.main-header-logo a {
+	display: block;
+	color: var(--primary-bg-text);
+	transition: transform 0.3s ease-in-out;
+}
+
+.main-header-logo a:hover {
+	color: var(--primary-bg-text);
+	transform: scale(1.05);
+}

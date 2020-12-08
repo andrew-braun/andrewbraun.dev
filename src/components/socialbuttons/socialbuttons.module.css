@@ -1,21 +1,27 @@
 .social-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .social-link {
-    margin: 0 1rem;
-    padding: 0;
-    font-size: 4rem;
+	display: block;
+	margin: 0 1rem;
+	padding: 0;
+	font-size: 4rem;
+	transition: transform 0.3s ease-in-out;
 }
 
+.social-link:hover {
+	transform: scale(0.97);
+	opacity: 0.9;
+}
 
 .linkedin-icon {
-    font-size: 3.8rem;
+	font-size: 3.8rem;
 }
 
 .twitter-icon {
-    font-size: 3.5rem;
+	font-size: 3.5rem;
 }

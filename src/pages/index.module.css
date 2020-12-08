@@ -1,28 +1,28 @@
 .home-main {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
 }
 
 .home-entry {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  background: var(--dark-2);
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	background: var(--primary-bg);
 }
 
 .hero-container {
-  display: flex;
-  flex: 1 1 auto;
-  width: 100%;
+	display: flex;
+	flex: 1 1 auto;
+	width: 100%;
 }
 
 .social-container {
-  display: flex;
-  flex: 1 1 auto;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0 13%;
-  z-index: 11;
+	display: flex;
+	flex: 1 1 auto;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 0 13%;
+	z-index: 11;
 }
