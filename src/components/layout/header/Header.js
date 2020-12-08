@@ -9,7 +9,8 @@ export default function Header() {
 		<div className={styles.siteLayout}>
 			<header className={styles.mainHeader}>
 				<div className={styles.mainHeaderLogo}>
-					<Logo />
+					{/* <Logo /> */}
+					AndrewBraun.dev
 				</div>
 				<Nav />
 			</header>

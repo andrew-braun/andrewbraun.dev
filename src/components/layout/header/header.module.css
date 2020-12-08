@@ -4,10 +4,19 @@
 	flex: 1 1 auto;
 	justify-content: space-between;
 	align-items: center;
-	max-height: 15vh;
-	background-color: var(--dark-2);
+	padding: 1rem;
+	background-color: var(--primary-bg);
+	color: var(--primary-bg-text);
 }
 
 .main-header-logo {
-	margin: 0.5em 0 0 0.5em;
+	/* margin: 0.5em 0 0 0.5em; */
+	display: block;
+	max-width: 35%;
+	padding: 0.5rem;
+	font-size: 1.8rem;
+	font-family: Economica;
+	border-style: solid;
+	border-color: var(--primary-bg-text);
+	border-width: 0 1px 0 1px;
 }

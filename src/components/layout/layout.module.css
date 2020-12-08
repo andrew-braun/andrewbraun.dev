@@ -10,17 +10,5 @@
 	display: flex;
 	flex: 1 1 auto;
 	min-height: 100%;
-	background-color: var(--dark-2);
-	color: var(--light-1);
-}
-
-/* Footer */
-.main-footer {
-	display: none;
-	width: 100%;
-	display: flex;
-	flex: 1 1 auto;
-	justify-content: center;
-	max-height: 5vh;
-	background-color: var(--mid-3);
+	color: var(--primary-bg-text);
 }
