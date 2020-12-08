@@ -72,7 +72,6 @@ export default function SocialButtons() {
 				<a href={item.link} alt={item.name} className={styles.socialLink}>
 					{item.name === "Facebook" ? (
 						<span className={styles.facebookIcon}>
-							{" "}
 							<FacebookIcon />
 						</span>
 					) : item.name === "GitHub" ? (
@@ -108,6 +107,7 @@ export default function SocialButtons() {
 							<EmailIcon />
 						</span>
 					) : null}
+					<span class={styles.socialButtonLabel}>{item.name}</span>
 				</a>
 			</div>
 		)
