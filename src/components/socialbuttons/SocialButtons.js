@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 import {
 	SiCodepen as CodePenIcon,
 	SiGithub as GitHubIcon,
