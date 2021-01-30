@@ -2,6 +2,16 @@
 
 /* Global styles */
 :root {
+	--color-1: hsla(0, 0%, 8%, 1);
+	--color-2: hsl(144, 16%, 94%);
+	--color-3: hsla(0, 0%, 100%, 1);
+	--color-4: hsl(0, 0%, 16%);
+	--color-5: hsl(286, 93%, 16%);
+	--color-6: hsla(205, 94%, 40%, 1);
+	--color-7: hsla(11, 97%, 64%, 1);
+	--color-8: hsla(33, 52%, 56%, 1);
+	--color-9: hsl(203, 23%, 36%);
+
 	--light-1: hsl(144, 16%, 94%);
 	--mid-1: #2c2c2c;
 	--mid-2: #c99554;
@@ -24,6 +34,9 @@
 	--accent-1: hsla(11, 97%, 64%, 1);
 	--accent-2: hsla(205, 94%, 40%, 1);
 }
+* {
+	box-sizing: border-box;
+}
 
 html {
 	font-family: "Courier New", Courier, monospace;
@@ -31,15 +44,15 @@ html {
 
 body {
 	margin: 0;
-	background: var(--primary-bg);
+	background: var(--color-1);
 }
 
 a {
-	color: var(--primary-link);
+	color: var(--color-7);
 	transition: color 0.2s ease-in-out;
 	text-decoration: none;
 }
 
 a:hover {
-	color: var(--primary-link-hover);
+	color: var(--color-6);
 }

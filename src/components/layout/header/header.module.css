@@ -5,8 +5,8 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem;
-	background-color: var(--primary-bg);
-	color: var(--primary-bg-text);
+	background-color: var(--color-1);
+	color: var(--color-2);
 }
 
 .main-header-logo {
@@ -16,18 +16,15 @@
 	padding: 0.5rem;
 	font-size: 1.8rem;
 	font-family: Economica;
-	border-style: solid;
-	border-color: var(--primary-bg-text);
-	border-width: 0 1px 0 1px;
 }
 
 .main-header-logo a {
 	display: block;
-	color: var(--primary-bg-text);
+	color: var(--color-2);
 	transition: transform 0.3s ease-in-out;
 }
 
 .main-header-logo a:hover {
-	color: var(--primary-bg-text);
+	color: var(--color-2);
 	transform: scale(1.05);
 }

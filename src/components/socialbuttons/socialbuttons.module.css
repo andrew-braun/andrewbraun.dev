@@ -8,6 +8,7 @@
 .social-button {
 	display: flex;
 	flex-direction: column;
+	min-width: 9rem;
 }
 
 .social-link {
@@ -29,7 +30,7 @@
 .social-button-label {
 	font-size: 1rem;
 	font-weight: 600;
-	color: var(--primary-bg-text);
+	color: var(--color-3);
 }
 
 .social-link:hover {
