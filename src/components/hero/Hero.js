@@ -48,6 +48,7 @@ export default function Hero() {
 					icon2Alt="React"
 					icon3={<DiWordpress />}
 					icon3Color="hsla(195, 100%, 31%, 1)"
+					icon3Alt="WordPress"
 					icon4={<DiHtml5 />}
 					icon4Color="hsla(18, 88%, 55%, 1)"
 					icon4Alt="HTML5"

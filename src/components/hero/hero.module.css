@@ -14,7 +14,6 @@
 	flex-wrap: wrap;
 	min-width: 100%;
 	min-height: 50vh;
-
 	text-align: center;
 }
 
@@ -50,6 +49,7 @@
 
 .hero-image-container {
 	padding: 5%;
+	margin: 5%;
 	width: clamp(12rem, 60vw, 25rem);
 	height: clamp(12rem, 60vw, 25rem);
 }
