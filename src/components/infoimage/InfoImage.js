@@ -58,6 +58,7 @@ export default function Hero(props) {
 		icon15Alt,
 		icon16Alt,
 	} = props
+
 	return (
 		<div className={styles.infoImageContainer}>
 			<div className={styles.background}>

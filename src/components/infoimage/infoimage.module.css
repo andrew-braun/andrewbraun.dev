@@ -75,4 +75,5 @@
 	font-size: clamp(2.5rem, 4vw, 3.5rem);
 	margin: 0 0.1rem;
 	transform: rotate(-30deg);
+	opacity: 9;
 }
