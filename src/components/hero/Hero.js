@@ -6,16 +6,15 @@ export default function Hero() {
 	return (
 		<div className={styles.hero}>
 			<div className={styles.heroText}>
-				<span className={styles.heroTextUnit} id="heroTextUnit1">
+				<span className={styles.heroTextUnit} id={styles.heroTextUnit1}>
 					DESIGN
 				</span>
-				<span className={styles.heroTextUnit} id="heroTextUnit2">
+				<span className={styles.heroTextUnit} id={styles.heroTextUnit2}>
 					DEVELOP
 				</span>
-				<span className={styles.heroTextUnit} id="heroTextUnit3">
+				<span className={styles.heroTextUnit} id={styles.heroTextUnit3}>
 					DEPLOY
 				</span>
-				<span className={styles.heroTextUnit} id="heroTextUnit4"></span>
 			</div>
 			<div className={styles.heroBackground}></div>
 		</div>
