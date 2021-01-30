@@ -22,6 +22,7 @@ import {
 	SiWebpack,
 } from "react-icons/si"
 import "../../styles/global.css"
+
 import styles from "./hero.module.css"
 
 export default function Hero() {

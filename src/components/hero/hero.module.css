@@ -1,3 +1,5 @@
+@import "../../fonts/typography.css";
+
 .hero {
 	--dark-1: hsla(0, 0%, 20%, 1);
 	--dark-2: hsla(217, 48%, 32%, 1);
@@ -39,6 +41,8 @@
 }
 
 #hero-text-unit-1 {
+	font-family: "Cinzel Decorative";
+	font-weight: normal;
 }
 
 #hero-text-unit-2 {
