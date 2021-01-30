@@ -59,11 +59,10 @@
 .icon-container {
 	position: relative;
 	display: flex;
-
 	flex-wrap: wrap;
 	height: 100%;
 	width: 100%;
-	padding: 1rem;
+	padding-top: 3%;
 	transform: rotate(30deg);
 	background: hsla(270, 50%, 50%, 0.1);
 
