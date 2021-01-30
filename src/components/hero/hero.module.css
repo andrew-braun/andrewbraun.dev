@@ -50,6 +50,8 @@
 
 .hero-image-container {
 	padding: 5%;
+	width: clamp(12rem, 60vw, 25rem);
+	height: clamp(12rem, 60vw, 25rem);
 }
 
 .hero-background {

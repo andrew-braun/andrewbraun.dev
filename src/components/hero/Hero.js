@@ -1,5 +1,6 @@
 import React from "react"
-import "../infoimage/InfoImage"
+import InfoImage from "../infoimage/InfoImage"
+import { DiJavascript1 } from "react-icons/di"
 import "../../styles/global.css"
 import styles from "./hero.module.css"
 
@@ -18,7 +19,17 @@ export default function Hero() {
 				</span>
 			</div>
 			<div className={styles.heroImageContainer}>
-				<div className={styles.heroBackground}></div>
+				<InfoImage
+					icon1={<DiJavascript1 />}
+					icon1Color="hsla(52, 84%, 63%, 1)"
+					icon2={<DiJavascript1 />}
+					icon3={<DiJavascript1 />}
+					icon4={<DiJavascript1 />}
+					icon5={<DiJavascript1 />}
+					icon6={<DiJavascript1 />}
+					icon7={<DiJavascript1 />}
+					icon8={<DiJavascript1 />}
+				/>
 			</div>
 		</div>
 	)
