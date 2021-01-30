@@ -16,7 +16,9 @@ export default function Hero() {
 					DEPLOY
 				</span>
 			</div>
-			<div className={styles.heroBackground}></div>
+			<div className={styles.heroImageContainer}>
+				<div className={styles.heroBackground}></div>
+			</div>
 		</div>
 	)
 }
