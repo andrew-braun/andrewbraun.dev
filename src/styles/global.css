@@ -5,12 +5,9 @@
 	--color-1: hsla(0, 0%, 8%, 1);
 	--color-2: hsl(144, 16%, 94%);
 	--color-3: hsla(0, 0%, 100%, 1);
-	--color-4: hsl(0, 0%, 16%);
-	--color-5: hsl(286, 93%, 16%);
-	--color-6: hsla(205, 94%, 40%, 1);
-	--color-7: hsla(11, 97%, 64%, 1);
-	--color-8: hsla(33, 52%, 56%, 1);
-	--color-9: hsl(203, 23%, 36%);
+	--color-4: hsla(205, 94%, 40%, 1);
+	--color-5: hsla(11, 97%, 64%, 1);
+	--color-6: hsla(33, 52%, 56%, 1);
 
 	--light-1: hsl(144, 16%, 94%);
 	--mid-1: #2c2c2c;
@@ -54,5 +51,5 @@ a {
 }
 
 a:hover {
-	color: var(--color-6);
+	color: var(--color-4);
 }

@@ -1,7 +1,7 @@
 .hero {
 	--dark-1: hsla(0, 0%, 20%, 1);
 	--dark-2: hsla(217, 48%, 32%, 1);
-	--light-1: hsla(144, 16%, 94%, 0.5);
+	--light-1: rgba(237, 242, 239, 0.5);
 	--bright-1: hsla(11, 97%, 64%, 1);
 	--bright-2: hsla(205, 94%, 40%, 1);
 }
@@ -58,13 +58,13 @@
 	font-size: 1.8rem;
 	margin: 0;
 	padding: 0.3rem;
-	color: var(--primary-bg-text);
+	color: var(--color-3);
 }
 
 .hero-text {
 	margin: 0.2rem;
 	font-size: 1rem;
-	color: var(--primary-bg-text);
+	color: var(--color-3);
 	max-width: 80%;
 }
 
