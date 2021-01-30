@@ -45,7 +45,7 @@ body {
 }
 
 a {
-	color: var(--color-7);
+	color: var(--color-5);
 	transition: color 0.2s ease-in-out;
 	text-decoration: none;
 }

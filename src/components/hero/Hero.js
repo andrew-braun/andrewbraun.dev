@@ -5,11 +5,19 @@ import styles from "./hero.module.css"
 export default function Hero() {
 	return (
 		<div className={styles.hero}>
-			<h2 className={styles.heroHeader}>Andrew Braun</h2>
-			<p className={styles.heroText}>makes websites,</p>
-			<p className={styles.heroText}>writes about tech,</p>
-			<p className={styles.heroText}>plays with data,</p>
-			<p className={styles.heroText}>and does other nerd things.</p>
+			<div className={styles.heroText}>
+				<span className={styles.heroTextUnit} id="heroTextUnit1">
+					DESIGN
+				</span>
+				<span className={styles.heroTextUnit} id="heroTextUnit2">
+					DEVELOP
+				</span>
+				<span className={styles.heroTextUnit} id="heroTextUnit3">
+					DEPLOY
+				</span>
+				<span className={styles.heroTextUnit} id="heroTextUnit4"></span>
+			</div>
+			<div className={styles.heroBackground}></div>
 		</div>
 	)
 }
