@@ -1,4 +1,5 @@
 import React from "react"
+import "../infoimage/InfoImage"
 import "../../styles/global.css"
 import styles from "./hero.module.css"
 
