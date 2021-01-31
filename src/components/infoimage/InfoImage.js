@@ -9,7 +9,7 @@ export default function Hero(props) {
 				className={styles.icon}
 				style={{ color: `${iconObj.color}` }}
 				title={iconObj.alt}
-				id={iconObj.alt.replace(/\s/g, "-")}
+				id={`${iconObj.alt.replace(/\s/g, "-").toLowerCase()}-icon`}
 			>
 				{iconObj.icon}
 			</div>

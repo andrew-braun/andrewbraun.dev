@@ -62,7 +62,7 @@
 	flex-wrap: wrap;
 	height: 100%;
 	width: 100%;
-	padding-top: 3%;
+	padding-top: 1%;
 	transform: rotate(30deg);
 	background: hsla(270, 50%, 50%, 0.1);
 
@@ -92,4 +92,20 @@
 
 .icon:hover {
 	transform: scale(1.25) rotate(-30deg);
+}
+
+:global #gatsby-icon svg {
+	max-width: 65%;
+}
+
+:global #photoshop-icon svg {
+	max-width: 75%;
+}
+
+:global #figma-icon svg {
+	max-width: 75%;
+}
+
+:global #raspberrypi-icon svg {
+	max-width: 75%;
 }

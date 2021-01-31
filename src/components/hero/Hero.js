@@ -37,14 +37,14 @@ const iconList = [
 		alt: "React",
 	},
 	{
-		icon: <DiCss3 />,
-		color: "hsla(207, 100%, 42%, 1)",
-		alt: "CSS3",
-	},
-	{
 		icon: <DiHtml5 />,
 		color: "hsla(18, 88%, 55%, 1)",
 		alt: "HTML5",
+	},
+	{
+		icon: <DiCss3 />,
+		color: "hsla(207, 100%, 42%, 1)",
+		alt: "CSS3",
 	},
 	{
 		icon: <DiWordpress />,
