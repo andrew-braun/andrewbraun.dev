@@ -11,11 +11,11 @@
 .hero {
 	position: relative;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: space-evenly;
+	align-items: flex-start;
 	flex-wrap: wrap;
 	min-width: 100%;
-	min-height: 50vh;
+	min-height: 100vh;
 	text-align: center;
 }
 
@@ -27,6 +27,7 @@
 	flex-wrap: wrap;
 	width: clamp(18rem, 50%, 100%);
 	margin: 0.2rem;
+	padding: 2%;
 	color: var(--color-3);
 	text-align: center;
 }
@@ -46,15 +47,16 @@
 }
 
 #hero-text-unit-2 {
-	font-family: "Fira Code";
+	font-family: "Share Tech Mono";
 }
 
 #hero-text-unit-3 {
+	font-family: Monoton;
+	font-size: clamp(3.2rem, 7.5vw - 0.5rem, 4.5rem);
 }
 
 .hero-image-container {
-	padding: 5%;
-	margin: 5%;
+	padding: 2%;
 	width: clamp(12rem, 60vw, 25rem);
 	height: clamp(12rem, 60vw, 25rem);
 }

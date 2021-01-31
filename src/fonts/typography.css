@@ -39,3 +39,35 @@
 	font-style: normal;
 	font-display: swap;
 }
+
+@font-face {
+	font-family: "Fira Code";
+	src: url("./Spartan/Spartan-VariableFont_wght.ttf")
+			format("truetype-variations"),
+		url("./Spartan/Spartan-VariableFont_wght.ttf")
+			format("truetype supports variations");
+	font-weight: 100 1000;
+	font-stretch: 75% 125%;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Share Tech Mono";
+	src: url("./ShareTechMono/ShareTechMono-Regular.woff2") format("woff2"),
+		url("./ShareTechMono/ShareTechMono-Regular.woff") format("woff"),
+		url("./ShareTechMono/ShareTechMono-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Monoton";
+	src: url("./Monoton/Monoton-Regular.woff2") format("woff2"),
+		url("./Monoton/Monoton-Regular.woff") format("woff"),
+		url("./Monoton/Monoton-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
