@@ -22,7 +22,7 @@ import {
 	SiWebpack,
 } from "react-icons/si"
 import "../../styles/global.css"
-
+import "../../fonts/typography.css"
 import styles from "./hero.module.css"
 
 const iconList = [
@@ -112,10 +112,6 @@ const iconList = [
 		alt: "RaspberryPi",
 	},
 ]
-
-// iconList.map(icon => {
-// 	console.log(`console-iconListMap ${icon.color}`)
-// })
 
 export default function Hero() {
 	return (
