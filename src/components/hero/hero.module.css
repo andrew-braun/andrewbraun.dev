@@ -114,6 +114,10 @@
 	}
 	.hero-text {
 		font-size: 0.9rem;
+		margin-bottom: 5%;
+	}
+	.hero-image-container {
+		margin-bottom: 15%;
 	}
 }
 
