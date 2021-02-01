@@ -57,8 +57,8 @@
 
 .hero-image-container {
 	padding: 2%;
-	width: clamp(12rem, 60vw, 25rem);
-	height: clamp(12rem, 60vw, 25rem);
+	width: clamp(12rem, 50vw, 25rem);
+	height: clamp(12rem, 50vw, 25rem);
 }
 
 .hero-background {
@@ -105,7 +105,7 @@
 	z-index: -1;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 812px) {
 	.hero {
 		justify-content: center;
 		align-items: center;
