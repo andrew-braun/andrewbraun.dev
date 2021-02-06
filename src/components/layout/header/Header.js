@@ -1,8 +1,7 @@
-import React from "react"
 import { Link } from "gatsby"
-import Nav from "../nav/Nav"
-import Logo from "../logo/Logo.js"
+import React from "react"
 import "../../../styles/global.css"
+import Nav from "../nav/Nav"
 import styles from "./header.module.css"
 
 export default function Header() {
@@ -10,7 +9,6 @@ export default function Header() {
 		<div className={styles.siteLayout}>
 			<header className={styles.mainHeader}>
 				<div className={styles.mainHeaderLogo}>
-					{/* <Logo /> */}
 					<Link to="/">AndrewBraun.dev</Link>
 				</div>
 				<Nav />

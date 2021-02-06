@@ -1,28 +1,27 @@
 import React from "react"
-import InfoImage from "../infoimage/InfoImage"
 import {
-	DiJavascript1,
-	DiReact,
-	DiWordpress,
-	DiHtml5,
 	DiCss3,
-	DiPython,
-	DiPostgresql,
 	DiGit,
+	DiHtml5,
+	DiJavascript1,
 	DiPhotoshop,
-	DiVisualstudio,
 	DiPhp,
+	DiPostgresql,
+	DiPython,
+	DiReact,
+	DiVisualstudio,
+	DiWordpress,
 } from "react-icons/di"
-import { GrGatsbyjs, GrGraphQl } from "react-icons/gr"
+import { GrGatsbyjs } from "react-icons/gr"
 import {
-	SiNextDotJs,
-	SiWoocommerce,
-	SiRaspberrypi,
 	SiFigma,
+	SiRaspberrypi,
 	SiWebpack,
+	SiWoocommerce,
 } from "react-icons/si"
-import "../../styles/global.css"
 import "../../fonts/typography.css"
+import "../../styles/global.css"
+import InfoImage from "../infoimage/InfoImage"
 import styles from "./hero.module.css"
 
 const iconList = [
