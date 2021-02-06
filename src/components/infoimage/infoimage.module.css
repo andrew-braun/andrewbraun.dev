@@ -38,7 +38,7 @@
 	box-shadow: 0rem 0rem 2rem 0.01rem var(--bright-1);
 	opacity: 0.95;
 	border-radius: 1%;
-	transform: rotate(30deg);
+	transform: rotate(45deg);
 	z-index: -1;
 }
 
@@ -52,7 +52,7 @@
 	background: var(--light-1);
 	opacity: 0.7;
 	box-shadow: 0rem 0rem 2rem 1rem var(--bright-2);
-	transform: rotate(15deg);
+	transform: rotate(22.5deg);
 	z-index: -1;
 }
 
@@ -63,7 +63,7 @@
 	height: 100%;
 	width: 100%;
 	padding-top: 1%;
-	transform: rotate(30deg);
+	transform: rotate(45deg);
 	background: hsla(270, 50%, 50%, 0.1);
 
 	z-index: 10;
@@ -79,7 +79,7 @@
 	max-width: 25%;
 	font-size: clamp(1.8rem, 4vw, 3.5rem);
 	margin: 0 0.1rem;
-	transform: rotate(-30deg);
+	transform: rotate(-45deg);
 	opacity: 9;
 	transition: transform 0.3s ease-in-out;
 }
