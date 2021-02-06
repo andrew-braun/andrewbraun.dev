@@ -1,20 +1,31 @@
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import {
-	SiCodepen as CodePenIcon,
-	SiGithub as GitHubIcon,
-	SiFacebook as FacebookIcon,
-	SiTwitter as TwitterIcon,
-	SiLinkedin as LinkedInIcon,
-	SiCodewars as CodewarsIcon,
-	SiUdemy as UdemyIcon,
-} from "react-icons/si"
 import {
 	RiMailSendLine as EmailIcon,
 	RiStackshareLine as StackShareIcon,
 } from "react-icons/ri"
-
+import {
+	SiCodepen as CodePenIcon,
+	SiCodewars as CodewarsIcon,
+	SiFacebook as FacebookIcon,
+	SiGithub as GitHubIcon,
+	SiLinkedin as LinkedInIcon,
+	SiTwitter as TwitterIcon,
+	SiUdemy as UdemyIcon,
+} from "react-icons/si"
 import styles from "./socialbuttons.module.css"
+
+const components = {
+	CodePenIcon: CodePenIcon,
+	EmailIcon: EmailIcon,
+	StackShareIcon: StackShareIcon,
+	CodewarsIcon: CodewarsIcon,
+	FacebookIcon: FacebookIcon,
+	GitHubIcon: GitHubIcon,
+	LinkedInIcon: LinkedInIcon,
+	TwitterIcon: TwitterIcon,
+	UdemyIcon: UdemyIcon,
+}
 
 export default function SocialButtons() {
 	const data = useStaticQuery(graphql`
@@ -65,6 +76,22 @@ export default function SocialButtons() {
 	`)
 
 	const socialArray = Object.values(data.allSocialInfoJson.edges[0].node)
+	const socialElementList = socialArray.map(item => {
+		console.log(item.name)
+		const Icon = components[`${item.name}Icon`]
+		console.log(components[`${item.name}Icon`])
+		return (
+			<div className={styles.socialButton} key={`${item.name}-button-key`}>
+				<a href={item.link} alt={item.name} className={styles.socialLink}>
+					<span className={`styles.${item.name}Icon`}>
+						<Icon />
+					</span>
+					<span class={styles.socialButtonLabel}>{item.name}</span>
+				</a>
+			</div>
+		)
+	})
+
 	const socialElements = socialArray.map(item => {
 		return (
 			<div className={styles.socialButton} key={`${item.name}-button`}>
@@ -112,5 +139,5 @@ export default function SocialButtons() {
 		)
 	})
 
-	return <div className={styles.socialButtons}>{socialElements}</div>
+	return <div className={styles.socialButtons}>{socialElementList}</div>
 }
