@@ -82,7 +82,12 @@ export default function SocialButtons() {
 		console.log(components[`${item.name}Icon`])
 		return (
 			<div className={styles.socialButton} key={`${item.name}-button-key`}>
-				<a href={item.link} alt={item.name} className={styles.socialLink}>
+				<a
+					href={item.link}
+					target="_blank"
+					alt={item.name}
+					className={styles.socialLink}
+				>
 					<span className={`styles.${item.name}Icon`}>
 						<Icon />
 					</span>
