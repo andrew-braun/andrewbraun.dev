@@ -3,6 +3,7 @@
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	background: linear-gradient(to bottom, var(--color-1) 50%, var(--color-4-t));
 }
 
 /* Main */
@@ -11,4 +12,5 @@
 	flex: 1 1 auto;
 	min-height: 100%;
 	color: var(--color-3);
+	background: transparent;
 }

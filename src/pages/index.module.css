@@ -3,13 +3,14 @@
 	flex-direction: column;
 	flex: 1 1 auto;
 	max-width: 100vw;
+	background: transparent;
 }
 
 .home-entry {
 	display: flex;
 	flex-direction: column;
 	flex: 1 1 auto;
-	background: var(--color-1);
+	background: transparent;
 }
 
 .hero-container {
