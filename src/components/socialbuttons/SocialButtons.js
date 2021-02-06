@@ -92,52 +92,5 @@ export default function SocialButtons() {
 		)
 	})
 
-	const socialElements = socialArray.map(item => {
-		return (
-			<div className={styles.socialButton} key={`${item.name}-button`}>
-				<a href={item.link} alt={item.name} className={styles.socialLink}>
-					{item.name === "Facebook" ? (
-						<span className={styles.facebookIcon}>
-							<FacebookIcon />
-						</span>
-					) : item.name === "GitHub" ? (
-						<span className={styles.githubIcon}>
-							<GitHubIcon />
-						</span>
-					) : item.name === "CodePen" ? (
-						<span className={styles.codepenIcon}>
-							<CodePenIcon />
-						</span>
-					) : item.name === "Twitter" ? (
-						<span className={styles.twitterIcon}>
-							<TwitterIcon />
-						</span>
-					) : item.name === "LinkedIn" ? (
-						<span className={styles.linkedinIcon}>
-							<LinkedInIcon />
-						</span>
-					) : item.name === "StackShare" ? (
-						<span className={styles.stackShareIcon}>
-							<StackShareIcon />
-						</span>
-					) : item.name === "Udemy" ? (
-						<span className={styles.socialIcon}>
-							<UdemyIcon />
-						</span>
-					) : item.name === "Codewars" ? (
-						<span className={styles.codewarsIcon}>
-							<CodewarsIcon />
-						</span>
-					) : item.name === "Email" ? (
-						<span className={styles.emailIcon}>
-							<EmailIcon />
-						</span>
-					) : null}
-					<span class={styles.socialButtonLabel}>{item.name}</span>
-				</a>
-			</div>
-		)
-	})
-
 	return <div className={styles.socialButtons}>{socialElementList}</div>
 }

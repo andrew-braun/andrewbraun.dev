@@ -18,6 +18,10 @@
 	margin-top: 2%;
 }
 
+.contact-container {
+	text-align: center;
+}
+
 .social-container {
 	display: flex;
 	flex: 1 1 auto;

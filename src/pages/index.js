@@ -1,9 +1,9 @@
 import React from "react"
-import "../styles/global.css"
-import Layout from "../components/layout/Layout"
 import Hero from "../components/hero/Hero"
-import SocialButtons from "../components/socialbuttons/SocialButtons"
+import Layout from "../components/layout/Layout"
 import SEO from "../components/seo"
+import SocialButtons from "../components/socialbuttons/SocialButtons"
+import "../styles/global.css"
 import styles from "./index.module.css"
 
 export default function Home() {
@@ -15,8 +15,11 @@ export default function Home() {
 					<div className={styles.heroContainer}>
 						<Hero />
 					</div>
-					<div className={styles.socialContainer}>
-						<SocialButtons />
+					<div className={styles.contactContainer}>
+						<h2 className={styles.contactSubHeading}>Contact Me</h2>
+						<div className={styles.socialContainer}>
+							<SocialButtons />
+						</div>
 					</div>
 				</div>
 			</main>
