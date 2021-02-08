@@ -16,9 +16,43 @@ export default function Home() {
 						<Hero />
 					</div>
 					<div className={styles.contactContainer}>
-						<h2 className={styles.contactSubHeading}>Contact Me</h2>
-						<div className={styles.socialContainer}>
-							<SocialButtons />
+						<h2 className={styles.contactSubHeading}>About Me</h2>
+						<div className={styles.contactSections}>
+							<div className={styles.socialContainer}>
+								<SocialButtons />
+							</div>
+							<div className={styles.contactAbout}>
+								<p>
+									I'm a JS/React/WordPress web developer, which means I'm always
+									learning and experimenting! I love staying up-to-date with the
+									latest web tech and deploying speedy, modern sites--and I'm
+									not just saying that ;) Whether you need a web app
+									custom-built from the ground up or a WordPress system set up,
+									I can help you out!
+								</p>
+								<p>
+									I've been playing with tech and making sites since the early
+									2000s, but I studied history in university, and since then
+									I've worked as a as a developer, teacher, writer, and chatbot
+									designer while living around the world in places like Korea,
+									Thailand, Georgia, and, of course, my native USA.
+								</p>
+								<p>
+									So let me know what I can do for you! You can reach me
+									via&nbsp;
+									<a href="mailto:andrew@andrewbraun.dev">email</a>,&nbsp;
+									<a href="https://twitter.com/braunecon">Twitter</a>,&nbsp;
+									<a href="https://facebook.com/andrewbraun.dev">Facebook</a>
+									,&nbsp; or
+									<a href="https://linkedin.com/in/andrewwestonbraun">
+										&nbsp;LinkedIn
+									</a>
+									. If you want to check out my work, you can find it on&nbsp;
+									<a href="https://github.com/andrew-braun">GitHub</a>
+									&nbsp;or&nbsp;
+									<a href="https://codepen.io/andrewbraun">CodePen</a>.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>

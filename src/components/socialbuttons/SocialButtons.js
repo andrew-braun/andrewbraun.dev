@@ -86,6 +86,7 @@ export default function SocialButtons() {
 				<a
 					href={item.link}
 					target="_blank"
+					rel="noreferrer"
 					alt={item.name}
 					className={styles.socialLink}
 				>
