@@ -52,9 +52,13 @@ h2 {
 }
 
 a {
-	color: var(--color-2);
+	color: var(--color-4);
 	transition: color 0.2s ease-in-out;
 	text-decoration: none;
+}
+
+p a {
+	font-weight: bold;
 }
 
 a:hover {

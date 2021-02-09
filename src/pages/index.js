@@ -37,20 +37,20 @@ export default function Home() {
 									designer while living around the world in places like Korea,
 									Thailand, Georgia, and, of course, my native USA.
 								</p>
+								{/* prettier-ignore */}
 								<p>
+
 									So let me know what I can do for you! You can reach me
-									via&nbsp;
-									<a href="mailto:andrew@andrewbraun.dev">email</a>,&nbsp;
-									<a href="https://twitter.com/braunecon">Twitter</a>,&nbsp;
-									<a href="https://facebook.com/andrewbraun.dev">Facebook</a>
-									,&nbsp; or
+									via <a href="mailto:andrew@andrewbraun.dev">email</a>,
+									<a href="https://twitter.com/braunecon">&nbsp;Twitter</a>,
+									<a href="https://facebook.com/andrewbraun.dev">&nbsp;Facebook</a>, or
 									<a href="https://linkedin.com/in/andrewwestonbraun">
 										&nbsp;LinkedIn
 									</a>
-									. If you want to check out my work, you can find it on&nbsp;
-									<a href="https://github.com/andrew-braun">GitHub</a>
-									&nbsp;or&nbsp;
-									<a href="https://codepen.io/andrewbraun">CodePen</a>.
+									. If you want to check out my work, you can find it on
+									<a href="https://github.com/andrew-braun">&nbsp;GitHub&nbsp;</a>
+									or
+									<a href="https://codepen.io/andrewbraun">&nbsp;CodePen</a>.
 								</p>
 							</div>
 						</div>
