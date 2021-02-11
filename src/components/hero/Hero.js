@@ -22,6 +22,7 @@ import {
 import "../../fonts/typography.css"
 import "../../styles/global.css"
 import InfoImage from "../infoimage/InfoImage"
+import TextAnimation from "../textanimation/TextAnimation"
 import styles from "./hero.module.css"
 
 const iconList = [
@@ -117,13 +118,13 @@ export default function Hero() {
 		<div className={styles.hero}>
 			<div className={styles.heroText}>
 				<span className={styles.heroTextUnit} id={styles.heroTextUnit1}>
-					DESIGN
+					<TextAnimation text="DESIGN" />
 				</span>
 				<span className={styles.heroTextUnit} id={styles.heroTextUnit2}>
-					DEVELOP
+					<TextAnimation text="DEVELOP" />
 				</span>
 				<span className={styles.heroTextUnit} id={styles.heroTextUnit3}>
-					DEPLOY
+					<TextAnimation text="DEPLOY" />
 				</span>
 			</div>
 			<div className={styles.heroImageContainer}>

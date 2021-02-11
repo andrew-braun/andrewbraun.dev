@@ -42,6 +42,15 @@ html {
 	font-family: "Fira Code", Courier, monospace;
 }
 
+@keyframes pageFadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
 body {
 	margin: 0;
 	background: var(--color-1);
