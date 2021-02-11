@@ -1,9 +1,9 @@
-.text-animation {
+/*.text-animation {
 	opacity: 0;
 	animation: fadeIn ease-in 1;
 	animation-fill-mode: forwards;
 	animation-duration: 0.4s;
-	animation-delay: 0.3s;
+	animation-delay: 0.5s;
 }
 
 @keyframes fadeIn {
@@ -14,3 +14,4 @@
 		opacity: 1;
 	}
 }
+*/

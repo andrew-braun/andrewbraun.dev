@@ -118,13 +118,25 @@ export default function Hero() {
 		<div className={styles.hero}>
 			<div className={styles.heroText}>
 				<span className={styles.heroTextUnit} id={styles.heroTextUnit1}>
-					<TextAnimation text="DESIGN" />
+					<TextAnimation
+						text="DESIGN"
+						animate={{ opacity: [0, 1] }}
+						transition={{ duration: 1 }}
+					/>
 				</span>
 				<span className={styles.heroTextUnit} id={styles.heroTextUnit2}>
-					<TextAnimation text="DEVELOP" />
+					<TextAnimation
+						text="DEVELOP"
+						animate={{ opacity: [0, 1] }}
+						transition={{ duration: 1, delay: 1 }}
+					/>
 				</span>
 				<span className={styles.heroTextUnit} id={styles.heroTextUnit3}>
-					<TextAnimation text="DEPLOY" />
+					<TextAnimation
+						text="DEPLOY"
+						animate={{ opacity: [0, 1] }}
+						transition={{ duration: 1, delay: 2 }}
+					/>
 				</span>
 			</div>
 			<div className={styles.heroImageContainer}>

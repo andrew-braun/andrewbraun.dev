@@ -18,6 +18,7 @@
     "@babel/core": "^7.12.9",
     "babel-loader": "^7.1.5",
     "dot-prop": "^5.3.0",
+    "framer-motion": "^3.3.0",
     "gatsby": "^2.28.1",
     "gatsby-cli": "^2.15.0",
     "gatsby-image": "^2.7.0",

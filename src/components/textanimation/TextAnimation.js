@@ -1,7 +1,16 @@
+import { motion } from "framer-motion"
 import React from "react"
 import styles from "./textanimation.module.css"
 
 export default function TextAnimation(props) {
-	const { text, animation } = props
-	return <span className={styles.textAnimation}>{text}</span>
+	const { text, animate, transition } = props
+	return (
+		<motion.span
+			className={styles.textAnimation}
+			animate={animate}
+			transition={transition}
+		>
+			{text}
+		</motion.span>
+	)
 }
