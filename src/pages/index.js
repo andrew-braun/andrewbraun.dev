@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import React from "react"
 import Hero from "../components/hero/Hero"
 import Layout from "../components/layout/Layout"
@@ -18,9 +19,13 @@ export default function Home() {
 					<div className={styles.contactContainer}>
 						<h2 className={styles.contactSubHeading}>About Me</h2>
 						<div className={styles.contactSections}>
-							<div className={styles.socialContainer}>
+							<motion.div
+								className={styles.socialContainer}
+								animate={{ opacity: [0, 1] }}
+								transition={{ duration: 1 }}
+							>
 								<SocialButtons />
-							</div>
+							</motion.div>
 							<div className={styles.contactAbout}>
 								<p>
 									I'm a JS/React/WordPress web developer, which means I'm always
