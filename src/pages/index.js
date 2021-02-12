@@ -1,5 +1,7 @@
-import { motion } from "framer-motion"
-import React from "react"
+import { useAnimation } from "framer-motion"
+import React, { useEffect } from "react"
+import { useInView } from "react-intersection-observer"
+import SlideIn from "../components/animations/SlideIn/SlideIn"
 import Hero from "../components/hero/Hero"
 import Layout from "../components/layout/Layout"
 import SEO from "../components/seo"
@@ -8,6 +10,14 @@ import "../styles/global.css"
 import styles from "./index.module.css"
 
 export default function Home() {
+	const controls = useAnimation()
+	const [contactRef, inView] = useInView()
+
+	useEffect(() => {
+		if (inView) {
+			controls.start("visible")
+		}
+	}, [controls, inView])
 	return (
 		<Layout>
 			<SEO title="Home" />
@@ -19,31 +29,31 @@ export default function Home() {
 					<div className={styles.contactContainer}>
 						<h2 className={styles.contactSubHeading}>About Me</h2>
 						<div className={styles.contactSections}>
-							<motion.div
-								className={styles.socialContainer}
-								animate={{ opacity: [0, 1] }}
-								transition={{ duration: 1 }}
-							>
-								<SocialButtons />
-							</motion.div>
+							<div className={styles.socialContainer}>
+								<SlideIn>
+									<SocialButtons />
+								</SlideIn>
+							</div>
 							<div className={styles.contactAbout}>
-								<p>
-									I'm a JS/React/WordPress web developer, which means I'm always
-									learning and experimenting! I love staying up-to-date with the
-									latest web tech and deploying speedy, modern sites--and I'm
-									not just saying that ;) Whether you need a web app
-									custom-built from the ground up or a WordPress system set up,
-									I can help you out!
-								</p>
-								<p>
-									I've been playing with tech and making sites since the early
-									2000s, but I studied history in university, and since then
-									I've worked as a as a developer, teacher, writer, and chatbot
-									designer while living around the world in places like Korea,
-									Thailand, Georgia, and, of course, my native USA.
-								</p>
-								{/* prettier-ignore */}
-								<p>
+								<SlideIn className={styles.contactAbout}>
+									<p>
+										I'm a JS/React/WordPress web developer, which means I'm
+										always learning and experimenting! I love staying up-to-date
+										with the latest web tech and deploying speedy, modern
+										sites--and I'm not just saying that ;) Whether you need a
+										web app custom-built from the ground up or a WordPress
+										system set up, I can help you out!
+									</p>
+									<p>
+										I've been playing with tech and making sites since the early
+										2000s, but I studied history in university, and since then
+										I've worked as a as a developer, teacher, writer, and
+										chatbot designer while living around the world in places
+										like Korea, Thailand, Georgia, and, of course, my native
+										USA.
+									</p>
+									{/* prettier-ignore */}
+									<p>
 
 									So let me know what I can do for you! You can reach me
 									via <a href="mailto:andrew@andrewbraun.dev">email</a>,
@@ -57,6 +67,7 @@ export default function Home() {
 									or
 									<a href="https://codepen.io/andrewbraun">&nbsp;CodePen</a>.
 								</p>
+								</SlideIn>
 							</div>
 						</div>
 					</div>
