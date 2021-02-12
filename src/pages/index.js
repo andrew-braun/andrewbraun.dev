@@ -35,7 +35,7 @@ export default function Home() {
 								</SlideIn>
 							</div>
 							<div className={styles.contactAbout}>
-								<SlideIn className={styles.contactAbout}>
+								<SlideIn className={styles.contactAbout} direction="right">
 									<p>
 										I'm a JS/React/WordPress web developer, which means I'm
 										always learning and experimenting! I love staying up-to-date

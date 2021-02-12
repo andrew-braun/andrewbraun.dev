@@ -9,6 +9,7 @@ export default function TextAnimation(props) {
 			className={styles.textAnimation}
 			animate={animate}
 			transition={transition}
+			initial={{ opacity: 0 }}
 		>
 			{text}
 		</motion.span>
