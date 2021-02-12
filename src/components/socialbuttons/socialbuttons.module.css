@@ -47,3 +47,9 @@
 .social-link span:first-of-type:hover {
 	transform: rotate(6deg);
 }
+
+@media (max-width: 420px) {
+	.social-link {
+		font-size: clamp(1.5rem, 2.5rem, 3.5rem);
+	}
+}
