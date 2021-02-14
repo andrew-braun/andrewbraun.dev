@@ -54,7 +54,7 @@
 	text-align: left;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 520px) {
 	.contact-about {
 		min-width: 16rem;
 	}
