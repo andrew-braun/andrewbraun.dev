@@ -8,8 +8,7 @@ export default function SlideIn({ children, direction }) {
 	const controls = useAnimation()
 	const [motionRef, inView] = useInView()
 
-	const slideDirection = direction === "right" ? 400 : -400
-	console.log(slideDirection)
+	const slideDirection = direction === "right" ? 1000 : -1000
 
 	useEffect(() => {
 		if (inView) {
@@ -18,18 +17,19 @@ export default function SlideIn({ children, direction }) {
 	}, [controls, inView])
 
 	return (
-		<motion.div
-			className={styles.motionContainer}
-			animate={controls}
-			initial="hidden"
-			transition={({ duration: 0.5 }, { type: "spring", stiffness: "70" })}
-			ref={motionRef}
-			variants={{
-				visible: { translateX: 0 },
-				hidden: { translateX: slideDirection },
-			}}
-		>
-			{children}
-		</motion.div>
+		<div className={styles.motionDivWrapper} ref={motionRef}>
+			<motion.div
+				className={styles.motionContainer}
+				animate={controls}
+				initial="hidden"
+				transition={({ duration: 0.5 }, { type: "spring", stiffness: "70" })}
+				variants={{
+					visible: { translateX: 0 },
+					hidden: { translateX: slideDirection },
+				}}
+			>
+				{children}
+			</motion.div>
+		</div>
 	)
 }
