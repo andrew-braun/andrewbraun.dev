@@ -30,12 +30,16 @@ export default function Home() {
 						<h2 className={styles.contactSubHeading}>About Me</h2>
 						<div className={styles.contactSections}>
 							<div className={styles.socialContainer}>
-								<SlideIn direction="left">
+								<SlideIn direction="left" delay="0">
 									<SocialButtons />
 								</SlideIn>
 							</div>
 							<div className={styles.contactAboutContainer}>
-								<SlideIn className={styles.contactAbout} direction="right">
+								<SlideIn
+									className={styles.contactAbout}
+									direction="right"
+									delay="0.5"
+								>
 									<div className={styles.contactAbout}>
 										<p>
 											I'm a JS/React/WordPress web developer, which means I'm

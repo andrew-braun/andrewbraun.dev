@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer"
 import "../../../styles/global.css"
 import styles from "./slidein.module.css"
 
-export default function SlideIn({ children, direction }) {
+export default function SlideIn({ children, direction, delay }) {
 	const controls = useAnimation()
 	const [motionRef, inView] = useInView()
 
@@ -22,9 +22,17 @@ export default function SlideIn({ children, direction }) {
 				className={styles.motionContainer}
 				animate={controls}
 				initial="hidden"
-				transition={({ duration: 0.5 }, { type: "spring", stiffness: "70" })}
+				// transition={({ duration: 5 }, { type: "spring", stiffness: "70" })}
 				variants={{
-					visible: { translateX: 0 },
+					visible: {
+						translateX: 0,
+						transition: {
+							delay: delay,
+							duration: 0.5,
+							type: "spring",
+							stiffness: 70,
+						},
+					},
 					hidden: { translateX: slideDirection },
 				}}
 			>
