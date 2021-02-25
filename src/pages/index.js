@@ -42,15 +42,17 @@ export default function Home() {
 								>
 									<div className={styles.contactAbout}>
 										<p>
-											I'm a JS/React/WordPress web developer, which means I'm
-											always learning and experimenting! I love staying
-											up-to-date with the latest web tech and deploying speedy,
-											modern sites--and I'm not just saying that ;) Whether you
-											need a web app custom-built from the ground up or a
-											WordPress system set up, I can help you out!
+											I'm a JS/React/WordPress web developer building everything from 
+											custom web apps to easily-manageable WordPress sites. Need something
+											created, fixed, or overhauled? Let's talk!
 										</p>
 										<p>
-											I've been playing with tech and making sites since the
+											My primary passions are learning and building things,
+											so I spend a lot of my free time coding and working on
+											personal projects, like <a href="https://geobeermap.com" rel="noreferrer noopener">a website about craft beer in Georgia </a>
+											or <a href="https://andrew-braun.github.io/hangtree-game/">a plant-based alternative to hangman</a>. 
+										</p>	
+										<p>I've been playing with tech and making sites since the
 											early 2000s, but I studied history in university, and
 											since then I've worked as a as a developer, teacher,
 											writer, and chatbot designer while living around the world
