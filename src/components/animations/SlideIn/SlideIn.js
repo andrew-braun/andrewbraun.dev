@@ -22,18 +22,17 @@ export default function SlideIn({ children, direction, delay }) {
 				className={styles.motionContainer}
 				animate={controls}
 				initial="hidden"
-				// transition={({ duration: 5 }, { type: "spring", stiffness: "70" })}
 				variants={{
 					visible: {
 						translateX: 0,
+						opacity: 1,
 						transition: {
 							delay: delay,
-							duration: 0.5,
-							type: "spring",
-							stiffness: 70,
+							duration: 0.8,
+							ease: "easeIn",
 						},
 					},
-					hidden: { translateX: slideDirection },
+					hidden: { translateX: slideDirection, opacity: 0 },
 				}}
 			>
 				{children}
