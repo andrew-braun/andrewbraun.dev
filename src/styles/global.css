@@ -3,7 +3,7 @@
 
 /* Global styles */
 :root {
-	--color-1: hsla(0, 0%, 8%, 1);
+	--color-1: hsla(0, 0%, 10%, 1);
 	--color-2: hsl(144, 16%, 94%);
 	--color-3: hsla(0, 0%, 100%, 1);
 	--color-4: hsla(205, 94%, 40%, 1);
@@ -39,7 +39,8 @@
 }
 
 html {
-	font-family: "Fira Code", Courier, monospace;
+	font-family: "Lato";
+	color: hsla(0, 0%, 100%, 0.89);
 	overflow-x: hidden;
 }
 
@@ -61,16 +62,21 @@ h2 {
 	font-size: 2rem;
 }
 
-a {
-	color: var(--color-4);
-	transition: color 0.2s ease-in-out;
-	text-decoration: none;
+p {
+	font-size: 1.1rem;
+	line-height: 1.5;
 }
 
-p a {
-	font-weight: bold;
+a {
+	color: var(--color-4);
+	transition: color 0.3s ease-in-out;
+	text-decoration: none;
 }
 
 a:hover {
 	color: var(--color-5);
+}
+
+p a {
+	font-weight: bold;
 }
