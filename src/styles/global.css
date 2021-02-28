@@ -10,28 +10,6 @@
 	--color-4-t: hsla(205, 94%, 40%, 0.7);
 	--color-5: hsla(11, 97%, 64%, 1);
 	--color-6: hsla(33, 52%, 56%, 1);
-
-	--light-1: hsl(144, 16%, 94%);
-	--mid-1: #2c2c2c;
-	--mid-2: #c99554;
-	--mid-3: #c1432e;
-	--dark-1: #476171;
-	--dark-2: #292929;
-	--dark-3: #3c034e;
-	--primary-bg: hsla(0, 0%, 8%, 1);
-	--primary-bg-text: white;
-	--secondary-bg: hsla(0, 0%, 96%, 1);
-	--secondary-bg-text: black;
-	--tertiary-bg: hsla(217, 48%, 32%, 1);
-	--tertiary-bg-text: white;
-	--primary-text: white;
-	--contrast-text: black;
-	--primary-link: #fc6b4a;
-	--primary-link-hover: hsla(205, 94%, 40%, 1);
-	--primary-button: hsla(11, 97%, 64%, 1);
-	--primary-button-hover: hsla(205, 94%, 40%, 1);
-	--accent-1: hsla(11, 97%, 64%, 1);
-	--accent-2: hsla(205, 94%, 40%, 1);
 }
 
 * {
