@@ -22,7 +22,7 @@ import {
 import "../../fonts/typography.css"
 import "../../styles/global.css"
 import InfoImage from "../infoimage/InfoImage"
-import TextAnimation from "../textanimation/TextAnimation"
+import TextAnimation from "../animations/textanimation/TextAnimation"
 import styles from "./hero.module.css"
 
 const iconList = [
@@ -121,21 +121,21 @@ export default function Hero() {
 					<TextAnimation
 						text="DESIGN"
 						animate={{ opacity: [0, 1] }}
-						transition={{ duration: 1 }}
+						transition={{ duration: 0.7 }}
 					/>
 				</span>
 				<span className={styles.heroTextUnit} id={styles.heroTextUnit2}>
 					<TextAnimation
 						text="DEVELOP"
 						animate={{ opacity: [0, 1] }}
-						transition={{ duration: 1, delay: 1 }}
+						transition={{ duration: 0.7, delay: 0.7 }}
 					/>
 				</span>
 				<span className={styles.heroTextUnit} id={styles.heroTextUnit3}>
 					<TextAnimation
 						text="DEPLOY"
 						animate={{ opacity: [0, 1] }}
-						transition={{ duration: 1, delay: 2 }}
+						transition={{ duration: 0.7, delay: 1.4 }}
 					/>
 				</span>
 			</div>

@@ -1,7 +1,7 @@
 import { useAnimation } from "framer-motion"
 import React, { useEffect } from "react"
 import { useInView } from "react-intersection-observer"
-import SlideIn from "../components/animations/SlideIn/SlideIn"
+import FadeIn from "../components/animations/fadein/FadeIn"
 import Hero from "../components/hero/Hero"
 import Layout from "../components/layout/Layout"
 import SEO from "../components/seo"
@@ -30,29 +30,36 @@ export default function Home() {
 						<h2 className={styles.contactSubHeading}>About Me</h2>
 						<div className={styles.contactSections}>
 							<div className={styles.socialContainer}>
-								<SlideIn direction="left" delay="0">
+								<FadeIn delay="0">
 									<SocialButtons />
-								</SlideIn>
+								</FadeIn>
 							</div>
 							<div className={styles.contactAboutContainer}>
-								<SlideIn
-									className={styles.contactAbout}
-									direction="right"
-									delay="0.5"
-								>
+								<FadeIn className={styles.contactAbout} delay="0.3">
 									<div className={styles.contactAbout}>
 										<p>
-											I'm a JS/React/WordPress web developer building everything from 
-											custom web apps to easily-manageable WordPress sites. Need something
-											created, fixed, or overhauled? Let's talk!
+											I'm a JS/React/WordPress web developer building everything
+											from custom web apps to easily-manageable WordPress sites.
+											Need something created, fixed, or overhauled? Let's talk!
 										</p>
 										<p>
-											My primary passions are learning and building things,
-											so I spend a lot of my free time coding and working on
-											personal projects, like <a href="https://geobeermap.com" rel="noreferrer noopener">a website about craft beer in Georgia </a>
-											or <a href="https://andrew-braun.github.io/hangtree-game/">a plant-based alternative to hangman</a>. 
-										</p>	
-										<p>I've been playing with tech and making sites since the
+											My primary passions are learning and building things, so I
+											spend a lot of my free time coding and working on personal
+											projects, like{" "}
+											<a
+												href="https://geobeermap.com"
+												rel="noreferrer noopener"
+											>
+												a website about craft beer in Georgia{" "}
+											</a>
+											or{" "}
+											<a href="https://andrew-braun.github.io/hangtree-game/">
+												a plant-based alternative to hangman
+											</a>
+											.
+										</p>
+										<p>
+											I've been playing with tech and making sites since the
 											early 2000s, but I studied history in university, and
 											since then I've worked as a as a developer, teacher,
 											writer, and chatbot designer while living around the world
@@ -75,7 +82,7 @@ export default function Home() {
 									<a href="https://codepen.io/andrewbraun">&nbsp;CodePen</a>.
 								</p>
 									</div>
-								</SlideIn>
+								</FadeIn>
 							</div>
 						</div>
 					</div>

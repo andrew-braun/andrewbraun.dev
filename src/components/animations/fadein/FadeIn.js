@@ -2,13 +2,11 @@ import { motion, useAnimation } from "framer-motion"
 import React, { useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 import "../../../styles/global.css"
-import styles from "./slidein.module.css"
+import styles from "./fadein.module.css"
 
-export default function SlideIn({ children, direction, delay }) {
+export default function FadeIn({ children, delay }) {
 	const controls = useAnimation()
 	const [motionRef, inView] = useInView()
-
-	const slideDirection = direction === "right" ? 1000 : -1000
 
 	useEffect(() => {
 		if (inView) {
@@ -24,15 +22,14 @@ export default function SlideIn({ children, direction, delay }) {
 				initial="hidden"
 				variants={{
 					visible: {
-						translateX: 0,
 						opacity: 1,
 						transition: {
 							delay: delay,
-							duration: 0.8,
+							duration: 0.3,
 							ease: "easeIn",
 						},
 					},
-					hidden: { translateX: slideDirection, opacity: 0 },
+					hidden: { opacity: 0 },
 				}}
 			>
 				{children}
