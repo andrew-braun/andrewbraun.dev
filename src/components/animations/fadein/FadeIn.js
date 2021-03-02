@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer"
 import "../../../styles/global.css"
 import styles from "./fadein.module.css"
 
-export default function FadeIn({ children, delay }) {
+export default function FadeIn({ children, delay, duration }) {
 	const controls = useAnimation()
 	const [motionRef, inView] = useInView()
 
@@ -25,7 +25,7 @@ export default function FadeIn({ children, delay }) {
 						opacity: 1,
 						transition: {
 							delay: delay,
-							duration: 0.4,
+							duration: duration,
 							ease: "easeIn",
 						},
 					},
