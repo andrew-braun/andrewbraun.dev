@@ -1,0 +1,6 @@
+.footer {
+	width: 100%;
+	padding: 1rem;
+	background: linear-gradient(to top, hsla(0, 0%, 0%, 0.4) 30%, transparent);
+	text-align: center;
+}
