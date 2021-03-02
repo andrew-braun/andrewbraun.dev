@@ -25,7 +25,7 @@ export default function FadeIn({ children, delay }) {
 						opacity: 1,
 						transition: {
 							delay: delay,
-							duration: 0.3,
+							duration: 0.4,
 							ease: "easeIn",
 						},
 					},

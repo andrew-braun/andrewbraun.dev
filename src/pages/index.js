@@ -30,12 +30,12 @@ export default function Home() {
 						<h2 className={styles.contactSubHeading}>About Me</h2>
 						<div className={styles.contactSections}>
 							<div className={styles.socialContainer}>
-								<FadeIn delay="0">
+								<FadeIn delay="0.1">
 									<SocialButtons />
 								</FadeIn>
 							</div>
 							<div className={styles.contactAboutContainer}>
-								<FadeIn className={styles.contactAbout} delay="0.3">
+								<FadeIn className={styles.contactAbout} delay="0.1">
 									<div className={styles.contactAbout}>
 										<p>
 											I'm a JS/React/WordPress web developer building everything
