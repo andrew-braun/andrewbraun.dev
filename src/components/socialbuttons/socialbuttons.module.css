@@ -3,7 +3,7 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	padding: 1rem 1rem 2rem 1rem;
+	padding: 2rem 1rem;
 }
 
 .social-button {
@@ -36,7 +36,7 @@
 }
 
 .social-link:hover {
-	opacity: 0.8;
+	opacity: 1;
 	transform: translateY(-3px);
 }
 

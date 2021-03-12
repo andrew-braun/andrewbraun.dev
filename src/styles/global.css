@@ -16,7 +16,7 @@
 	--fs-ml: 3.052rem;
 	--fs-md: 2.441rem;
 	--fs-ms: 1.563rem;
-	--fs-s: 1.25em;
+	--fs-sm: 1.25em;
 	--fs-xs: 1rem;
 }
 
@@ -54,13 +54,13 @@ p {
 }
 
 a {
-	color: var(--color-4);
+	color: var(--color-5);
 	transition: color 0.3s ease-in-out;
 	text-decoration: none;
 }
 
 a:hover {
-	color: var(--color-5);
+	color: var(--color-3);
 }
 
 p a {

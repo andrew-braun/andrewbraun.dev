@@ -24,11 +24,16 @@
 }
 
 .contactSubHeading {
-	margin: 0 0 1.5rem 0;
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	background: linear-gradient(to top, hsla(0, 0%, 0%, 0.2) 20%, transparent);
 }
 .contact-sections {
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
+	z-index: 10;
 }
 
 .social-container {
@@ -37,22 +42,30 @@
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap-reverse;
-	min-width: 22rem;
+	min-width: 30rem;
 	padding: 0 2rem;
 	z-index: 11;
+	background: linear-gradient(30deg, var(--color-4) 40%, transparent 40%);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto;
 }
 
 .contact-about-container {
 	flex: 1 1 45%;
-	min-width: 15rem;
-	margin: 0 1rem 1rem 1rem;
+	min-width: 30rem;
+
+	background: linear-gradient(216deg, var(--color-4) 40%, transparent 40%);
 }
 
 .contact-about {
-	padding: 0.5rem 1rem;
-
+	padding: 1.3rem;
 	text-align: left;
+	background: hsla(0, 0%, 0%, 0.15);
 }
 
 @media (max-width: 520px) {
+	.contact-about-container {
+		min-width: 20rem;
+	}
 }
