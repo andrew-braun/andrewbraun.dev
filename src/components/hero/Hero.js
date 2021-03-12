@@ -21,10 +21,10 @@ import {
 } from "react-icons/si"
 import "../../fonts/typography.css"
 import "../../styles/global.css"
-import InfoImage from "../infoimage/InfoImage"
 import TextAnimation from "../animations/textanimation/TextAnimation"
 import styles from "./hero.module.css"
 
+/*
 const iconList = [
 	{
 		icon: <DiJavascript1 />,
@@ -112,6 +112,7 @@ const iconList = [
 		alt: "RaspberryPi",
 	},
 ]
+*/
 
 export default function Hero() {
 	return (
@@ -138,9 +139,6 @@ export default function Hero() {
 						transition={{ duration: 0.7, delay: 1.4 }}
 					/>
 				</span>
-			</div>
-			<div className={styles.heroImageContainer}>
-				<InfoImage icons={iconList} />
 			</div>
 		</div>
 	)

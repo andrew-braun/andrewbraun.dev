@@ -30,7 +30,7 @@ export default function Home() {
 						<h2 className={styles.contactSubHeading}>About Me</h2>
 						<div className={styles.contactSections}>
 							<div className={styles.socialContainer}>
-								<FadeIn delay="0.1" duration="1">
+								<FadeIn delay="0.1" duration="0.7">
 									<SocialButtons />
 								</FadeIn>
 							</div>
@@ -38,7 +38,7 @@ export default function Home() {
 								<FadeIn
 									className={styles.contactAbout}
 									delay="0.1"
-									duration="1"
+									duration="0.7"
 								>
 									<div className={styles.contactAbout}>
 										<p>

@@ -23,6 +23,9 @@
 	text-align: center;
 }
 
+.contactSubHeading {
+	margin: 0 0 1.5rem 0;
+}
 .contact-sections {
 	display: flex;
 	flex-wrap: wrap;
@@ -47,7 +50,7 @@
 
 .contact-about {
 	padding: 0.5rem 1rem;
-	background: hsla(0, 0%, 0%, 0.45);
+
 	text-align: left;
 }
 
