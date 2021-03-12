@@ -5,11 +5,11 @@ import styles from "./footer.module.css"
 export default function Footer() {
 	return (
 		<footer className={styles.footer}>
-			Made with
+			Made with &nbsp;
 			<span role="img" aria-label="heart-emoji">
 				❤️
 			</span>
-			by Andrew Braun
+			&nbsp; by Andrew Braun
 		</footer>
 	)
 }
