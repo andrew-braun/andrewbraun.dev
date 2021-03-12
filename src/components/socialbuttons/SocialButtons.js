@@ -13,7 +13,7 @@ import {
 	SiTwitter as TwitterIcon,
 	SiUdemy as UdemyIcon,
 } from "react-icons/si"
-import styles from "./socialbuttons.module.css"
+import  * as styles from "./socialbuttons.module.css"
 
 const components = {
 	CodePenIcon: CodePenIcon,

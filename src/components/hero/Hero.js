@@ -22,7 +22,7 @@ import {
 import "../../fonts/typography.css"
 import "../../styles/global.css"
 import TextAnimation from "../animations/textanimation/TextAnimation"
-import styles from "./hero.module.css"
+import  * as styles from "./hero.module.css"
 
 /*
 const iconList = [

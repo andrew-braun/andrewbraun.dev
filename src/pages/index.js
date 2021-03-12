@@ -7,7 +7,7 @@ import Layout from "../components/layout/Layout"
 import SEO from "../components/seo"
 import SocialButtons from "../components/socialbuttons/SocialButtons"
 import "../styles/global.css"
-import styles from "./index.module.css"
+import  * as styles from "./index.module.css"
 
 export default function Home() {
 	const controls = useAnimation()

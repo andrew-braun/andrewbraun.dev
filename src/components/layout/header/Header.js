@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import "../../../styles/global.css"
 import Nav from "../nav/Nav"
-import styles from "./header.module.css"
+import  * as styles from "./header.module.css"
 
 export default function Header() {
 	return (

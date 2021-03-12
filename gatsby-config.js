@@ -31,6 +31,18 @@ module.exports = {
 			},
 		},
 		`gatsby-plugin-sharp`,
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: `AndrewBraun.dev`,
+				short_name: `AndrewBraun.dev`,
+				start_url: `/`,
+				background_color: `hsla(0, 0%, 12%, 1)`,
+				theme_color: `hsla(0, 0%, 12%, 1)`,
+				display: `standalone`,
+				icon: `src/assets/brand/favicon.svg`,
+			},
+		},
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-preload-fonts`,

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import React from "react"
-import styles from "./textanimation.module.css"
+import  * as styles from "./textanimation.module.css"
 
 export default function TextAnimation(props) {
 	const { text, animate, transition } = props

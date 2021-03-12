@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
-import styles from "./logo.module.css"
+import  * as styles from "./logo.module.css"
 import logoImg from "./logo.svg"
 
 export default function Logo() {

@@ -2,7 +2,7 @@ import { motion, useAnimation } from "framer-motion"
 import React, { useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 import "../../../styles/global.css"
-import styles from "./fadein.module.css"
+import * as styles from "./fadein.module.css"
 
 export default function FadeIn({ children, delay, duration }) {
 	const controls = useAnimation()
