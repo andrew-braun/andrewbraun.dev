@@ -40,7 +40,7 @@ module.exports = {
 				background_color: `hsla(0, 0%, 12%, 1)`,
 				theme_color: `hsla(0, 0%, 12%, 1)`,
 				display: `standalone`,
-				icon: `src/assets/brand/favicon.svg`,
+				icon: `src/assets/brand/favicon.png`,
 			},
 		},
 		`gatsby-transformer-sharp`,

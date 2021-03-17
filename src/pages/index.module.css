@@ -47,20 +47,20 @@
 	max-width: 100vw;
 	padding: 1rem 0.5rem;
 	z-index: 11;
-	background: linear-gradient(30deg, var(--color-4) 40%, transparent 40%);
+	background: linear-gradient(30deg, var(--color-4-t) 40%, transparent 40%);
 }
 
 .contact-about-container {
 	flex: 1 1 45%;
 	min-width: 30rem;
 
-	background: linear-gradient(216deg, var(--color-4) 40%, transparent 40%);
+	background: linear-gradient(216deg, var(--color-4-t) 25%, transparent 25%);
 }
 
 .contact-about {
 	padding: 1.3rem;
 	text-align: left;
-	background: hsla(0, 0%, 0%, 0.15);
+	background: hsla(0, 0%, 0%, 0.3);
 }
 
 @media (max-width: 520px) {
