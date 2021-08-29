@@ -1,0 +1,3 @@
+const error404 = "<h1>404</h1>"
+
+export { error404 }
