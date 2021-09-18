@@ -1,3 +1,7 @@
+<script>
+	import "/src/global.css";
+</script>
+
 <svelte:head>
 	<title>AndrewBraun.dev - WordPress, React, Svelte, and More</title>
 </svelte:head>

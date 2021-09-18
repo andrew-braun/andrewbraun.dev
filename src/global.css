@@ -1,0 +1,6 @@
+.vertical-text {
+	display: flex;
+	padding-left: 0.5rem;
+	writing-mode: vertical-rl;
+	text-orientation: sideways;
+}
