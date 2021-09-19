@@ -1,6 +1,7 @@
 <script>
 	import Icon from "../lib/icons/icons.svelte";
 	import VerticalSidebar from "../lib/layout/VerticalSidebar.svelte";
+	import { socialLinks } from "../data/social-links.js";
 </script>
 
 <div class="main-layout">
@@ -12,16 +13,12 @@
 	</header>
 
 	<section class="layout-grid">
-		<VerticalSidebar class="left-bar" side="left" />
+		<aside class="vertical-sidebar left-bar">
+			<VerticalSidebar class="left-vertical-sidebar" side="left" content={socialLinks} />
+		</aside>
 		<main class="layout-main">
 			<slot />
 		</main>
-		<aside class="right-bar">
-			<a href="mailto:andrew@andrewbraun.dev"
-				><Icon name="email" />
-				<span class="vertical-text">andrew@andrewbraun.dev</span></a
-			>
-		</aside>
 	</section>
 	<footer class="layout-footer">
 		<p>Made by Andrew Braun</p>
@@ -30,11 +27,22 @@
 
 <style>
 	.layout-grid {
-		display: grid;
-		grid-template-columns: 60px auto 60px;
+		position: relative;
 	}
 	.layout-main {
 		min-height: 80vh;
+		margin: 0 0 0 3rem;
+		padding: 0 1rem;
+	}
+	.vertical-sidebar {
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		width: 3rem;
+	}
+	.left-bar {
+		left: 0;
+		top: 6rem;
 	}
 	.layout-footer {
 		display: flex;
