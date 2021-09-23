@@ -1,19 +1,11 @@
 <script>
-	import Icon from "../lib/icons/icons.svelte";
 	import VerticalSidebar from "../lib/layout/VerticalSidebar.svelte";
 	import { socialLinks } from "../data/social-links.js";
-	import Logo from "../lib/branding/logo.svelte";
+	import Header from "../lib/layout/Header.svelte";
 </script>
 
 <div class="main-layout">
-	<header class="layout-header">
-		<Logo background={true} />
-		AndrewBraun.dev
-		<nav>
-			<a href="/">Home</a>
-		</nav>
-	</header>
-
+	<Header />
 	<section class="layout-grid">
 		<aside class="vertical-sidebar left-bar">
 			<VerticalSidebar class="left-vertical-sidebar" side="left" content={socialLinks} />
