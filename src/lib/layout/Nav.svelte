@@ -29,7 +29,7 @@
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			grid-template-rows: repeat(3, 1rem);
-			padding: 0;
+			padding: 0.2rem 0;
 			grid-gap: 0;
 		}
 		.nav-link {
@@ -40,7 +40,7 @@
 			grid-column: 1;
 			grid-row: 2/4;
 			border: 1px solid black;
-			border-width: 1px 0 0 0px;
+			border-width: 1px 0 0 0;
 		}
 		#contact-link {
 			grid-column: 2;
