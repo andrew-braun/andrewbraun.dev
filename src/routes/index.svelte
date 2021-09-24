@@ -8,7 +8,7 @@
 
 <h1>AndrewBraun.dev</h1>
 
-<h2>Arruinado consiguio restaurar no pluguiera tu le</h2>
+<h2 id="about">About</h2>
 
 <p>
 	Ex estupido mientras se senalada so correcta madrugar. Trovador ay gracioso se eh sostengo
@@ -26,6 +26,7 @@
 	sexo.
 </p>
 
+<h2 id="my-work">My Work</h2>
 <p>
 	No tios tome lune ella ojos su. No secretario escondidos un sr ir intensidad comprendio. He cura
 	ir un fino tiro ma. Perdonaria antipatico intensidad al fe. Toco sera paro don dio miro fue.
@@ -54,7 +55,7 @@
 	pais el alta pero. Por con luto este fijo. Ex un mareos diario griego. La interes dociles revista
 	cerrada encogia eh. Constituia ahi temporadas ser ama anteriores comprender que.
 </p>
-
+<h2 id="contact">Contact</h2>
 <p>
 	Ganado correo operas cuerpo sirvio la manera lo es. En lacrimoso pelagatos insomnios ha ti
 	expresion el. Que rapidisimo caballeros escopetazo exclamaron don son forasteros amabilidad los.

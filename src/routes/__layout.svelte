@@ -2,6 +2,7 @@
 	import VerticalSidebar from "../lib/layout/VerticalSidebar.svelte";
 	import { socialLinks } from "../data/social-links.js";
 	import Header from "../lib/layout/Header.svelte";
+	import TabBar from "../lib/layout/TabBar.svelte";
 </script>
 
 <div class="main-layout">
@@ -17,6 +18,7 @@
 	<footer class="layout-footer">
 		<p>Made by Andrew Braun</p>
 	</footer>
+	<TabBar />
 </div>
 
 <style>

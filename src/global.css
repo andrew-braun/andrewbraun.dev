@@ -1,5 +1,6 @@
 /* Variables */
 :root {
+	--background-1: white;
 	--accent-1: red;
 
 	--transition-duration-short: 0.3s;

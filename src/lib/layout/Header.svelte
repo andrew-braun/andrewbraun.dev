@@ -6,9 +6,9 @@
 <header class="layout-header">
 	<div class="site-branding">
 		<Logo background={true} />
-		AndrewBraun.dev
+		<p>AndrewBraun.dev</p>
 	</div>
-	<Nav />
+	<Nav hideOnMobile={true} />
 </header>
 
 <style>
