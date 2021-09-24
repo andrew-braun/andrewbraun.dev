@@ -12,7 +12,7 @@
 					<Icon
 						name={item.name}
 						strokeWidth={item.name === "polywork" ? "0.08rem" : undefined}
-						class={`icon-${item.name}`}
+						class={`icon icon-${item.name}`}
 					/>
 				</a>
 			{:else}
@@ -23,7 +23,14 @@
 </div>
 
 <style>
+	.sidebar-content {
+		padding-top: 15vh;
+	}
 	.sidebar-content a {
 		display: block;
+	}
+	.sidebar-content a:hover {
+		transform: translateX(5px);
+		border-color: transparent;
 	}
 </style>

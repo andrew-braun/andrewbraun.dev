@@ -1,3 +1,36 @@
+/* Variables */
+:root {
+	--accent-1: red;
+
+	--transition-duration-short: 0.3s;
+	--transition-duration-long: 0.5s;
+}
+
+/* Base element styles */
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	border: 1px solid transparent;
+	border-width: 0 0 1px 0;
+	transition-duration: var(--transition-duration-short);
+	transition-timing-function: ease-in;
+}
+
+a:hover {
+	border-color: black;
+}
+
 .vertical-text {
 	display: flex;
 	padding-left: 0.5rem;
