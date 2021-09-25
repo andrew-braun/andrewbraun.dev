@@ -83,6 +83,11 @@
 
 <style>
 	.content-container {
-		padding: 0 calc(1.5rem + 4vw);
+		padding: 7rem calc(1.5rem + 4vw) 0 calc(2.5rem + 4vw);
+	}
+	@media only screen and (max-width: 480px) {
+		.content-container {
+			padding: 7rem calc(1.5rem + 4vw);
+		}
 	}
 </style>

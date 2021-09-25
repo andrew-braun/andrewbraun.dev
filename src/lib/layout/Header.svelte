@@ -5,7 +5,9 @@
 
 <header class="layout-header">
 	<div class="site-branding">
-		<Logo background={true} />
+		<div class="header-logo">
+			<Logo background={true} />
+		</div>
 		<p class="site-title">AndrewBraun.dev</p>
 	</div>
 	<Nav hideOnMobile={true} />
@@ -13,7 +15,7 @@
 
 <style>
 	.layout-header {
-		position: relative;
+		position: fixed;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -23,11 +25,18 @@
 		padding: 0 5%;
 	}
 	.site-branding {
+		position: relative;
 		display: flex;
 		align-items: center;
 		flex: 1 1 auto;
 		min-width: 25%;
 		height: 100%;
+	}
+	.header-logo {
+		min-width: 5rem;
+		width: 20%;
+		max-width: 15rem;
+		height: auto;
 	}
 	.site-title {
 		font-size: 2rem;
