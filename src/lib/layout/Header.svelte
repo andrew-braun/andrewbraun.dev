@@ -1,14 +1,17 @@
 <script>
 	import Logo from "../branding/Logo.svelte";
 	import Nav from "../layout/Nav.svelte";
+	import "../../global.css";
+	let y;
 </script>
 
-<header class="layout-header">
+<svelte:window bind:scrollY={y} />
+<header class={`layout-header ${y > 50 ? "layout-header-scrolled shrink" : "grow"}`}>
 	<div class="site-branding">
-		<div class="header-logo">
+		<div class={`header-logo ${y > 50 ? "header-logo-scrolled" : ""}`}>
 			<Logo background={true} />
 		</div>
-		<p class="site-title">AndrewBraun.dev</p>
+		<p class={`site-title ${y > 50 ? "site-title-scrolled" : ""}`}>AndrewBraun.dev</p>
 	</div>
 	<Nav hideOnMobile={true} />
 </header>
@@ -21,8 +24,13 @@
 		align-items: center;
 		flex-wrap: wrap;
 		min-width: 100%;
-		height: clamp(5rem, 20vh, 25rem);
+		height: calc(4rem + 10vh);
 		padding: 0 5%;
+	}
+	.layout-header-scrolled {
+		height: calc(1rem + 5vh);
+		background: var(--background-1);
+		z-index: 100;
 	}
 	.site-branding {
 		position: relative;
@@ -33,17 +41,44 @@
 		height: 100%;
 	}
 	.header-logo {
-		min-width: 5rem;
-		width: 20%;
-		max-width: 15rem;
-		height: auto;
+		flex: 0 1 20%;
+		max-width: 7rem;
+		max-height: auto;
+	}
+	.header-logo-scrolled {
+		max-width: 2.5rem;
 	}
 	.site-title {
 		font-size: 2rem;
+	}
+	.site-title-scrolled {
+		font-size: 1.2rem;
 	}
 	@media only screen and (max-width: 480px) {
 		.site-title {
 			font-size: 1.2rem;
 		}
+	}
+	@keyframes shrink {
+		from {
+			height: calc(4rem + 10vh);
+		}
+		to {
+			height: calc(1rem + 5vh);
+		}
+	}
+	@keyframes grow {
+		from {
+			height: calc(1rem + 5vh);
+		}
+		to {
+			height: calc(4rem + 10vh);
+		}
+	}
+	.shrink {
+		animation: shrink 0.5s forwards;
+	}
+	.grow {
+		animation: grow 0.5s forwards;
 	}
 </style>
