@@ -27,8 +27,6 @@
 	}
 	.layout-main {
 		min-height: 80vh;
-		margin: 0 0 0 3rem;
-		padding: 0 1rem;
 	}
 	.vertical-sidebar {
 		position: fixed;
@@ -43,5 +41,10 @@
 	.layout-footer {
 		display: flex;
 		justify-content: center;
+	}
+	@media only screen and (max-width: 480px) {
+		.vertical-sidebar {
+			display: none;
+		}
 	}
 </style>

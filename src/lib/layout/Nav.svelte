@@ -17,7 +17,6 @@
 		flex: 1 1 auto;
 		min-width: 15rem;
 		height: 100%;
-		padding-right: 10%;
 	}
 	.nav-link {
 		display: block;
