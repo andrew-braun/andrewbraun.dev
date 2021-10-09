@@ -26,6 +26,7 @@
 		min-width: 100%;
 		height: calc(4rem + 10vh);
 		padding: 0 5%;
+		opacity: 0;
 	}
 	.layout-header-scrolled {
 		height: calc(1rem + 5vh);
@@ -65,14 +66,18 @@
 		}
 		to {
 			height: calc(1rem + 5vh);
+			opacity: 1;
 		}
 	}
+
 	@keyframes grow {
 		from {
+			opacity: 0;
 			height: calc(1rem + 5vh);
 		}
 		to {
 			height: calc(4rem + 10vh);
+			opacity: 1;
 		}
 	}
 	.shrink {
