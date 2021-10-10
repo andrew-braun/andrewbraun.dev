@@ -27,6 +27,7 @@
 		height: calc(4rem + 10vh);
 		padding: 0 5%;
 		opacity: 0;
+		z-index: 100;
 	}
 	.layout-header-scrolled {
 		height: calc(1rem + 5vh);

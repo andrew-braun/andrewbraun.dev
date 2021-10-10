@@ -55,6 +55,10 @@
 		info: {
 			name: "info",
 			svg: `<circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line>`
+		},
+		upChevron: {
+			name: "up-chevron",
+			svg: `<polyline points="18 15 12 9 6 15"></polyline>`
 		}
 	};
 	let displayIcon = icons[name];

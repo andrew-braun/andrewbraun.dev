@@ -3,6 +3,7 @@
 	import { socialLinks } from "../data/social-links.js";
 	import Header from "../lib/layout/Header.svelte";
 	import TabBar from "../lib/layout/TabBar.svelte";
+	import ScrollUpChevron from "../lib/layout/ScrollUpChevron.svelte";
 </script>
 
 <div class="main-layout">
@@ -19,6 +20,7 @@
 		<p>Made by Andrew Braun</p>
 	</footer>
 	<TabBar />
+	<ScrollUpChevron />
 </div>
 
 <style>
