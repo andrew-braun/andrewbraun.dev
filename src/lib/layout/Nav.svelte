@@ -1,9 +1,7 @@
 <script>
-	export let hideOnMobile = false;
-	console.log(hideOnMobile);
 </script>
 
-<nav class={`main-nav ${hideOnMobile ? "hidden" : ""}`}>
+<nav class="main-nav">
 	<a class="nav-link" id="about-link" href="#about">About</a>
 	<a class="nav-link" id="contact-link" href="#contact">Contact</a>
 	<a class="nav-link" id="my-work-link" href="#my-work">My Work</a>
@@ -25,38 +23,6 @@
 
 	@media only screen and (max-width: 768px) {
 		.main-nav {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: repeat(3, 1rem);
-			padding: 0.2rem 0;
-			grid-gap: 0;
-		}
-		.nav-link {
-			padding: 0.5rem;
-			text-align: center;
-		}
-		#about-link {
-			grid-column: 1;
-			grid-row: 2/4;
-			border: 1px solid black;
-			border-width: 1px 0 0 0;
-		}
-		#contact-link {
-			grid-column: 2;
-			grid-row: 1/3;
-			border: 1px solid black;
-			border-radius: 10px;
-		}
-		#my-work-link {
-			grid-column: 3;
-			grid-row: 2/4;
-			border: 1px solid black;
-			border-width: 1px 0 0 0;
-		}
-	}
-
-	@media only screen and (max-width: 768px) {
-		.hidden {
 			display: none;
 		}
 	}

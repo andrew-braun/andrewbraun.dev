@@ -13,7 +13,7 @@
 		</div>
 		<p class={`site-title ${y > 50 ? "site-title-scrolled" : ""}`}>AndrewBraun.dev</p>
 	</div>
-	<Nav hideOnMobile={true} />
+	<Nav />
 </header>
 
 <style>
