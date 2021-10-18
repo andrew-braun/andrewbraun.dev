@@ -8,7 +8,10 @@
 
 <div class="content-container">
 	<section class="hero-section">
-		<h1>AndrewBraun.dev</h1>
+		<div class="hero-flavor-container" />
+		<div class="hero-info-container">
+			<h1>AndrewBraun.dev</h1>
+		</div>
 	</section>
 	<section class="my-work-section page-section">
 		<h2 id="my-work">My Work</h2>
@@ -97,10 +100,29 @@
 		padding: 1rem calc(1.5rem + 4vw) 1rem calc(2.5rem + 4vw);
 	}
 	.hero-section {
+		display: grid;
+		grid-template-columns: 2fr 4fr;
+		grid-template-areas: "flavor info";
 		width: 100%;
-		padding: 7rem calc(1.5rem + 4vw) 0 calc(2.5rem + 4vw);
 		min-height: 80vh;
 		background: lightblue;
+	}
+	.hero-flavor-container {
+		padding: 7rem 0 0 calc(2.5rem + 4vw);
+		grid-area: flavor;
+		background: lightcoral;
+	}
+	.hero-info-container {
+		padding: 7rem calc(1.5rem + 4vw) 0 0;
+		grid-area: info;
+	}
+	@media screen and (max-width: 768px) {
+		.hero-section {
+			grid-template-columns: 100%;
+			grid-template-areas:
+				"flavor"
+				"info";
+		}
 	}
 	.my-work-section {
 		background: lightgreen;
