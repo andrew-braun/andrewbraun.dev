@@ -173,7 +173,16 @@
 			</div>
 		</div>
 		<div class="hero-info-container">
-			<h1>AndrewBraun.dev</h1>
+			<div class="hero-info-text">
+				<!-- Add links to socials on hover-->
+				<p>I'm <span class="extra-info-text">Andrew Braun</span></p>
+				<!--Add list of languages on hover-->
+				<p>I write <span class="extra-info-text">code</span>,</p>
+				<!--Add links on hover-->
+				<p>build <span class="extra-info-text">websites</span>,</p>
+				<!--Other links-->
+				<p>and do other <span class="extra-info-text">nerd things</span></p>
+			</div>
 		</div>
 	</section>
 	<section class="my-work-section page-section">
@@ -264,21 +273,27 @@
 	}
 	.hero-section {
 		display: grid;
-		grid-template-columns: 3fr 4fr;
+		grid-template-columns: 2fr 5fr;
 		grid-template-areas: "flavor info";
 		width: 100%;
-		min-height: 80vh;
+		min-height: 90vh;
 		background: lightblue;
 	}
 	.hero-flavor-container {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
 		grid-area: flavor;
+		padding-top: 3rem;
 		background: lightcoral;
+		min-height: 50vh;
+		min-width: 20rem;
 	}
 	.hero-flavor-image {
+		position: absolute;
+		left: calc(4rem + 10vw);
+		display: flex;
+		justify-content: center;
 		max-width: 280px;
 		max-height: 280px;
 	}
@@ -289,16 +304,49 @@
 	.hero-info-container {
 		padding: 7rem calc(1.5rem + 4vw) 0 0;
 		grid-area: info;
+		display: flex;
+		justify-content: center;
+	}
+	.extra-info-text {
+		font-size: 1.5rem;
+		font-weight: 700;
 	}
 	@media screen and (max-width: 768px) {
 		.hero-section {
-			grid-template-columns: 100%;
+			display: flex;
+			flex-direction: column;
+			/* grid-template-columns: 100%;
 			grid-template-areas:
 				"flavor"
-				"info";
+				"info"; */
 		}
 		.hero-info-container {
 			padding: 7rem calc(1.5rem + 4vw) 0 calc(2.5rem + 4vw);
+			z-index: 10;
+		}
+		.hero-info-container {
+			color: white;
+		}
+		.hero-flavor-container {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1;
+		}
+		.hero-flavor-container::after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			content: "";
+			background: hsla(0, 0%, 0%, 0.3);
+		}
+		.hero-flavor-image {
+			position: static;
+			max-width: 280px;
+			max-height: 280px;
 		}
 	}
 	.my-work-section {

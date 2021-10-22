@@ -11,7 +11,7 @@
 				<a href={item.link}>
 					<Icon
 						name={item.name}
-						strokeWidth={item.name === "polywork" ? "0.08rem" : undefined}
+						strokeWidth={item.name === "polywork" ? "0.05rem" : "0.08rem"}
 						class={`icon icon-${item.name}`}
 					/>
 				</a>
@@ -24,7 +24,6 @@
 
 <style>
 	.sidebar-content {
-		padding-top: 15vh;
 	}
 	.sidebar-content a {
 		display: block;

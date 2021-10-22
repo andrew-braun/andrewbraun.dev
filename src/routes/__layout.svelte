@@ -34,11 +34,14 @@
 		position: fixed;
 		display: flex;
 		justify-content: center;
-		width: 3rem;
+		max-width: 6rem;
+		z-index: 100;
 	}
 	.left-bar {
-		left: 0;
-		top: 6rem;
+		padding: 8px 0 0px 3.5%;
+		top: 40%;
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
 	}
 	.layout-footer {
 		display: flex;
