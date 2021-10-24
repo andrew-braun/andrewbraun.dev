@@ -11,7 +11,8 @@
 				<a href={item.link}>
 					<Icon
 						name={item.name}
-						strokeWidth={item.name === "polywork" ? "0.05rem" : "0.08rem"}
+						strokeWidth={item.name === "polywork" ? "0.02rem" : "0.04rem"}
+						hoverColor={["email", "codepen", "polywork"].includes(item.name) ? "white" : null}
 						class={`icon icon-${item.name}`}
 					/>
 				</a>

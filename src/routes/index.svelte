@@ -277,7 +277,7 @@
 		grid-template-areas: "flavor info";
 		width: 100%;
 		min-height: 90vh;
-		background: lightblue;
+		background: var(--dark-background-1);
 	}
 	.hero-flavor-container {
 		display: flex;
@@ -285,7 +285,7 @@
 		align-items: center;
 		grid-area: flavor;
 		padding-top: 3rem;
-		background: lightcoral;
+		background: var(--color-4);
 		min-height: 50vh;
 		min-width: 20rem;
 	}
@@ -307,8 +307,11 @@
 		display: flex;
 		justify-content: center;
 	}
-	.extra-info-text {
+	.hero-info-text {
 		font-size: 1.5rem;
+	}
+	.extra-info-text {
+		font-size: 1.5em;
 		font-weight: 700;
 	}
 	@media screen and (max-width: 768px) {

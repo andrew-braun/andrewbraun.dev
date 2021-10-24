@@ -3,9 +3,9 @@
 	export let width = "2rem";
 	export let height = "2rem";
 	export let strokeColor = "black";
-	export let fillColor = "none";
+	export let fillColor = "var(--color-2)";
 	export let hoverColor;
-	export let strokeWidth = 2;
+	export let strokeWidth = "1";
 	export let focusable = false;
 	export let strokeLinecap = "round";
 	export let strokeLinejoin = "round";
@@ -28,7 +28,8 @@
 		},
 		email: {
 			name: "email",
-			svg: `<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>`
+			svg: `<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>`,
+			fillColor: "var(--color-3)"
 		},
 		linkedin: {
 			name: "linkedin",
@@ -75,7 +76,7 @@
 		changeIconColor();
 	};
 	const handleMouseOut = (event) => {
-		fillColor = "none";
+		fillColor = "var(--color-2)";
 		strokeColor = "black";
 	};
 </script>
