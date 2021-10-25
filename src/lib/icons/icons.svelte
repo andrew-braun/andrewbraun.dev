@@ -5,6 +5,7 @@
 	export let strokeColor = "black";
 	export let fillColor = "var(--color-2)";
 	export let hoverColor;
+	export let noFill = false;
 	export let strokeWidth = "1";
 	export let focusable = false;
 	export let strokeLinecap = "round";
@@ -59,7 +60,8 @@
 		},
 		upChevron: {
 			name: "up-chevron",
-			svg: `<polyline points="18 15 12 9 6 15"></polyline>`
+			svg: `<polyline points="18 15 12 9 6 15"></polyline>`,
+			fillColor: "transparent"
 		}
 	};
 	let displayIcon = icons[name];

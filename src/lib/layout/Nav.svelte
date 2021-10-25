@@ -19,6 +19,10 @@
 	.nav-link {
 		display: block;
 		padding: 1rem;
+		color: var(--dark-text-1);
+	}
+	.nav-link:hover {
+		border-color: white;
 	}
 
 	@media only screen and (max-width: 768px) {

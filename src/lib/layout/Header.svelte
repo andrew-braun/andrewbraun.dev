@@ -31,7 +31,7 @@
 	}
 	.layout-header-scrolled {
 		height: calc(1rem + 5vh);
-		background: var(--background-1);
+		background: var(--dark-background-1);
 		z-index: 100;
 	}
 	.site-branding {

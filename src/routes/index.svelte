@@ -1,5 +1,6 @@
 <script>
 	import "/src/global.css";
+	import Button from "../lib/ui/Button.svelte";
 </script>
 
 <svelte:head>
@@ -183,6 +184,9 @@
 				<!--Other links-->
 				<p>and do other <span class="extra-info-text">nerd things</span></p>
 			</div>
+			<div class="hero-cta">
+				<Button link="#contact">Do nerd things for me</Button>
+			</div>
 		</div>
 	</section>
 	<section class="my-work-section page-section">
@@ -305,7 +309,9 @@
 		padding: 7rem calc(1.5rem + 4vw) 0 0;
 		grid-area: info;
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
 	}
 	.hero-info-text {
 		font-size: 1.5rem;
@@ -353,12 +359,12 @@
 		}
 	}
 	.my-work-section {
-		background: lightgreen;
-	}
-	.contact-section {
-		background: lightslategrey;
+		background: var(--dark-background-2);
 	}
 	.about-section {
-		background: skyblue;
+		background: var(--dark-background-1);
+	}
+	.contact-section {
+		background: var(--dark-background-2);
 	}
 </style>

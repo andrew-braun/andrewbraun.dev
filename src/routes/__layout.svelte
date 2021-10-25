@@ -3,7 +3,7 @@
 	import { socialLinks } from "../data/social-links.js";
 	import Header from "../lib/layout/Header.svelte";
 	import TabBar from "../lib/layout/TabBar.svelte";
-	import ScrollUpChevron from "../lib/layout/ScrollUpChevron.svelte";
+	import ScrollUpChevron from "../lib/ui/ScrollUpChevron.svelte";
 </script>
 
 <div class="main-layout">

@@ -21,7 +21,7 @@
 		right: 2vw;
 		width: 2.2rem;
 		height: 2.2rem;
-		background: gray;
+		background: var(--color-3);
 		border-radius: 50%;
 		text-align: center;
 		opacity: 0.6;
@@ -30,7 +30,7 @@
 	}
 	.scroll-up-chevron:hover {
 		cursor: pointer;
-		opacity: 0.3;
+		opacity: 0.5;
 	}
 	:global(.up-chevron-icon) {
 		position: sticky;
