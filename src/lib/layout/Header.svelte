@@ -1,13 +1,20 @@
 <script>
 	import Logo from "../branding/Logo.svelte";
 	import Nav from "../layout/Nav.svelte";
+	import scrollUp from "../../helpers/scrollUp";
 	import "../../global.css";
 	let y;
 </script>
 
 <svelte:window bind:scrollY={y} />
 <header class={`layout-header ${y > 50 ? "layout-header-scrolled shrink" : "grow"}`}>
-	<div class="site-branding">
+	<div
+		class="site-branding"
+		role="button"
+		tabindex="0"
+		on:click={scrollUp}
+		on:keypress={(event) => (event.key === "Enter" ? scrollUp() : "")}
+	>
 		<div class={`header-logo ${y > 50 ? "header-logo-scrolled" : ""}`}>
 			<Logo background={true} />
 		</div>
@@ -41,6 +48,9 @@
 		flex: 1 1 auto;
 		min-width: 25%;
 		height: 100%;
+	}
+	.site-branding:hover {
+		cursor: pointer;
 	}
 	.header-logo {
 		flex: 0 1 20%;

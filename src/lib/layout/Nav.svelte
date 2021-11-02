@@ -2,9 +2,9 @@
 </script>
 
 <nav class="main-nav">
-	<a class="nav-link" id="about-link" href="#about">About</a>
-	<a class="nav-link" id="contact-link" href="#contact">Contact</a>
-	<a class="nav-link" id="my-work-link" href="#my-work">My Work</a>
+	<a class="nav-link" id="about-link" href="#about" rel="external">About</a>
+	<a class="nav-link" id="contact-link" href="#contact" rel="external">Contact</a>
+	<a class="nav-link" id="my-work-link" href="#my-work" rel="external">My Work</a>
 </nav>
 
 <style>

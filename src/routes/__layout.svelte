@@ -35,11 +35,11 @@
 		display: flex;
 		justify-content: center;
 		max-width: 6rem;
-		z-index: 100;
+		z-index: 75;
 	}
 	.left-bar {
-		padding: 8px 0 0px 3.5%;
-		top: 40%;
+		padding: 8px 0 0px 2.5%;
+		top: 35%;
 		border-top: 1px solid black;
 		border-bottom: 1px solid black;
 	}

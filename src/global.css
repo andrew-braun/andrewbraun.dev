@@ -5,12 +5,13 @@
 
 	--color-1: hsla(23, 100%, 53%, 1);
 	--color-2: hsla(347, 100%, 61%, 1);
-	--color-3: hsla(181, 79%, 54%, 1);
+	--color-3: hsla(192, 59%, 48%, 1);
 	--color-4: hsla(261, 56%, 18%, 1);
 	--color-5: hsla(261, 89%, 7%, 1);
 
 	--dark-background-2: hsla(261, 56%, 18%, 1);
 	--dark-background-1: hsla(261, 89%, 7%, 1);
+	--dark-background-1-trans: hsla(261, 89%, 7%, 0.5);
 	--dark-text-1: hsla(0, 0%, 96%, 1);
 }
 
@@ -57,5 +58,6 @@ p {
 	display: flex;
 	padding-left: 0.5rem;
 	writing-mode: vertical-rl;
+	-webkit-text-orientation: sideways;
 	text-orientation: sideways;
 }

@@ -1,7 +1,7 @@
 <script>
 	export let name;
-	export let width = "2rem";
-	export let height = "2rem";
+	export let width = "1.8rem";
+	export let height = "1.8rem";
 	export let strokeColor = "black";
 	export let fillColor = "var(--color-2)";
 	export let hoverColor;

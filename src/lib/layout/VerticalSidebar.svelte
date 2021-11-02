@@ -28,6 +28,7 @@
 	}
 	.sidebar-content a {
 		display: block;
+		margin-top: 5px;
 	}
 	.sidebar-content a:hover {
 		transform: translateX(5px);

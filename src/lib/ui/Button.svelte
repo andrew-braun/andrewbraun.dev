@@ -31,17 +31,19 @@
 
 <style>
 	.button {
-		background: var(--color-1);
+		position: relative;
 		padding: 0.75rem;
 		border: none;
 		border-radius: 5px;
-		font-size: 1rem;
+		background: var(--color-1);
+		font-size: 1.25rem;
+		font-weight: 600;
 		color: var(--dark-text-1);
-		transition-duration: var(--transition-duration-short);
+		transition-duration: var(--transition-duration-long);
 		transition-timing-function: ease-in-out;
 	}
 	.button:hover {
 		cursor: pointer;
-		opacity: 0.8;
+		box-shadow: inset 20rem 0 0 0 var(--color-3);
 	}
 </style>

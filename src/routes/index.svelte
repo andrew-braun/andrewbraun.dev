@@ -183,9 +183,9 @@
 				<p>build <span class="extra-info-text">websites</span>,</p>
 				<!--Other links-->
 				<p>and do other <span class="extra-info-text">nerd things</span></p>
-			</div>
-			<div class="hero-cta">
-				<Button link="#contact">Do nerd things for me</Button>
+				<div class="hero-cta">
+					<Button link="#contact">Do nerd things for me</Button>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -298,27 +298,38 @@
 		left: calc(4rem + 10vw);
 		display: flex;
 		justify-content: center;
+		width: 100%;
+		height: 100%;
 		max-width: 280px;
 		max-height: 280px;
+		z-index: 20;
 	}
 	.hero-flavor-image svg {
 		max-width: 260px;
 		max-height: 260px;
 	}
 	.hero-info-container {
-		padding: 7rem calc(1.5rem + 4vw) 0 0;
+		position: relative;
 		grid-area: info;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
+		padding: 7rem calc(1.5rem + 4vw) 0 0;
+		z-index: 75;
 	}
 	.hero-info-text {
+		height: 100%;
+		background: var(--dark-background-1-trans);
 		font-size: 1.5rem;
 	}
 	.extra-info-text {
 		font-size: 1.5em;
 		font-weight: 700;
+	}
+	.hero-cta {
+		margin-top: 15%;
+		text-align: center;
 	}
 	@media screen and (max-width: 768px) {
 		.hero-section {
@@ -335,6 +346,9 @@
 		}
 		.hero-info-container {
 			color: white;
+		}
+		.hero-cta {
+			margin-top: 15%;
 		}
 		.hero-flavor-container {
 			position: absolute;

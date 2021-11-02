@@ -1,16 +1,9 @@
 <script>
 	import Icon from "../icons/icons.svelte";
-
-	const handleScrollUpClick = (event) => {
-		window.scroll({
-			top: 0,
-			left: 0,
-			behavior: "smooth"
-		});
-	};
+	import scrollUp from "../../helpers/scrollUp";
 </script>
 
-<div class="scroll-up-chevron" on:click={handleScrollUpClick}>
+<div class="scroll-up-chevron" on:click={scrollUp}>
 	<Icon name="upChevron" hoverColor="transparent" class="up-chevron-icon" />
 </div>
 
