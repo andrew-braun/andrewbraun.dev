@@ -5,15 +5,20 @@
 	export let link;
 	export let onClick;
 	export let noRouteChange = true;
+	export let width;
 
-	const buttonStyles = `background: ${background}; color: ${textColor}`;
+	const buttonStyles = `background: ${background}; color: ${textColor}; width: ${width}`;
 </script>
 
 {#if link}
 	<a
 		href={link}
 		class="button {className ?? ''}"
-		style={background || textColor ? (background || textColor ? buttonStyles : "") : null}
+		style={background || textColor || width
+			? background || textColor || width
+				? buttonStyles
+				: ""
+			: null}
 		on:click={onClick}
 		rel={noRouteChange ? (noRouteChange ? "external" : "") : ""}
 	>
@@ -39,12 +44,13 @@
 		background: var(--color-1);
 		font-size: 1.25rem;
 		font-weight: 600;
+		text-align: center;
 		color: var(--dark-text-1);
 		transition-duration: var(--transition-duration-long);
 		transition-timing-function: ease-in-out;
 	}
 	.button:hover {
 		cursor: pointer;
-		box-shadow: inset 20rem 0 0 0 var(--color-3);
+		box-shadow: inset 30rem 0 0 0 var(--color-3);
 	}
 </style>

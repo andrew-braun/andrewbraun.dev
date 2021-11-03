@@ -184,7 +184,7 @@
 				<!--Other links-->
 				<p>and do other <span class="extra-info-text">nerd things</span></p>
 				<div class="hero-cta">
-					<Button link="#contact">Do nerd things for me</Button>
+					<Button link="#contact" width="80%">Do nerd things for me</Button>
 				</div>
 			</div>
 		</div>
@@ -328,6 +328,8 @@
 		font-weight: 700;
 	}
 	.hero-cta {
+		display: flex;
+		justify-content: center;
 		margin-top: 15%;
 		text-align: center;
 	}
