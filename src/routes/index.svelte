@@ -335,10 +335,6 @@
 		.hero-section {
 			display: flex;
 			flex-direction: column;
-			/* grid-template-columns: 100%;
-			grid-template-areas:
-				"flavor"
-				"info"; */
 		}
 		.hero-info-container {
 			padding: 7rem calc(1.5rem + 4vw) 0 calc(2.5rem + 4vw);
@@ -356,6 +352,7 @@
 			left: 0;
 			right: 0;
 			z-index: 1;
+			min-height: 80vh;
 		}
 		.hero-flavor-container::after {
 			position: absolute;
@@ -370,6 +367,12 @@
 			position: static;
 			max-width: 280px;
 			max-height: 280px;
+		}
+	}
+	@media screen and (max-width: 480px) {
+		.hero-info-container {
+			padding-left: 5%;
+			padding-right: 5%;
 		}
 	}
 	.my-work-section {

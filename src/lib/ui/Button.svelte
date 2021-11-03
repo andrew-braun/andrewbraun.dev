@@ -32,6 +32,7 @@
 <style>
 	.button {
 		position: relative;
+		display: block;
 		padding: 0.75rem;
 		border: none;
 		border-radius: 5px;
