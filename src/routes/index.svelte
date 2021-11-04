@@ -289,7 +289,7 @@
 		align-items: center;
 		grid-area: flavor;
 		padding-top: 3rem;
-		background: var(--color-4);
+		background: var(--dark-background-2);
 		min-height: 50vh;
 		min-width: 20rem;
 	}

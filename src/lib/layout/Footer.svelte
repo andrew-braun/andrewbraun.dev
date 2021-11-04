@@ -2,7 +2,7 @@
 </script>
 
 <footer class="layout-footer">
-	<p>Made by Andrew Braun</p>
+	<p>Made with ❤️ by Andrew Braun</p>
 </footer>
 
 <style>
