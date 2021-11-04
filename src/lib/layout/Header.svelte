@@ -48,6 +48,7 @@
 		flex: 1 1 auto;
 		min-width: 25%;
 		height: 100%;
+		font-family: var(--heading-font);
 	}
 	.site-branding:hover {
 		cursor: pointer;

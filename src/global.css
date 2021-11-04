@@ -13,10 +13,15 @@
 	--dark-background-1: hsla(261, 89%, 7%, 1);
 	--dark-background-1-trans: hsla(261, 89%, 7%, 0.5);
 	--dark-text-1: hsla(0, 0%, 96%, 1);
+
+	--body-font: "Inter", "sans-serif";
+	--heading-font: "Raleway", "sans-serif";
+	// --heading-font: "Exo 2", "sans-serif";
 }
 
 /* Base element styles */
 html {
+	font-family: var(--body-font);
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 }
@@ -47,6 +52,7 @@ h4,
 h5,
 h6 {
 	margin: 0;
+	font-family: var(--heading-font);
 	color: var(--dark-text-1);
 }
 

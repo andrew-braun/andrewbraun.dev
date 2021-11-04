@@ -3,9 +3,7 @@
 	import Button from "../lib/ui/Button.svelte";
 </script>
 
-<svelte:head>
-	<title>AndrewBraun.dev - WordPress, React, Svelte, and More</title>
-</svelte:head>
+<svelte:head />
 
 <div class="content-container">
 	<section class="hero-section">
@@ -184,11 +182,12 @@
 				<!--Other links-->
 				<p>and do other <span class="extra-info-text">nerd things</span></p>
 				<div class="hero-cta">
-					<Button link="#contact" width="80%">Do nerd things for me</Button>
+					<Button link="mailto:andrew@andrewbraun.dev" width="80%">Do nerd things for me</Button>
 				</div>
 			</div>
 		</div>
 	</section>
+	<!---
 	<section class="my-work-section page-section">
 		<h2 id="my-work">My Work</h2>
 		<p>
@@ -265,6 +264,7 @@
 			fantastico convertido el sacamuelas le. Esa tuvo van gris anos paje algo para.
 		</p>
 	</section>
+-->
 </div>
 
 <style>
@@ -319,6 +319,7 @@
 		z-index: 75;
 	}
 	.hero-info-text {
+		font-family: var(--heading-font);
 		height: 100%;
 		background: var(--dark-background-1-trans);
 		font-size: 1.5rem;
@@ -331,7 +332,6 @@
 		display: flex;
 		justify-content: center;
 		margin-top: 15%;
-		text-align: center;
 	}
 	@media screen and (max-width: 768px) {
 		.hero-section {
