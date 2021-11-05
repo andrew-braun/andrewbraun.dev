@@ -26,7 +26,7 @@
 	</a>
 {:else}
 	<button
-		class="button {className ?? ''}"
+		class="button {className ? className : ''}"
 		style={background || textColor ? buttonStyles : ""}
 		on:click={onClick}
 	>
