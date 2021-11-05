@@ -1,5 +1,5 @@
 <script>
-	import Logo from "../../lib/branding/Logo.svelte";
+	// import Logo from "../branding/Logo.svelte";
 	import Nav from "../layout/Nav.svelte";
 	import scrollUp from "../../helpers/scrollUp";
 	import "../../global.css";
@@ -16,7 +16,7 @@
 		on:keypress={(event) => (event.key === "Enter" ? scrollUp() : "")}
 	>
 		<div class={`header-logo ${y > 50 ? "header-logo-scrolled" : ""}`}>
-			<Logo background={true} />
+			<!-- <Logo background={true} /> -->
 		</div>
 		<p class={`site-title ${y > 50 ? "site-title-scrolled" : ""}`}>AndrewBraun.dev</p>
 	</div>
