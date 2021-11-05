@@ -13,7 +13,7 @@
 {#if link}
 	<a
 		href={link}
-		class="button {className ?? ''}"
+		class="button {className ? className : ''}"
 		style={background || textColor || width
 			? background || textColor || width
 				? buttonStyles
