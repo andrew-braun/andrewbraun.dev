@@ -1,5 +1,5 @@
 <script>
-	import Logo from "../branding/Logo.svelte";
+	import Logo from "../../lib/branding/Logo.svelte";
 	import Nav from "../layout/Nav.svelte";
 	import scrollUp from "../../helpers/scrollUp";
 	import "../../global.css";
