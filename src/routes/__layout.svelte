@@ -48,12 +48,13 @@
 <style>
 	.main-layout {
 		min-height: 100vh;
+		background: var(--dark-background-1);
 	}
 	.layout-grid {
 		position: relative;
 	}
 	.layout-content {
-		min-height: 80vh;
+		min-height: 100vh;
 	}
 	.vertical-sidebar {
 		position: fixed;
