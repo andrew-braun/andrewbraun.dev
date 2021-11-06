@@ -36,7 +36,7 @@
 		<aside class="vertical-sidebar left-bar">
 			<VerticalSidebar class="left-vertical-sidebar" side="left" content={socialLinks} />
 		</aside>
-		<main class="layout-main">
+		<main class="layout-content">
 			<slot />
 		</main>
 	</section>
@@ -46,11 +46,14 @@
 </div>
 
 <style>
+	.main-layout {
+		min-height: 100vh;
+	}
 	.layout-grid {
 		position: relative;
 	}
-	.layout-main {
-		min-height: 100vh;
+	.layout-content {
+		min-height: 80vh;
 	}
 	.vertical-sidebar {
 		position: fixed;
