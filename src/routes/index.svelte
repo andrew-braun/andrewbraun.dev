@@ -373,8 +373,9 @@
 	}
 	@media screen and (max-width: 480px) {
 		.hero-info-container {
-			padding-left: 5%;
+			padding-top: 35%;
 			padding-right: 5%;
+			padding-left: 5%;
 		}
 	}
 	.my-work-section {
