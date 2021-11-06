@@ -1,3 +1,8 @@
 [build]
   command = "npm run build"
   publish = "build/"
+  
+[dev]
+ command = "svelte-kit dev"
+[functions]
+    node_bundler = "esbuild"
