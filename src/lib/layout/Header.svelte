@@ -1,6 +1,6 @@
 <script>
 	import Nav from "../layout/Nav.svelte";
-	import Logo from "../branding/Logo.svelte";
+
 	import scrollUp from "../../helpers/scrollUp";
 	import "../../global.css";
 	let y;
