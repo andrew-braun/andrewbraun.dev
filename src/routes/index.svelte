@@ -373,7 +373,7 @@
 	}
 	@media screen and (max-width: 480px) {
 		.hero-info-container {
-			padding-top: 35%;
+			padding-top: 40%;
 			padding-right: 5%;
 			padding-left: 5%;
 		}
