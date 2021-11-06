@@ -50,7 +50,7 @@
 		position: relative;
 	}
 	.layout-main {
-		min-height: 80vh;
+		min-height: 100vh;
 	}
 	.vertical-sidebar {
 		position: fixed;
