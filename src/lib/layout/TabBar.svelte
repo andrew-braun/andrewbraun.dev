@@ -28,6 +28,7 @@
 		align-items: center;
 		width: 100%;
 		min-height: 3rem;
+		z-index: 100;
 	}
 	.tab-bar .nav-link {
 		background: var(--dark-background-1);

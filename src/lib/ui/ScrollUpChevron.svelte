@@ -20,6 +20,7 @@
 		opacity: 0.6;
 		transition-duration: 0.2s;
 		transition-timing-function: ease-in-out;
+		z-index: 100;
 	}
 	.scroll-up-chevron:hover {
 		cursor: pointer;
