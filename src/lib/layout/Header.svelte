@@ -4,6 +4,14 @@
 	import scrollUp from "../../helpers/scrollUp";
 	import "../../global.css";
 	let y;
+
+	import { onMount } from "svelte";
+	import { fade } from "svelte/transition";
+	import { circIn } from "svelte/easing";
+	let init = false;
+	onMount(() => {
+		init = true;
+	});
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -18,7 +26,14 @@
 		<div class={`header-logo ${y > 50 ? "header-logo-scrolled" : ""}`}>
 			<Logo background={true} />
 		</div>
-		<p class={`site-title ${y > 50 ? "site-title-scrolled" : ""}`}>AndrewBraun.dev</p>
+		{#if init}
+			<p
+				class={`site-title ${y > 50 ? "site-title-scrolled" : ""}`}
+				transition:fade={{ duration: 600, easing: circIn }}
+			>
+				AndrewBraun.dev
+			</p>
+		{/if}
 	</div>
 	<Nav />
 </header>

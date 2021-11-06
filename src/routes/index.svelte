@@ -1,6 +1,16 @@
 <script>
 	import "/src/global.css";
 	import Button from "../lib/ui/Button.svelte";
+
+	import { onMount } from "svelte";
+	import { fade } from "svelte/transition";
+	import { circIn } from "svelte/easing";
+	let init = false;
+	const delay = 600;
+	const duration = 600;
+	onMount(() => {
+		init = true;
+	});
 </script>
 
 <svelte:head />
@@ -172,19 +182,37 @@
 			</div>
 		</div>
 		<div class="hero-info-container">
-			<div class="hero-info-text">
-				<!-- Add links to socials on hover-->
-				<p>I'm <span class="extra-info-text">Andrew Braun</span></p>
-				<!--Add list of languages on hover-->
-				<p>I write <span class="extra-info-text">code</span>,</p>
-				<!--Add links on hover-->
-				<p>build <span class="extra-info-text">websites</span>,</p>
-				<!--Other links-->
-				<p>and do other <span class="extra-info-text">nerd things</span></p>
-				<div class="hero-cta">
-					<Button link="mailto:andrew@andrewbraun.dev" width="80%">Do nerd things for me</Button>
+			{#if init}
+				<div class="hero-info-text">
+					<!-- Add links to socials on hover-->
+
+					<p transition:fade={{ duration: duration, easing: circIn }}>
+						I'm <span class="extra-info-text">Andrew Braun</span>
+					</p>
+
+					<!--Add list of languages on hover-->
+					<p transition:fade={{ delay: delay, duration: duration, easing: circIn }}>
+						I write <span class="extra-info-text">code</span>,
+					</p>
+					<!--Add links on hover-->
+					<p transition:fade={{ delay: delay * 2, duration: duration, easing: circIn }}>
+						build <span class="extra-info-text">websites</span>,
+					</p>
+					<!--Other links-->
+					<p transition:fade={{ delay: delay * 3, duration: duration, easing: circIn }}>
+						and do other <span class="extra-info-text">nerd things</span>
+					</p>
+					{#if init}
+						<div
+							class="hero-cta"
+							transition:fade={{ delay: delay * 4, duration: duration, easing: circIn }}
+						>
+							<Button link="mailto:andrew@andrewbraun.dev" width="80%">Do nerd things for me</Button
+							>
+						</div>
+					{/if}
 				</div>
-			</div>
+			{/if}
 		</div>
 	</section>
 	<!---
