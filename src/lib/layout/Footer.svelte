@@ -10,7 +10,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		min-height: 4rem;
+		min-height: 3rem;
 		background: var(--dark-background-2);
 		font-family: var(--heading-font);
 	}

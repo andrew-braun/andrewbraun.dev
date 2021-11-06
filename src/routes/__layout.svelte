@@ -25,13 +25,13 @@
 <style>
 	.main-layout {
 		min-height: 100vh;
-		background: var(--dark-background-1);
+		background: var(--dark-background-2);
 	}
 	.layout-grid {
 		position: relative;
 	}
 	.layout-content {
-		min-height: 100vh;
+		min-height: 80vh;
 	}
 	.vertical-sidebar {
 		position: fixed;
@@ -51,6 +51,9 @@
 		justify-content: center;
 	}
 	@media only screen and (max-width: 480px) {
+		.layout-content {
+			min-height: 100vh;
+		}
 		.vertical-sidebar {
 			display: none;
 		}
