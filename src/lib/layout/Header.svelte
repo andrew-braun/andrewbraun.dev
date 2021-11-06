@@ -29,7 +29,7 @@
 		{#if init}
 			<p
 				class={`site-title ${y > 50 ? "site-title-scrolled" : ""}`}
-				transition:fade={{ duration: 600, easing: circIn }}
+				transition:fade={{ duration: 600, delay: 400, easing: circIn }}
 			>
 				AndrewBraun.dev
 			</p>
