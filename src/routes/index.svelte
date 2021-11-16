@@ -1,6 +1,8 @@
 <script>
 	import "/src/global.css";
 	import Button from "../lib/ui/Button.svelte";
+	// import projects from "../helpers/api/cms.svelte";
+	import PortfolioContainer from "../lib/portfolio/PortfolioContainer.svelte";
 
 	import { onMount } from "svelte";
 	import { fade } from "svelte/transition";
@@ -213,6 +215,7 @@
 	</section>
 	<section class="my-work-section page-section">
 		<h2 id="my-work">My Work</h2>
+		<PortfolioContainer />
 	</section>
 
 	<!-- <section class="about-section page-section">
