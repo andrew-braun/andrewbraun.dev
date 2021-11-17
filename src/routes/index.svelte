@@ -214,7 +214,7 @@
 		</div>
 	</section>
 	<section class="my-work-section page-section">
-		<h2 id="my-work">My Work</h2>
+		<!-- <h2 id="my-work">My Work</h2> -->
 		<PortfolioContainer />
 	</section>
 

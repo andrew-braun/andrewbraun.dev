@@ -9,7 +9,7 @@
 </script>
 
 <div class="portfolio-container">
-	<h2>hi</h2>
+	<!-- <h2>hi</h2> -->
 	{#if projectList}
 		{#each projectList as project}
 			<p>{project.id}</p>
