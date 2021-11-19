@@ -1,5 +1,5 @@
-async function fetchProjects() {
-	const url = `https://cms.andrewbraun.dev/projects`;
+async function fetchStrapi(fetchUrl) {
+	const url = fetchUrl;
 
 	try {
 		const res = await fetch(url, {
@@ -17,4 +17,4 @@ async function fetchProjects() {
 	}
 }
 
-export { fetchProjects };
+export { fetchStrapi };

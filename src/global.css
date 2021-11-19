@@ -22,6 +22,7 @@
 /* Base element styles */
 html {
 	font-family: var(--body-font);
+	color: var(--dark-text-1);
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 }
