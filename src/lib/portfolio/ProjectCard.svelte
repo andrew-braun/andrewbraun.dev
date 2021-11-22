@@ -19,7 +19,9 @@
 	<div class="portfolio-card-tag-container">
 		{#if tags}
 			{#each tags as tag}
-				<span class="portfolio-card-tag">{tag.tagname}</span>
+				<a sveltekit:prefetch href="/tags/{tag.slug.toLowerCase()}" class="portfolio-card-tag"
+					>{tag.tagname}</a
+				>
 			{/each}
 		{/if}
 	</div>
@@ -43,6 +45,7 @@
 	.portfolio-card-tag-container {
 		display: flex;
 		flex-wrap: wrap;
+		padding: 3%;
 	}
 	.portfolio-card-tag {
 		padding: 0.2rem;
@@ -50,5 +53,6 @@
 		border-radius: 5px;
 		background: var(--color-1);
 		font-size: 0.8rem;
+		color: var(--color-5);
 	}
 </style>

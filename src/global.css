@@ -57,6 +57,10 @@ h6 {
 	color: var(--dark-text-1);
 }
 
+h2 {
+	font-size: 2rem;
+}
+
 p {
 	color: var(--dark-text-1);
 }
@@ -67,4 +71,15 @@ p {
 	writing-mode: vertical-rl;
 	-webkit-text-orientation: sideways;
 	text-orientation: sideways;
+}
+
+/* Put top page section below header */
+.global-top-section {
+	padding-top: 7rem;
+}
+
+/* Avoid social media sidebar */
+.global-center-content {
+	padding-right: calc(1.5rem + 4vw);
+	padding-left: calc(2.5rem + 4vw);
 }

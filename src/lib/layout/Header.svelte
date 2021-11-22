@@ -23,17 +23,20 @@
 		on:click={scrollUp}
 		on:keypress={(event) => (event.key === "Enter" ? scrollUp() : "")}
 	>
-		<div class={`header-logo ${y > 50 ? "header-logo-scrolled" : ""}`}>
-			<Logo background={true} />
-		</div>
-		{#if init}
-			<p
-				class={`site-title ${y > 50 ? "site-title-scrolled" : ""}`}
-				transition:fade={{ duration: 600, delay: 400, easing: circIn }}
-			>
-				AndrewBraun.dev
-			</p>
-		{/if}
+		<a sveltekit:prefetch href="/" class="logo-link">
+			<div class={`header-logo ${y > 50 ? "header-logo-scrolled" : ""}`}>
+				<Logo background={true} />
+			</div>
+
+			{#if init}
+				<p
+					class={`site-title ${y > 50 ? "site-title-scrolled" : ""}`}
+					transition:fade={{ duration: 600, delay: 400, easing: circIn }}
+				>
+					AndrewBraun.dev
+				</p>
+			{/if}
+		</a>
 	</div>
 	<Nav />
 </header>
@@ -41,12 +44,8 @@
 <style>
 	.layout-header {
 		position: fixed;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex-wrap: wrap;
-		min-width: 100%;
 		height: calc(4rem + 10vh);
+		min-width: 100%;
 		padding: 5% 2%;
 		opacity: 0;
 		z-index: 100;
@@ -61,8 +60,8 @@
 		display: flex;
 		align-items: center;
 		flex: 1 1 auto;
-		min-width: 25%;
 		height: 100%;
+
 		font-family: var(--heading-font);
 	}
 	.site-branding:hover {
@@ -75,6 +74,14 @@
 	}
 	.header-logo-scrolled {
 		max-width: 2.5rem;
+	}
+	.logo-link {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-wrap: wrap;
+		flex-grow: 1;
+		width: clamp(10rem, 25%, 15rem);
 	}
 	.site-title {
 		font-size: 1.25rem;

@@ -187,7 +187,7 @@
 				>
 			</div>
 		</div>
-		<div class="hero-info-container">
+		<div class="hero-info-container global-top-section">
 			{#if init}
 				<div
 					class="hero-info-text"
@@ -220,8 +220,10 @@
 		</div>
 	</section>
 	<section class="my-work-section page-section">
-		<!-- <h2 id="my-work">My Work</h2> -->
-		<PortfolioContainer />
+		<h2 id="my-work">My Work</h2>
+		<div class="my-work-portfolio-items">
+			<PortfolioContainer />
+		</div>
 	</section>
 
 	<!-- <section class="about-section page-section">
@@ -317,7 +319,7 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
-		padding: 7rem calc(1.5rem + 4vw) 0 0;
+
 		z-index: 75;
 	}
 	.hero-info-text {
@@ -380,8 +382,16 @@
 			padding-left: 5%;
 		}
 	}
+
 	.my-work-section {
 		background: var(--dark-background-2);
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+	#my-work {
+		padding: 1rem 0;
+	}
+	.my-work-portfolio-items {
 	}
 	.about-section {
 		background: var(--dark-background-1);

@@ -22,3 +22,10 @@
 		{/each}
 	{/if}
 </div>
+
+<style>
+	.portfolio-container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+</style>
