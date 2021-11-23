@@ -2,13 +2,6 @@
 	import ProjectCard from "./ProjectCard.svelte";
 
 	export let projects;
-	// import { fetchStrapi } from "../../helpers/api/fetchStrapi.js";
-	// let projectData;
-
-	// fetchStrapi(`https://cms.andrewbraun.dev/projects`).then((object) => {
-	// 	projectData = object;
-	// 	console.log(projectData);
-	// });
 </script>
 
 <div class="portfolio-container">

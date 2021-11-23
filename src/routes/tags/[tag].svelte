@@ -30,15 +30,8 @@
 		slug = props.params.tag;
 	});
 
-	// let projectList;
-
-	// fetchStrapi(`https://cms.andrewbraun.dev/tags?slug=${slug}`).then((object) => {
-	// 	projectList = object[0].projects;
-	// 	console.log(projectList);
-	// });
 	export let tagData;
 	let projects = tagData[0].projects;
-	console.log(projects);
 </script>
 
 <section class="tagged-projects-section global-top-section global-center-content">
