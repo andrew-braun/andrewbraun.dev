@@ -1,3 +1,24 @@
+<script context="module">
+	export async function load({ page, fetch, session, stuff }) {
+		const url = `/api/projects`;
+		const res = await fetch(url);
+
+		if (res.ok) {
+			return {
+				props: {
+					projects: await res.json()
+				}
+			};
+		}
+
+		return {
+			status: res.status,
+			error: new Error(`Could not load ${url}`)
+		};
+	}
+	export const prerender = true;
+</script>
+
 <script>
 	import "/src/global.css";
 	import Button from "../lib/ui/Button.svelte";
@@ -16,9 +37,11 @@
 	onMount(() => {
 		init = true;
 	});
-	fetchStrapi(`https://cms.andrewbraun.dev/projects`).then((data) => {
-		projectData.set(data);
-	});
+	// fetchStrapi(`https://cms.andrewbraun.dev/projects`).then((data) => {
+	// 	projectData.set(data);
+	// });
+
+	export let projects;
 </script>
 
 <div class="content-container">
@@ -222,7 +245,7 @@
 	<section class="my-work-section page-section">
 		<h2 id="my-work">My Work</h2>
 		<div class="my-work-portfolio-items">
-			<PortfolioContainer />
+			<PortfolioContainer {projects} />
 		</div>
 	</section>
 
