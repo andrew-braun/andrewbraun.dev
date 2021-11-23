@@ -24,8 +24,6 @@
 	import Button from "../lib/ui/Button.svelte";
 	// import projects from "../helpers/api/cms.svelte";
 	import PortfolioContainer from "../lib/portfolio/PortfolioContainer.svelte";
-	import { fetchStrapi } from "../helpers/api/fetchStrapi.js";
-	import { projectData } from "../stores/strapiData.js";
 
 	import { onMount } from "svelte";
 	import { fade } from "svelte/transition";
@@ -37,9 +35,6 @@
 	onMount(() => {
 		init = true;
 	});
-	// fetchStrapi(`https://cms.andrewbraun.dev/projects`).then((data) => {
-	// 	projectData.set(data);
-	// });
 
 	export let projects;
 </script>
