@@ -21,14 +21,14 @@
 
 <script>
 	import { page } from "$app/stores";
-	// import { fetchStrapi } from "../../helpers/api/fetchStrapi";
-
-	import ProjectCard from "../../lib/portfolio/ProjectCard.svelte";
+	import PortfolioContainer from "../../lib/portfolio/PortfolioContainer.svelte";
 
 	let slug;
 	page.subscribe((props) => {
 		slug = props.params.tag;
 	});
+
+	console.log(page.params);
 
 	export let tagData;
 	let projects = tagData[0].projects;
@@ -37,15 +37,7 @@
 <section class="tagged-projects-section global-top-section global-center-content">
 	<h2 class="tag-title">{slug}</h2>
 	<div class="tagged-projects-container">
-		{#if projects}
-			{#each projects as project}
-				<ProjectCard
-					name={project.name}
-					featuredImageUrl={project.featured_image.formats.small.url}
-					link={project.link}
-				/>
-			{/each}
-		{/if}
+		<PortfolioContainer {projects} />
 	</div>
 </section>
 
