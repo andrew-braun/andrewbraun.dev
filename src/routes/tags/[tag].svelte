@@ -1,10 +1,27 @@
 <script context="module">
+	export async function load({ page, fetch, session, stuff }) {
+		const url = `/api/tags/${page.params.tag}`;
+		const res = await fetch(url);
+
+		if (res.ok) {
+			return {
+				props: {
+					tagData: await res.json()
+				}
+			};
+		}
+
+		return {
+			status: res.status,
+			error: new Error(`Could not load ${url}`)
+		};
+	}
 	export const prerender = true;
 </script>
 
 <script>
 	import { page } from "$app/stores";
-	import { fetchStrapi } from "../../helpers/api/fetchStrapi";
+	// import { fetchStrapi } from "../../helpers/api/fetchStrapi";
 
 	import ProjectCard from "../../lib/portfolio/ProjectCard.svelte";
 
@@ -13,19 +30,22 @@
 		slug = props.params.tag;
 	});
 
-	let projectList;
+	// let projectList;
 
-	fetchStrapi(`https://cms.andrewbraun.dev/tags?slug=${slug}`).then((object) => {
-		projectList = object[0].projects;
-		console.log(projectList);
-	});
+	// fetchStrapi(`https://cms.andrewbraun.dev/tags?slug=${slug}`).then((object) => {
+	// 	projectList = object[0].projects;
+	// 	console.log(projectList);
+	// });
+	export let tagData;
+	let projects = tagData[0].projects;
+	console.log(projects);
 </script>
 
 <section class="tagged-projects-section global-top-section global-center-content">
 	<h2 class="tag-title">{slug}</h2>
 	<div class="tagged-projects-container">
-		{#if projectList}
-			{#each projectList as project}
+		{#if projects}
+			{#each projects as project}
 				<ProjectCard
 					name={project.name}
 					featuredImageUrl={project.featured_image.formats.small.url}
