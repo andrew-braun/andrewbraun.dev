@@ -18,7 +18,6 @@
 			/>
 		</div>
 		<span class="portfolio-card-name">{name}</span>
-		<!-- <p class="portfolio-card-excerpt">{excerpt}</p> -->
 	</a>
 	<div class="portfolio-card-tag-container">
 		{#if tags}
@@ -29,15 +28,32 @@
 			{/each}
 		{/if}
 	</div>
+	<div class="portfolio-card-slide">
+		<p class="portfolio-card-excerpt">{excerpt}</p>
+	</div>
 </article>
 
 <style>
 	.portfolio-card {
 		position: relative;
 		max-width: 280px;
+		min-height: 200px;
 		border-radius: 5px;
 		text-align: center;
 		background: linear-gradient(180deg, var(--color-2) 40%, transparent);
+
+		/* transition: all 0.3s ease-in-out; */
+	}
+
+	.portfolio-card-slide {
+		position: relative;
+		opacity: 0;
+		transform: translateY(-200px);
+		transition: transform 0.3s ease-in-out, opacity 0.6s ease-in;
+	}
+	.portfolio-card:hover .portfolio-card-slide {
+		opacity: 1;
+		transform: translateY(0px);
 	}
 	.portfolio-card-image-wrapper {
 		max-width: 280px;
