@@ -13,6 +13,7 @@
 				featuredImageUrl={project.featured_image.formats.small.url}
 				link={project.link}
 				tags={project.tags}
+				excerpt={project.description}
 			/>
 		{/each}
 	{/if}

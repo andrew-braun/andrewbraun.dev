@@ -2,6 +2,7 @@
 	export let background;
 	export let className;
 	export let textColor;
+	export let fontSize;
 	export let link;
 	export let onClick;
 	export let noRouteChange = true;
@@ -14,13 +15,14 @@
 	<a
 		href={link}
 		class="button {className ? className : ''}"
-		style={background || textColor || width
+		style={background || textColor || width || fontSize
 			? background || textColor || width
 				? buttonStyles
 				: ""
 			: null}
 		on:click={onClick}
 		rel={noRouteChange ? (noRouteChange ? "external" : "") : ""}
+		sveltekit:prefetch
 	>
 		<slot />
 	</a>

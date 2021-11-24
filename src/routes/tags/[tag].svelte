@@ -28,8 +28,6 @@
 		slug = props.params.tag;
 	});
 
-	console.log(page.params);
-
 	export let tagData;
 	let projects = tagData[0].projects;
 </script>

@@ -2,6 +2,7 @@
 :root {
 	--transition-duration-short: 0.3s;
 	--transition-duration-long: 0.5s;
+	--transition-duration-very-long: 0.7s;
 
 	--color-1: hsla(23, 100%, 53%, 1);
 	--color-2: hsla(347, 100%, 61%, 1);
