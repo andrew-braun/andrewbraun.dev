@@ -60,6 +60,7 @@
 	}
 	.portfolio-card-image {
 		width: 100%;
+		height: 150px;
 		border-radius: 5px 5px 0 0;
 	}
 	.portfolio-card-name {
