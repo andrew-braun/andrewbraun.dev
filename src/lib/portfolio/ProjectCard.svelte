@@ -20,43 +20,37 @@
 		<span class="portfolio-card-name">{name}</span>
 	</a>
 	<div class="portfolio-card-tag-container">
-		{#if tags}
-			{#each tags as tag}
-				<a sveltekit:prefetch href="/tags/{tag.slug.toLowerCase()}" class="portfolio-card-tag"
-					>{tag.tagname}</a
-				>
-			{/each}
-		{/if}
+		<div class="portfolio-card-tags">
+			{#if tags}
+				{#each tags as tag}
+					<a sveltekit:prefetch href="/tags/{tag.slug.toLowerCase()}" class="portfolio-card-tag"
+						>{tag.tagname}</a
+					>
+				{/each}
+			{/if}
+		</div>
 	</div>
-	<div class="portfolio-card-slide">
-		<p class="portfolio-card-excerpt">{excerpt}</p>
-	</div>
+	<Button {link}>Visit Site</Button>
 </article>
 
 <style>
 	.portfolio-card {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
 		position: relative;
-		max-width: 280px;
+		max-width: 250px;
 		min-height: 200px;
 		border-radius: 5px;
 		text-align: center;
+		margin: 1rem;
 		background: linear-gradient(180deg, var(--color-2) 40%, transparent);
 
 		/* transition: all 0.3s ease-in-out; */
 	}
 
-	.portfolio-card-slide {
-		position: relative;
-		opacity: 0;
-		transform: translateY(-200px);
-		transition: transform 0.3s ease-in-out, opacity 0.6s ease-in;
-	}
-	.portfolio-card:hover .portfolio-card-slide {
-		opacity: 1;
-		transform: translateY(0px);
-	}
 	.portfolio-card-image-wrapper {
-		max-width: 280px;
+		max-width: 250px;
 	}
 	.portfolio-card-image {
 		width: 100%;
@@ -64,7 +58,7 @@
 		border-radius: 5px 5px 0 0;
 	}
 	.portfolio-card-name {
-		color: var(--color-5);
+		color: var(--dark-background-text);
 		font-weight: bold;
 		font-size: 1.3rem;
 	}
@@ -74,18 +68,21 @@
 		border-bottom: none;
 		border-color: none;
 	}
-	.portfolio-card-excerpt {
-		margin: 0;
-		padding: 0.3rem 1rem;
-		text-align: left;
-		font-size: 0.8rem;
-	}
 	.portfolio-card-tag-container {
+		min-height: 12rem;
+	}
+	.portfolio-card-tags {
 		display: flex;
 		flex-wrap: wrap;
+		align-items: flex-start;
+
 		padding: 3%;
 	}
 	.portfolio-card-tag {
+		flex: 0 1 auto;
+		display: flex;
+		align-items: center;
+		height: 2rem;
 		padding: 0.3rem;
 		margin: 0.2rem;
 		border-radius: 5px;
