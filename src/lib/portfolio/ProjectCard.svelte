@@ -1,5 +1,6 @@
 <script>
 	import Button from "../ui/Button.svelte";
+	import "../../animations.css";
 
 	export let name;
 	export let featuredImageUrl;
@@ -16,6 +17,7 @@
 				class="portfolio-card-image"
 				alt="Screenshot of {name}"
 			/>
+			<div class="portfolio-card-overlay">{excerpt}</div>
 		</div>
 		<span class="portfolio-card-name">{name}</span>
 	</a>
@@ -56,7 +58,24 @@
 	}
 
 	.portfolio-card-image-wrapper {
+		position: relative;
 		max-width: 250px;
+		overflow: hidden;
+	}
+	.portfolio-card-overlay {
+		position: absolute;
+		display: none;
+		top: 0;
+		right: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: hsla(0, 0%, 0%, 0.5);
+		transform: translateY(-150px);
+	}
+	.portfolio-card-image-wrapper:hover .portfolio-card-overlay {
+		animation: slideDown 0.3s forwards, fadeIn 0.3s forwards;
+		display: block;
 	}
 	.portfolio-card-image {
 		width: 100%;
