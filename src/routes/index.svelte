@@ -22,7 +22,7 @@
 <script>
 	import "/src/global.css";
 	import Button from "../lib/ui/Button.svelte";
-	// import projects from "../helpers/api/cms.svelte";
+
 	import PortfolioContainer from "../lib/portfolio/PortfolioContainer.svelte";
 
 	import { onMount } from "svelte";

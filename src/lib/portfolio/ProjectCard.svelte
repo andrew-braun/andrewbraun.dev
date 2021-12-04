@@ -23,10 +23,16 @@
 		<div class="portfolio-card-tags">
 			{#if tags}
 				{#each tags as tag}
-					<a sveltekit:prefetch href="/tags/{tag.slug.toLowerCase()}" class="portfolio-card-tag"
-						>{tag.tagname}</a
+					<a
+						href="/tags/{tag.slug.toLowerCase()}"
+						class="portfolio-card-tag"
+						sveltekit:noscroll
+						sveltekit:prefetch>{tag.tagname}</a
 					>
 				{/each}
+			{/if}
+			{#if tags && tags.length >= 8}
+				<Button className="tags-read-more open-modal" fontSize="0.85rem">...and more</Button>
 			{/if}
 		</div>
 	</div>
@@ -69,12 +75,15 @@
 		border-color: none;
 	}
 	.portfolio-card-tag-container {
-		min-height: 12rem;
+		min-height: 11rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.portfolio-card-tags {
 		display: flex;
 		flex-wrap: wrap;
-		align-items: flex-start;
+		align-items: center;
 
 		padding: 3%;
 	}
@@ -87,7 +96,7 @@
 		margin: 0.2rem;
 		border-radius: 5px;
 		background: var(--dark-background-1);
-		font-size: 0.85rem;
+		font-size: 0.75rem;
 		color: var(--dark-background-text);
 		transition-duration: var(--transition-duration-very-long);
 		transition-timing-function: ease-in-out;

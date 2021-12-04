@@ -6,32 +6,35 @@
 	export let link;
 	export let onClick;
 	export let noRouteChange = true;
+	export let noScroll = true;
 	export let width;
 
-	const buttonStyles = `background: ${background}; color: ${textColor}; width: ${width}`;
+	const isStyled = background || textColor || width || fontSize;
+
+	const buttonStyles = `background: ${background}; 
+		color: ${textColor}; 
+		width: ${width};
+		font-size: ${fontSize};
+	`;
+
+	const returnedStyles = isStyled ? (isStyled ? buttonStyles : "") : null;
 </script>
 
 {#if link}
 	<a
 		href={link}
+		sveltekit:noscroll
+		sveltekit:keepfocus
 		class="button {className ? className : ''}"
-		style={background || textColor || width || fontSize
-			? background || textColor || width
-				? buttonStyles
-				: ""
-			: null}
-		on:click={onClick}
+		style={returnedStyles}
+		on:click={(event) => event.preventDefault()}
 		rel={noRouteChange ? (noRouteChange ? "external" : "") : ""}
 		sveltekit:prefetch
 	>
 		<slot />
 	</a>
 {:else}
-	<button
-		class="button {className ? className : ''}"
-		style={background || textColor ? buttonStyles : ""}
-		on:click={onClick}
-	>
+	<button class="button {className ? className : ''}" style={returnedStyles} on:click={onClick}>
 		<slot />
 	</button>
 {/if}
@@ -40,6 +43,7 @@
 	.button {
 		position: relative;
 		display: block;
+
 		padding: 0.75rem;
 		border: none;
 		border-radius: 5px;
@@ -51,8 +55,14 @@
 		transition-duration: var(--transition-duration-long);
 		transition-timing-function: ease-in-out;
 	}
+
 	.button:hover {
 		cursor: pointer;
 		box-shadow: inset 30rem 0 0 0 var(--color-3);
+	}
+	.tags-read-more {
+		margin: 0.2rem;
+		padding: 0.5rem;
+		background: linear-gradient(to right, var(--color-2), var(--color-3));
 	}
 </style>

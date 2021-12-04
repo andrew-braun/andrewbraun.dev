@@ -5,7 +5,6 @@
 </script>
 
 <div class="portfolio-container">
-	<!-- <h2>hi</h2> -->
 	{#if projects}
 		{#each projects as project}
 			<ProjectCard

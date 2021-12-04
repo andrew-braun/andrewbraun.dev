@@ -1,6 +1,6 @@
 <script context="module">
 	export async function load({ page, fetch, session, stuff }) {
-		const url = `/api/tags/${page.params.tag}`;
+		const url = `/api/projects?tags.tagname_contains=${page.params.tag}`;
 		const res = await fetch(url);
 
 		if (res.ok) {
@@ -21,6 +21,7 @@
 
 <script>
 	import { page } from "$app/stores";
+	import { afterUpdate } from "svelte";
 	import PortfolioContainer from "../../lib/portfolio/PortfolioContainer.svelte";
 
 	let slug;
@@ -28,8 +29,12 @@
 		slug = props.params.tag;
 	});
 
+	afterUpdate(() => {
+		projects = tagData;
+	});
+
 	export let tagData;
-	let projects = tagData[0].projects;
+	let projects = tagData;
 </script>
 
 <section class="tagged-projects-section global-top-section global-center-content">
