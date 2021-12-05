@@ -20,7 +20,13 @@
 
 	let isModalActive = false;
 
+	function handleMessage(event) {
+		console.log("Parent event firing!");
+		console.log(event.detail.text);
+	}
+
 	const toggleModal = (event) => {
+		event.preventDefault();
 		isModalActive = !isModalActive;
 	};
 </script>
@@ -55,7 +61,8 @@
 		</div>
 	</div>
 	<Button {link}>Visit Site</Button>
-	<Modal isOpen={isModalActive}><span slot="content">Sample Modal</span></Modal>
+	<Modal isOpen={isModalActive}><span slot="content" on:message={handleMessage}>{name}</span></Modal
+	>
 </article>
 
 <style>
@@ -89,6 +96,7 @@
 		top: 0;
 		right: 0;
 		left: 0;
+		opacity: 0;
 		height: 96%;
 		width: 100%;
 

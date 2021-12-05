@@ -1,15 +1,33 @@
 <script>
+	import { fade, blur, fly, slide, scale } from "svelte/transition";
 	import { clickOutside } from "../../helpers/clickOutside";
+	import { createEventDispatcher } from "svelte";
 
-	function handleClickOutside(event) {
-		isOpen = false;
+	const dispatch = createEventDispatcher();
+
+	const handleClickOutside = () => {
+		dispatch("message", {
+			text: "Hello!"
+		});
+	};
+	function sayHello() {
+		console.log("Child event firing!");
+		dispatch("message", {
+			text: "Hello!"
+		});
 	}
 
 	export let isOpen = false;
 </script>
 
 {#if isOpen}
-	<aside class="modal" use:clickOutside on:click_outside={handleClickOutside}>
+	<aside
+		class="modal"
+		transition:fade={{ duration: 500 }}
+		use:clickOutside
+		on:click_outside={handleClickOutside}
+	>
+		<button on:click={sayHello}>Close</button>
 		<slot name="content" />
 	</aside>
 {/if}
