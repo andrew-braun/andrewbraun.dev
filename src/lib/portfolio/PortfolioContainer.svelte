@@ -9,7 +9,7 @@
 		{#each projects as project}
 			<ProjectCard
 				name={project.name}
-				featuredImageUrl={project.featured_image.formats.small.url}
+				featuredImageUrl={project.featured_image.formats}
 				link={project.link}
 				tags={project.tags}
 				excerpt={project.description}

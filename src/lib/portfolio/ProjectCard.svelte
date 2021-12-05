@@ -1,6 +1,8 @@
 <script>
 	import Button from "../ui/Button.svelte";
 	import Modal from "../ui/Modal.svelte";
+	import PortfolioModalContent from "../portfolio/PortfolioModalContent.svelte";
+	import Tag from "./Tag.svelte";
 	import "../../animations.css";
 
 	export let name;
@@ -20,11 +22,6 @@
 
 	let isModalActive = false;
 
-	function handleMessage(event) {
-		console.log("Parent event firing!");
-		console.log(event.detail.text);
-	}
-
 	const toggleModal = (event) => {
 		event.preventDefault();
 		isModalActive = !isModalActive;
@@ -34,23 +31,18 @@
 <article class="portfolio-card">
 	<div class="portfolio-card-image-wrapper" on:click={toggleModal}>
 		<img
-			src="https://cms.andrewbraun.dev{featuredImageUrl}"
+			src="https://cms.andrewbraun.dev{featuredImageUrl.small.url}"
 			class="portfolio-card-image"
 			alt="Screenshot of {name}"
 		/>
 		<div class="portfolio-card-overlay"><p>{excerpt}</p></div>
 	</div>
-	<span class="portfolio-card-name">{name}</span>
+	<h3 class="portfolio-card-name">{name}</h3>
 	<div class="portfolio-card-tag-container">
 		<div class="portfolio-card-tags">
 			{#if tags}
 				{#each tags as tag}
-					<a
-						href="/tags/{tag.slug.toLowerCase()}"
-						class="portfolio-card-tag"
-						sveltekit:noscroll
-						sveltekit:prefetch>{tag.tagname}</a
-					>
+					<Tag tagname={tag.tagname} slug={tag.slug} />
 				{/each}
 			{/if}
 			{#if tags && tags.length >= 8}
@@ -61,7 +53,10 @@
 		</div>
 	</div>
 	<Button {link}>Visit Site</Button>
-	<Modal isOpen={isModalActive}><span slot="content" on:message={handleMessage}>{name}</span></Modal
+	<Modal bind:isOpen={isModalActive}
+		><span slot="content"
+			><PortfolioModalContent {name} {link} {tags} {excerpt} {featuredImageUrl} /></span
+		></Modal
 	>
 </article>
 
@@ -122,6 +117,7 @@
 		color: var(--dark-background-text);
 		font-weight: bold;
 		font-size: 1.3rem;
+		padding-top: 0.5rem;
 	}
 	.portfolio-card-link,
 	.portfolio-card-name:hover {
@@ -139,24 +135,6 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-
-		padding: 3%;
-	}
-	.portfolio-card-tag {
-		flex: 0 1 auto;
-		display: flex;
-		align-items: center;
-		height: 2rem;
-		padding: 0.3rem;
-		margin: 0.2rem;
-		border-radius: 5px;
-		background: var(--dark-background-1);
-		font-size: 0.75rem;
-		color: var(--dark-background-text);
-		transition-duration: var(--transition-duration-very-long);
-		transition-timing-function: ease-in-out;
-	}
-	.portfolio-card-tag:hover {
-		box-shadow: inset 8rem 0 0 0 var(--color-3);
+		padding: 0 3% 3% 3%;
 	}
 </style>
