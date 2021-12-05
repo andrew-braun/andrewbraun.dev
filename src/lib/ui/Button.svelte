@@ -27,7 +27,6 @@
 		sveltekit:keepfocus
 		class="button link {className ? className : ''}"
 		style={returnedStyles}
-		on:click={(event) => event.preventDefault()}
 		rel={noRouteChange ? (noRouteChange ? "external" : "") : ""}
 		sveltekit:prefetch
 	>
