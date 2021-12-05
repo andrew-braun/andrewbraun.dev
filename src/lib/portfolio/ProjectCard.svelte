@@ -1,5 +1,6 @@
 <script>
 	import Button from "../ui/Button.svelte";
+	import Modal from "../ui/Modal.svelte";
 	import "../../animations.css";
 
 	export let name;
@@ -7,20 +8,33 @@
 	export let link;
 	export let tags;
 	export let excerpt;
+
+	const excerptWordCount = excerpt.match(/(\w+)/g).length;
+
+	function truncateString(string, maxLength) {
+		// get the index of space after maxLength
+		const index = string.indexOf(" ", maxLength);
+		return index === -1 ? string : `${string.substring(0, index)}...`;
+	}
+	excerpt = truncateString(excerpt, 180);
+
+	let isModalActive = false;
+
+	const toggleModal = (event) => {
+		isModalActive = !isModalActive;
+	};
 </script>
 
 <article class="portfolio-card">
-	<a href={link} class="portfolio-card-link" sveltekit:prefetch>
-		<div class="portfolio-card-image-wrapper">
-			<img
-				src="https://cms.andrewbraun.dev{featuredImageUrl}"
-				class="portfolio-card-image"
-				alt="Screenshot of {name}"
-			/>
-			<div class="portfolio-card-overlay">{excerpt}</div>
-		</div>
-		<span class="portfolio-card-name">{name}</span>
-	</a>
+	<div class="portfolio-card-image-wrapper" on:click={toggleModal}>
+		<img
+			src="https://cms.andrewbraun.dev{featuredImageUrl}"
+			class="portfolio-card-image"
+			alt="Screenshot of {name}"
+		/>
+		<div class="portfolio-card-overlay"><p>{excerpt}</p></div>
+	</div>
+	<span class="portfolio-card-name">{name}</span>
 	<div class="portfolio-card-tag-container">
 		<div class="portfolio-card-tags">
 			{#if tags}
@@ -34,11 +48,14 @@
 				{/each}
 			{/if}
 			{#if tags && tags.length >= 8}
-				<Button className="tags-read-more open-modal" fontSize="0.85rem">...and more</Button>
+				<Button className="tags-read-more open-modal" onClick={toggleModal} fontSize="0.85rem"
+					>...and more</Button
+				>
 			{/if}
 		</div>
 	</div>
 	<Button {link}>Visit Site</Button>
+	<Modal isOpen={isModalActive}><span slot="content">Sample Modal</span></Modal>
 </article>
 
 <style>
@@ -62,19 +79,30 @@
 		max-width: 250px;
 		overflow: hidden;
 	}
+	.portfolio-card-image-wrapper:hover {
+		cursor: pointer;
+		animation: addGlow 0.8s forwards;
+	}
 	.portfolio-card-overlay {
 		position: absolute;
 		display: none;
 		top: 0;
 		right: 0;
 		left: 0;
-		height: 100%;
+		height: 96%;
 		width: 100%;
-		background: hsla(0, 0%, 0%, 0.5);
-		transform: translateY(-150px);
+
+		background: hsla(0, 0%, 0%, 0.7);
+		transform: translateY(-200px);
+	}
+	.portfolio-card-overlay p {
+		margin: 0rem;
+		padding: 0.5rem;
+		text-align: left;
+		font-size: 0.9rem;
 	}
 	.portfolio-card-image-wrapper:hover .portfolio-card-overlay {
-		animation: slideDown 0.3s forwards, fadeIn 0.3s forwards;
+		animation: slideDown 0.4s forwards, fadeIn 0.6s forwards;
 		display: block;
 	}
 	.portfolio-card-image {

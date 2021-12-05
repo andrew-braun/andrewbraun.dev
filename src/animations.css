@@ -15,3 +15,12 @@
 		opacity: 1;
 	}
 }
+
+@keyframes addGlow {
+	from {
+		box-shadow: none;
+	}
+	to {
+		box-shadow: 0px -5px 20px var(--color-3);
+	}
+}
