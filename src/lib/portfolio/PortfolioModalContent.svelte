@@ -1,5 +1,6 @@
 <script>
 	import Button from "../ui/Button.svelte";
+	import Tag from "./Tag.svelte";
 	export let name;
 	export let featuredImageUrl;
 	export let link;
@@ -20,12 +21,7 @@
 			<div class="portfolio-modal-tags">
 				{#if tags}
 					{#each tags as tag}
-						<a
-							href="/tags/{tag.slug.toLowerCase()}"
-							class="portfolio-card-tag"
-							sveltekit:noscroll
-							sveltekit:prefetch>{tag.tagname}</a
-						>
+						<Tag tagname={tag.tagname} slug={tag.slug} backgroundColor="var(--color-2)" />
 					{/each}
 				{/if}
 			</div>
@@ -45,6 +41,7 @@
 		grid-template-columns: 1fr 1fr;
 		width: 100%;
 		height: 100%;
+		overflow: auto;
 	}
 	.portfolio-modal-column {
 		position: relative;
@@ -61,5 +58,32 @@
 	}
 	.portfolio-modal-image {
 		width: 100%;
+	}
+	.portfolio-modal-tag-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 3% 5%;
+	}
+	.portfolio-modal-tags {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		padding: 0 3% 3% 3%;
+	}
+	.portfolio-modal-description {
+		padding: 2rem;
+		text-align: left;
+	}
+	@media screen and (max-width: 768px) {
+		.portfolio-modal-content-container {
+			grid-template-columns: 1fr;
+		}
+		.column-1 {
+			grid-column: 1;
+		}
+		.column-2 {
+			grid-column: 1;
+		}
 	}
 </style>

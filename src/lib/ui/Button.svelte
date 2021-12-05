@@ -25,7 +25,7 @@
 		href={link}
 		sveltekit:noscroll
 		sveltekit:keepfocus
-		class="button {className ? className : ''}"
+		class="button link {className ? className : ''}"
 		style={returnedStyles}
 		on:click={(event) => event.preventDefault()}
 		rel={noRouteChange ? (noRouteChange ? "external" : "") : ""}
@@ -34,7 +34,11 @@
 		<slot />
 	</a>
 {:else}
-	<button class="button {className ? className : ''}" style={returnedStyles} on:click={onClick}>
+	<button
+		class="button internal {className ? className : ''}"
+		style={returnedStyles}
+		on:click={onClick}
+	>
 		<slot />
 	</button>
 {/if}
@@ -56,7 +60,11 @@
 		transition-timing-function: ease-in-out;
 	}
 
-	.button:hover {
+	.button.internal:hover {
+		cursor: pointer;
+		box-shadow: inset 30rem 0 0 0 var(--color-3);
+	}
+	.button.link:hover {
 		cursor: pointer;
 		box-shadow: inset 30rem 0 0 0 var(--color-3);
 	}

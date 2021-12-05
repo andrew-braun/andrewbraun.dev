@@ -1,11 +1,20 @@
 <script>
 	export let tagname;
 	export let slug;
+	export let backgroundColor;
+
+	const tagStyles = {
+		background: backgroundColor
+	};
+	const hasStyles = Object.values(tagStyles);
+	const tagStylesString = Object.entries(tagStyles).join("").replace(",", ":");
+	console.log(tagStylesString);
 </script>
 
 <a
 	href="/tags/{slug.toLowerCase()}"
 	class="portfolio-card-tag"
+	style={tagStylesString}
 	sveltekit:noscroll
 	sveltekit:prefetch>{tagname}</a
 >
