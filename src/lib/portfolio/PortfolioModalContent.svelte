@@ -21,7 +21,12 @@
 			<div class="portfolio-modal-tags">
 				{#if tags}
 					{#each tags as tag}
-						<Tag tagname={tag.tagname} slug={tag.slug} backgroundColor="var(--color-2)" />
+						<Tag
+							tagname={tag.tagname}
+							slug={tag.slug}
+							backgroundColor="var(--color-2)"
+							fontWeight="bold"
+						/>
 					{/each}
 				{/if}
 			</div>

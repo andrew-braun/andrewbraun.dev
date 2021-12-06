@@ -9,16 +9,14 @@
 	export let featuredImageUrl;
 	export let link;
 	export let tags;
-	export let excerpt;
-
-	const excerptWordCount = excerpt.match(/(\w+)/g).length;
+	export let description;
 
 	function truncateString(string, maxLength) {
 		// get the index of space after maxLength
 		const index = string.indexOf(" ", maxLength);
 		return index === -1 ? string : `${string.substring(0, index)}...`;
 	}
-	excerpt = truncateString(excerpt, 180);
+	excerpt = truncateString(description, 180);
 
 	let isModalActive = false;
 

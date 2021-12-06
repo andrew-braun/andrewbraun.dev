@@ -2,13 +2,11 @@
 	export let tagname;
 	export let slug;
 	export let backgroundColor;
+	export let fontWeight;
 
-	const tagStyles = {
-		background: backgroundColor
-	};
-	const hasStyles = Object.values(tagStyles);
-	const tagStylesString = Object.entries(tagStyles).join("").replace(",", ":");
-	console.log(tagStylesString);
+	const tagStyles = [`background: ${backgroundColor};`, `font-weight: ${fontWeight};`];
+	const hasStyles = backgroundColor || fontWeight;
+	const tagStylesString = tagStyles.join(" ");
 </script>
 
 <a

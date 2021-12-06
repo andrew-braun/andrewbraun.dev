@@ -12,7 +12,7 @@
 				featuredImageUrl={project.featured_image.formats}
 				link={project.link}
 				tags={project.tags}
-				excerpt={project.description}
+				description={project.description}
 			/>
 		{/each}
 	{/if}
