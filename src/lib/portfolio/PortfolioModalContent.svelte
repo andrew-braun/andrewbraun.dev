@@ -6,6 +6,7 @@
 	export let link;
 	export let tags;
 	export let excerpt;
+	export let description;
 </script>
 
 <div class="portfolio-modal-content-container">
@@ -34,7 +35,7 @@
 	</div>
 	<div class="portfolio-modal-column column-2">
 		<h2 class="portfolio-modal-name">{name}</h2>
-		<p class="portfolio-modal-description">{excerpt}</p>
+		<p class="portfolio-modal-description">{description}</p>
 	</div>
 </div>
 

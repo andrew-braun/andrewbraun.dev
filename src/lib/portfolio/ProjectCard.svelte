@@ -16,7 +16,7 @@
 		const index = string.indexOf(" ", maxLength);
 		return index === -1 ? string : `${string.substring(0, index)}...`;
 	}
-	excerpt = truncateString(description, 180);
+	const excerpt = truncateString(description, 180);
 
 	let isModalActive = false;
 
@@ -53,7 +53,14 @@
 	<Button {link}>Visit Site</Button>
 	<Modal bind:isOpen={isModalActive}
 		><span slot="content"
-			><PortfolioModalContent {name} {link} {tags} {excerpt} {featuredImageUrl} /></span
+			><PortfolioModalContent
+				{name}
+				{link}
+				{tags}
+				{excerpt}
+				{featuredImageUrl}
+				{description}
+			/></span
 		></Modal
 	>
 </article>

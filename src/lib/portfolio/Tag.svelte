@@ -12,7 +12,7 @@
 <a
 	href="/tags/{slug.toLowerCase()}"
 	class="portfolio-card-tag"
-	style={tagStylesString}
+	style={hasStyles ? tagStylesString : ""}
 	sveltekit:noscroll
 	sveltekit:prefetch>{tagname}</a
 >
