@@ -36,8 +36,8 @@
 	}
 	.modal-close-button {
 		position: absolute;
-		top: 0;
-		right: 1.5rem;
+		top: 0.4rem;
+		right: 0.5rem;
 		padding: 0 0.6rem;
 		border: 0;
 		border-radius: 10px;

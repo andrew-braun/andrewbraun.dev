@@ -12,11 +12,13 @@
 <div class="portfolio-modal-content-container">
 	<div class="portfolio-modal-column column-1">
 		<div class="portfolio-modal-image-wrapper">
-			<img
-				src="https://cms.andrewbraun.dev{featuredImageUrl.large.url}"
-				class="portfolio-modal-image"
-				alt="Screenshot of {name}"
-			/>
+			<a href={link} alt="`Link to ${name}`">
+				<img
+					src="https://cms.andrewbraun.dev{featuredImageUrl.large.url}"
+					class="portfolio-modal-image"
+					alt="Screenshot of {name}"
+				/>
+			</a>
 		</div>
 		<div class="portfolio-modal-tag-container">
 			<div class="portfolio-modal-tags">
@@ -32,6 +34,7 @@
 				{/if}
 			</div>
 		</div>
+		<Button {link} width="80%">Visit Site</Button>
 	</div>
 	<div class="portfolio-modal-column column-2">
 		<h2 class="portfolio-modal-name">{name}</h2>
@@ -51,12 +54,16 @@
 	}
 	.portfolio-modal-column {
 		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 	.column-1 {
 		grid-column: 1;
 	}
 	.column-2 {
 		grid-column: 2;
+		padding: 4% 2% 4% 0%;
 	}
 	.portfolio-modal-image-wrapper {
 		position: relative;
