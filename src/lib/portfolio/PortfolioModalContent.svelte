@@ -12,12 +12,13 @@
 <div class="portfolio-modal-content-container">
 	<div class="portfolio-modal-column column-1">
 		<div class="portfolio-modal-image-wrapper">
-			<a href={link} alt="`Link to ${name}`">
-				<img
-					src="https://cms.andrewbraun.dev{featuredImageUrl.large.url}"
-					class="portfolio-modal-image"
-					alt="Screenshot of {name}"
-				/>
+			<img
+				src="https://cms.andrewbraun.dev{featuredImageUrl.large.url}"
+				class="portfolio-modal-image"
+				alt="Screenshot of {name}"
+			/>
+			<a href={link} class="portfolio-modal-image-overlay">
+				<p>Visit Site</p>
 			</a>
 		</div>
 		<div class="portfolio-modal-tag-container">
@@ -71,7 +72,36 @@
 	}
 	.portfolio-modal-image {
 		width: 100%;
+		transition: all 0.3s ease-in-out;
 	}
+	.portfolio-modal-image-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		background: var(--dark-background-1-trans);
+		opacity: 0;
+		transition: all 0.3s ease-in-out;
+	}
+	.portfolio-modal-image-overlay p {
+		border: 1px solid white;
+		border-radius: 10px;
+		font-size: 1.8rem;
+		padding: 0.8rem 1.5rem;
+	}
+	.portfolio-modal-image-wrapper:hover .portfolio-modal-image {
+		filter: blur(5px);
+	}
+	.portfolio-modal-image-overlay:hover {
+		opacity: 1;
+	}
+
 	.portfolio-modal-tag-container {
 		display: flex;
 		justify-content: center;
