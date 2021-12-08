@@ -39,8 +39,10 @@
 	<div class="portfolio-card-tag-container">
 		<div class="portfolio-card-tags">
 			{#if tags}
-				{#each tags as tag}
-					<Tag tagname={tag.tagname} slug={tag.slug} />
+				{#each tags as tag, index}
+					{#if index <= 8}
+						<Tag tagname={tag.tagname} slug={tag.slug} />
+					{/if}
 				{/each}
 			{/if}
 			{#if tags && tags.length >= 8}
