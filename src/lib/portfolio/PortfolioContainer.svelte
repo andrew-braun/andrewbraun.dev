@@ -11,6 +11,7 @@
 				name={project.name}
 				featuredImageUrl={project.featured_image.formats}
 				link={project.link}
+				repo={project.repo}
 				tags={project.tags}
 				description={project.description}
 			/>

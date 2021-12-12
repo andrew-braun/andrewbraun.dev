@@ -8,6 +8,7 @@
 	export let name;
 	export let featuredImageUrl;
 	export let link;
+	export let repo;
 	export let tags;
 	export let description;
 
@@ -58,6 +59,7 @@
 			><PortfolioModalContent
 				{name}
 				{link}
+				{repo}
 				{tags}
 				{excerpt}
 				{featuredImageUrl}
@@ -142,6 +144,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+
 		padding: 0 3% 3% 3%;
 	}
 </style>

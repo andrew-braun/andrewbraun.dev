@@ -9,6 +9,7 @@
 	export let isOpen = false;
 </script>
 
+<svelte:window on:keydown={(event) => (event.key === "Escape" && isOpen ? closeModal() : "")} />
 {#if isOpen}
 	<aside
 		class="modal"
