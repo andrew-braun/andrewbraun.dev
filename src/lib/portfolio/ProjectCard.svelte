@@ -1,4 +1,5 @@
 <script>
+	import { slide } from "svelte/transition";
 	import Button from "../ui/Button.svelte";
 	import Modal from "../ui/Modal.svelte";
 	import PortfolioModalContent from "../portfolio/PortfolioModalContent.svelte";
@@ -11,6 +12,7 @@
 	export let repo;
 	export let tags;
 	export let description;
+	export let listPosition;
 
 	function truncateString(string, maxLength) {
 		// get the index of space after maxLength
@@ -27,7 +29,11 @@
 	};
 </script>
 
-<article class="portfolio-card">
+<article
+	class="portfolio-card"
+	data-card-position={listPosition}
+	transition:slide={{ delay: listPosition * 150 - 900, y: 400, duration: 2000 }}
+>
 	<div class="portfolio-card-image-wrapper" on:click={toggleModal}>
 		<img
 			src="https://cms.andrewbraun.dev{featuredImageUrl.small.url}"
@@ -36,7 +42,7 @@
 		/>
 		<div class="portfolio-card-overlay"><p>{excerpt}</p></div>
 	</div>
-	<h3 class="portfolio-card-name">{name}</h3>
+	<h3 class="portfolio-card-name" on:click={toggleModal}>{name}</h3>
 	<div class="portfolio-card-tag-container">
 		<div class="portfolio-card-tags">
 			{#if tags}
@@ -76,13 +82,12 @@
 		align-items: stretch;
 		position: relative;
 		max-width: 250px;
-		min-height: 200px;
+
 		border-radius: 5px;
 		text-align: center;
 		margin: 1rem;
 		background: linear-gradient(180deg, var(--color-2) 40%, transparent);
-
-		/* transition: all 0.3s ease-in-out; */
+		transition: all 0.3s ease-in-out;
 	}
 
 	.portfolio-card-image-wrapper {
@@ -123,10 +128,16 @@
 		border-radius: 5px 5px 0 0;
 	}
 	.portfolio-card-name {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 4rem;
 		color: var(--dark-background-text);
 		font-weight: bold;
 		font-size: 1.3rem;
-		padding-top: 0.5rem;
+	}
+	.portfolio-card-name:hover {
+		cursor: pointer;
 	}
 	.portfolio-card-link,
 	.portfolio-card-name:hover {
@@ -145,6 +156,6 @@
 		flex-wrap: wrap;
 		align-items: center;
 
-		padding: 0 3% 3% 3%;
+		padding: 0 3% 0 3%;
 	}
 </style>

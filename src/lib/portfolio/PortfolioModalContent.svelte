@@ -1,4 +1,5 @@
 <script>
+	import { fade } from "svelte/transition";
 	import Button from "../ui/Button.svelte";
 	import Tag from "./Tag.svelte";
 
@@ -39,6 +40,7 @@
 				src="https://cms.andrewbraun.dev{featuredImageUrl.large.url}"
 				class="portfolio-modal-image"
 				alt="Screenshot of {name}"
+				transition:fade
 			/>
 			<a href={link} class="portfolio-modal-image-overlay">
 				<p>Visit Site</p>
