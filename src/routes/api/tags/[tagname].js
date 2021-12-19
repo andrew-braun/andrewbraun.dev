@@ -4,7 +4,7 @@ export async function get({ params }) {
 		method: "GET",
 		headers: {
 			"CONTENT-TYPE": "application/json",
-			Authorization: import.meta.env.VITE_STRAPI_JWT
+			Authorization: process.env.VITE_STRAPI_JWT
 		}
 	});
 	const data = await res.json();
