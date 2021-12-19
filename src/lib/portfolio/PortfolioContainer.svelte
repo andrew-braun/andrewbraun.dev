@@ -3,12 +3,12 @@
 	import ProjectCard from "./ProjectCard.svelte";
 	import Button from "../ui/Button.svelte";
 	export let projects;
-	const sortedProjects = projects
-		? projects.sort((projectA, projectB) => projectA.order_priority > projectB.order_priority)
-		: "";
+
+	const sortedProjects = projects;
 
 	// Get list of project objects as props
 	let projectList;
+	console.log(sortedProjects);
 
 	// Display 6 projects initially (0 index)
 	let projectsToDisplay = 5;
