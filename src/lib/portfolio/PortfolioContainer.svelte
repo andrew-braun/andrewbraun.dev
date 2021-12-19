@@ -7,23 +7,23 @@
 		(projectA, projectB) => projectA.order_priority > projectB.order_priority
 	);
 
+	// Get list of project objects as props
 	let projectList;
 
+	// Display 6 projects initially (0 index)
 	let projectsToDisplay = 5;
-	let lastProjectPosition = projectsToDisplay;
-	let lastProjectId;
-	let lastProject;
 
+	// Track the currently rendered project cards
+	let renderedProjectCards = [];
+
+	let lastRenderedProjectPosition;
+
+	// Listen for custom component event on card creation, push to list
 	const handleCardCreation = (event) => {
-		console.log(event.detail);
-		lastProjectPosition = event.detail.listPosition;
-		// lastProjectId = event.detail.slug;
-		console.log(`lastProjectPosition: ${lastProjectPosition}`);
-		console.log(`lastProjectId: ${lastProjectId}`);
-		// console.log(`CurrentDisplay: ${projectsToDisplay}`);
-		// console.log(`listPositions: ${event.detail.listPosition}`);
+		renderedProjectCards.push(event.detail);
 	};
 
+	// Display up to 6 more projects on Show More click
 	const handleShowMore = async () => {
 		if (projectsToDisplay + 6 <= projects.length) {
 			projectsToDisplay += 6;
@@ -31,14 +31,24 @@
 	};
 
 	beforeUpdate(() => {
-		lastProjectPosition += 1;
+		lastRenderedProjectPosition ? console.log(lastRenderedProjectPosition) : "";
+		if (renderedProjectCards.length) {
+			lastRenderedProjectPosition =
+				renderedProjectCards[renderedProjectCards.length - 1].listPosition;
+		}
 	});
 	afterUpdate(() => {
-		lastProject = document.querySelector(`[data-list-position='${lastProjectPosition}']`);
-		console.log(lastProject);
-		setTimeout(() => {
-			lastProject.scrollIntoView({ behavior: "smooth", block: "start" });
-		}, 100);
+		const scrollToNextProject = () => {
+			if (!lastRenderedProjectPosition) {
+				return;
+			}
+			const scrollToProject = document.querySelector(
+				`[data-list-position='${lastRenderedProjectPosition + 1}']`
+			);
+			scrollToProject.scrollIntoView({ behavior: "smooth", block: "center" });
+			console.log(scrollToProject);
+		};
+		scrollToNextProject();
 	});
 </script>
 

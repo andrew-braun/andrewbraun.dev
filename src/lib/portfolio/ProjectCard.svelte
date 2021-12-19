@@ -50,7 +50,7 @@
 	class="portfolio-card"
 	id={slug}
 	data-list-position={listPosition}
-	transition:fade={{ delay: listPosition * 100 - 600, y: 400, duration: 1000 }}
+	transition:fade={{ delay: listPosition * 150 - 600, y: 400, duration: 1500 }}
 >
 	<div class="portfolio-card-image-wrapper" on:click={toggleModal}>
 		<img
