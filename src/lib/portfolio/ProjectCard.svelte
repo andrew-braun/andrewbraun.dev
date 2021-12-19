@@ -1,18 +1,35 @@
 <script>
-	import { slide } from "svelte/transition";
+	import { slide, fade } from "svelte/transition";
 	import Button from "../ui/Button.svelte";
 	import Modal from "../ui/Modal.svelte";
+	import { createEventDispatcher, onMount, afterUpdate } from "svelte";
+
 	import PortfolioModalContent from "../portfolio/PortfolioModalContent.svelte";
 	import Tag from "./Tag.svelte";
 	import "../../animations.css";
 
 	export let name;
+	export let slug;
 	export let featuredImageUrl;
 	export let link;
 	export let repo;
 	export let tags;
 	export let description;
 	export let listPosition;
+
+	const dispatch = createEventDispatcher();
+
+	function fireCreatedEvent() {
+		dispatch("created", {
+			name,
+			listPosition,
+			slug
+		});
+	}
+
+	afterUpdate(() => {
+		fireCreatedEvent();
+	});
 
 	function truncateString(string, maxLength) {
 		// get the index of space after maxLength
@@ -31,8 +48,9 @@
 
 <article
 	class="portfolio-card"
-	data-card-position={listPosition}
-	transition:slide={{ delay: listPosition * 150 - 900, y: 400, duration: 2000 }}
+	id={slug}
+	data-list-position={listPosition}
+	transition:fade={{ delay: listPosition * 100 - 600, y: 400, duration: 1000 }}
 >
 	<div class="portfolio-card-image-wrapper" on:click={toggleModal}>
 		<img

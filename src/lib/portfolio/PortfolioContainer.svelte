@@ -1,5 +1,5 @@
 <script>
-	import { onMount, tick } from "svelte";
+	import { afterUpdate, beforeUpdate, onMount, tick } from "svelte";
 	import ProjectCard from "./ProjectCard.svelte";
 	import Button from "../ui/Button.svelte";
 	export let projects;
@@ -10,14 +10,36 @@
 	let projectList;
 
 	let projectsToDisplay = 5;
+	let lastProjectPosition = projectsToDisplay;
+	let lastProjectId;
+	let lastProject;
+
+	const handleCardCreation = (event) => {
+		console.log(event.detail);
+		lastProjectPosition = event.detail.listPosition;
+		// lastProjectId = event.detail.slug;
+		console.log(`lastProjectPosition: ${lastProjectPosition}`);
+		console.log(`lastProjectId: ${lastProjectId}`);
+		// console.log(`CurrentDisplay: ${projectsToDisplay}`);
+		// console.log(`listPositions: ${event.detail.listPosition}`);
+	};
+
 	const handleShowMore = async () => {
 		if (projectsToDisplay + 6 <= projects.length) {
 			projectsToDisplay += 6;
 		}
-		setTimeout(() => {
-			window.scrollBy(0, 800);
-		}, 400);
 	};
+
+	beforeUpdate(() => {
+		lastProjectPosition += 1;
+	});
+	afterUpdate(() => {
+		lastProject = document.querySelector(`[data-list-position='${lastProjectPosition}']`);
+		console.log(lastProject);
+		setTimeout(() => {
+			lastProject.scrollIntoView({ behavior: "smooth", block: "start" });
+		}, 100);
+	});
 </script>
 
 <div class="portfolio-container" bind:this={projectList}>
@@ -27,12 +49,14 @@
 				{#if index <= projectsToDisplay}
 					<ProjectCard
 						listPosition={index}
+						slug={project.slug}
 						name={project.name}
 						featuredImageUrl={project.featured_image.formats}
 						link={project.link}
 						repo={project.repo}
 						tags={project.tags}
 						description={project.description}
+						on:created={handleCardCreation}
 					/>
 				{/if}
 			{/each}
