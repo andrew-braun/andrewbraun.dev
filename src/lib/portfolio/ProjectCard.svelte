@@ -1,8 +1,8 @@
 <script>
-	import { slide, fade } from "svelte/transition";
+	import { fade } from "svelte/transition";
 	import Button from "../ui/Button.svelte";
 	import Modal from "../ui/Modal.svelte";
-	import { createEventDispatcher, onMount, afterUpdate } from "svelte";
+	import { createEventDispatcher, afterUpdate } from "svelte";
 
 	import PortfolioModalContent from "../portfolio/PortfolioModalContent.svelte";
 	import Tag from "./Tag.svelte";
