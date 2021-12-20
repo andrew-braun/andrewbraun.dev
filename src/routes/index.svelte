@@ -231,8 +231,8 @@
 					</p>
 
 					<div class="hero-cta">
-						<Button link="mailto:andrew@andrewbraun.dev" width="80%" prefetch={false}
-							>Do nerd things for me</Button
+						<Button link="mailto:andrew@andrewbraun.dev" width="80%" prefetch={false}>
+							Do nerd things for me</Button
 						>
 					</div>
 				</div>
