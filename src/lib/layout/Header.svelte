@@ -5,6 +5,7 @@
 	import "../../global.css";
 	let y;
 
+	/* Animation for intro */
 	import { onMount } from "svelte";
 	import { fade } from "svelte/transition";
 	import { circIn } from "svelte/easing";

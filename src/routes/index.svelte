@@ -1,5 +1,5 @@
 <script context="module">
-	export async function load({ page, fetch, session, stuff }) {
+	export async function load({ page, fetch }) {
 		const url = `/api/projects`;
 		const res = await fetch(url);
 
