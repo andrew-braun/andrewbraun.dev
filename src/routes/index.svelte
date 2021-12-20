@@ -1,4 +1,5 @@
 <script context="module">
+	/* Load initial project list via API call*/
 	export async function load({ page, fetch }) {
 		const url = `/api/projects`;
 		const res = await fetch(url);
