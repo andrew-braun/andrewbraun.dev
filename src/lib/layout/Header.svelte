@@ -23,7 +23,7 @@
 		on:click={scrollUp}
 		on:keypress={(event) => (event.key === "Enter" ? scrollUp() : "")}
 	>
-		<a href="/" class="logo-link">
+		<a href="/" class="logo-link" rel="external">
 			<div class={`header-logo ${y > 50 ? "header-logo-scrolled" : ""}`}>
 				<Logo background={true} />
 			</div>
