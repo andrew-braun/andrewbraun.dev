@@ -25,7 +25,7 @@
 
 	import PortfolioContainer from "../lib/portfolio/PortfolioContainer.svelte";
 
-	import { onMount } from "svelte";
+	import { onMount, beforeUpdate } from "svelte";
 	import { fade } from "svelte/transition";
 	import { circIn } from "svelte/easing";
 
@@ -242,7 +242,11 @@
 	<section class="my-work-section page-section">
 		<h2 id="my-work">My Work</h2>
 		<div class="my-work-portfolio-items">
-			<PortfolioContainer {projects} />
+			{#if projects}
+				{#key projects}
+					<PortfolioContainer {projects} />
+				{/key}
+			{/if}
 		</div>
 	</section>
 
