@@ -6,7 +6,8 @@
 		if (res.ok) {
 			return {
 				props: {
-					projects: await res.json()
+					projects: await res.json(),
+					page: page
 				}
 			};
 		}
@@ -37,8 +38,10 @@
 	});
 
 	export let projects;
+	export let page;
 
 	console.log(projects);
+	console.log(page);
 </script>
 
 <div class="content-container">
