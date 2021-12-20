@@ -29,7 +29,7 @@
 		class="button link {className ? className : ''}"
 		style={returnedStyles}
 		rel={noRouteChange ? (noRouteChange ? "external" : "") : ""}
-		'prefetch ? sveltekit:prefetch : ""'
+		sveltekit:prefetch={prefetch}
 	>
 		<slot />
 	</a>
