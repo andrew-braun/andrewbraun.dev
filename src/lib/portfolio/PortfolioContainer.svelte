@@ -49,7 +49,7 @@
 			const scrollToProject = document.querySelector(
 				`[data-list-position='${lastRenderedProjectPosition + 1}']`
 			);
-			if (scrollToProject) {
+			if (scrollToProject && typeof scrollToProject !== null) {
 				scrollToProject.scrollIntoView({ behavior: "smooth", block: "center" });
 				console.log(scrollToProject);
 			}
