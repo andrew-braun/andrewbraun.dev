@@ -37,11 +37,6 @@
 	});
 
 	export let projects;
-
-	function handleMessage(event) {
-		console.log("Parent event firing!");
-		console.log(event.detail.text);
-	}
 </script>
 
 <div class="content-container">

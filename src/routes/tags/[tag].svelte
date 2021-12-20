@@ -6,7 +6,8 @@
 		if (res.ok) {
 			return {
 				props: {
-					tagData: await res.json()
+					tagData: await res.json(),
+					slug: page.params.tag
 				}
 			};
 		}
@@ -20,19 +21,15 @@
 </script>
 
 <script>
-	import { page } from "$app/stores";
+	// import { page } from "$app/stores";
 	import { afterUpdate, beforeUpdate, onMount } from "svelte";
 	import PortfolioContainer from "../../lib/portfolio/PortfolioContainer.svelte";
-
-	let slug;
-	page.subscribe((props) => {
-		slug = props.params.tag;
-	});
 
 	// onMount(() => {
 	// 	projects = tagData;
 	// });
 
+	export let slug;
 	export let tagData;
 </script>
 

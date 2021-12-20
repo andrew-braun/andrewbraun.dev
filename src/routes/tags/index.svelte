@@ -21,7 +21,6 @@
 
 <script>
 	export let tags;
-	// console.log(tags);
 </script>
 
 <section class="tag-page global-top-section global-center-content">

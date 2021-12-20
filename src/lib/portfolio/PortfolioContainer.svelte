@@ -12,7 +12,6 @@
 
 	// Get list of project objects as props
 	let projectList;
-	console.log(projects);
 
 	// Display 6 projects initially (0 index)
 	let projectsToDisplay = 5;
@@ -35,7 +34,6 @@
 	};
 
 	beforeUpdate(() => {
-		lastRenderedProjectPosition ? console.log(lastRenderedProjectPosition) : "";
 		if (renderedProjectCards.length) {
 			lastRenderedProjectPosition =
 				renderedProjectCards[renderedProjectCards.length - 1].listPosition;
