@@ -37,6 +37,8 @@
 	});
 
 	export let projects;
+
+	console.log(projects);
 </script>
 
 <div class="content-container">
