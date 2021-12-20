@@ -37,11 +37,10 @@
 		init = true;
 	});
 
+	const pageData = page;
+
 	export let projects;
 	export let page;
-
-	console.log(projects);
-	console.log(page);
 </script>
 
 <div class="content-container">

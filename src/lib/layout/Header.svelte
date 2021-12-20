@@ -23,7 +23,7 @@
 		on:click={scrollUp}
 		on:keypress={(event) => (event.key === "Enter" ? scrollUp() : "")}
 	>
-		<a href="/" class="logo-link" rel="external">
+		<a href="/" target="_self" class="logo-link" sveltekit:prefetch>
 			<div class={`header-logo ${y > 50 ? "header-logo-scrolled" : ""}`}>
 				<Logo background={true} />
 			</div>
