@@ -21,7 +21,7 @@
 
 <script>
 	import { page } from "$app/stores";
-	import { afterUpdate } from "svelte";
+	import { afterUpdate, beforeUpdate, onMount } from "svelte";
 	import PortfolioContainer from "../../lib/portfolio/PortfolioContainer.svelte";
 
 	let slug;
@@ -29,18 +29,19 @@
 		slug = props.params.tag;
 	});
 
-	afterUpdate(() => {
-		projects = tagData;
-	});
+	// onMount(() => {
+	// 	projects = tagData;
+	// });
 
 	export let tagData;
-	let projects = tagData;
 </script>
 
 <section class="tagged-projects-section global-top-section global-center-content">
 	<h2 class="tag-title">{slug}</h2>
 	<div class="tagged-projects-container">
-		<PortfolioContainer {projects} />
+		{#key tagData}
+			<PortfolioContainer projects={tagData} />
+		{/key}
 	</div>
 </section>
 

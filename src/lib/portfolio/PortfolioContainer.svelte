@@ -4,7 +4,7 @@
 	import Button from "../ui/Button.svelte";
 	export let projects;
 
-	const sortedProjects = projects;
+	$: sortedProjects = projects;
 
 	// const sortedProjects = projects
 	// 	? projects.sort((projectA, projectB) => projectA.order_priority > projectB.order_priority)
@@ -12,7 +12,7 @@
 
 	// Get list of project objects as props
 	let projectList;
-	console.log(sortedProjects);
+	console.log(projects);
 
 	// Display 6 projects initially (0 index)
 	let projectsToDisplay = 5;
@@ -49,8 +49,10 @@
 			const scrollToProject = document.querySelector(
 				`[data-list-position='${lastRenderedProjectPosition + 1}']`
 			);
-			scrollToProject.scrollIntoView({ behavior: "smooth", block: "center" });
-			console.log(scrollToProject);
+			if (scrollToProject) {
+				scrollToProject.scrollIntoView({ behavior: "smooth", block: "center" });
+				console.log(scrollToProject);
+			}
 		};
 		scrollToNextProject();
 	});
@@ -59,6 +61,7 @@
 <div class="portfolio-container" bind:this={projectList}>
 	<div class="project-list">
 		{#if projects}
+
 			{#each sortedProjects as project, index}
 				{#if index <= projectsToDisplay}
 					<ProjectCard
@@ -74,6 +77,7 @@
 					/>
 				{/if}
 			{/each}
+			
 		{/if}
 	</div>
 	{#if projects.length > 6 && projectsToDisplay < projects.length}
