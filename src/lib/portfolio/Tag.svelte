@@ -11,10 +11,11 @@
 
 <a
 	href="/tags/{slug.toLowerCase()}"
-	rel="external"
+	target="_self"
 	class="portfolio-card-tag"
 	style={hasStyles ? tagStylesString : ""}
-	sveltekit:noscroll>{tagname}</a
+	sveltekit:noscroll
+	sveltekit:prefetch>{tagname}</a
 >
 
 <style>
