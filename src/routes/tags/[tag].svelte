@@ -16,7 +16,7 @@
 			error: new Error(`Could not load ${url}`)
 		};
 	}
-	export const prerender = true;
+	// export const prerender = true;
 </script>
 
 <script>
