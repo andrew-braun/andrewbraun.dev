@@ -43,16 +43,18 @@
 	});
 	afterUpdate(() => {
 		const scrollToNextProject = () => {
-			if (!lastRenderedProjectPosition) {
+			if (!lastRenderedProjectPosition || !scrollToProject || scrollToProject === null) {
 				return;
 			}
 			const scrollToProject = document.querySelector(
 				`[data-list-position='${lastRenderedProjectPosition + 1}']`
 			);
-			if (scrollToProject && typeof scrollToProject !== null) {
-				scrollToProject.scrollIntoView({ behavior: "smooth", block: "center" });
-				console.log(scrollToProject);
-			}
+
+			setTimeout(() => {
+				scrollToProject
+					? scrollToProject.scrollIntoView({ behavior: "smooth", block: "center" })
+					: "";
+			}, 0);
 		};
 		scrollToNextProject();
 	});
@@ -61,7 +63,6 @@
 <div class="portfolio-container" bind:this={projectList}>
 	<div class="project-list">
 		{#if projects}
-
 			{#each sortedProjects as project, index}
 				{#if index <= projectsToDisplay}
 					<ProjectCard
@@ -77,7 +78,6 @@
 					/>
 				{/if}
 			{/each}
-			
 		{/if}
 	</div>
 	{#if projects.length > 6 && projectsToDisplay < projects.length}
