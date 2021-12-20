@@ -1,4 +1,4 @@
-import { env } from "../local-config";
+import { env } from "../api-config";
 export async function get({ params }) {
 	const res = await fetch(`https://cms.andrewbraun.dev/tags`, {
 		method: "GET",
