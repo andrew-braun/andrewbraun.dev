@@ -6,6 +6,10 @@
 
 	const sortedProjects = projects;
 
+	// const sortedProjects = projects
+	// 	? projects.sort((projectA, projectB) => projectA.order_priority > projectB.order_priority)
+	// 	: "";
+
 	// Get list of project objects as props
 	let projectList;
 	console.log(sortedProjects);
