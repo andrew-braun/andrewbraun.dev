@@ -37,10 +37,9 @@
 		init = true;
 	});
 
-	const pageData = page;
-
 	export let projects;
 	export let page;
+	const pageData = page;
 </script>
 
 <div class="content-container">
