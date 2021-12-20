@@ -8,6 +8,7 @@
 	export let noRouteChange = true;
 	export let noScroll = true;
 	export let width;
+	export let prefetch = true;
 
 	const isStyled = background || textColor || width || fontSize;
 
@@ -28,7 +29,7 @@
 		class="button link {className ? className : ''}"
 		style={returnedStyles}
 		rel={noRouteChange ? (noRouteChange ? "external" : "") : ""}
-		sveltekit:prefetch
+		'prefetch ? sveltekit:prefetch : ""'
 	>
 		<slot />
 	</a>
