@@ -41,18 +41,20 @@
 	});
 	afterUpdate(() => {
 		const scrollToNextProject = () => {
-			if (!lastRenderedProjectPosition || !scrollToProject || scrollToProject === null) {
+			if (!lastRenderedProjectPosition) {
 				return;
 			}
-			const scrollToProject = document.querySelector(
-				`[data-list-position='${lastRenderedProjectPosition + 1}']`
-			);
 
 			setTimeout(() => {
+				const scrollToProject = document.querySelector(
+					`[data-list-position='${lastRenderedProjectPosition + 1}']`
+				);
+
+				console.log(scrollToProject);
 				scrollToProject
 					? scrollToProject.scrollIntoView({ behavior: "smooth", block: "center" })
 					: "";
-			}, 0);
+			}, 10);
 		};
 		scrollToNextProject();
 	});
