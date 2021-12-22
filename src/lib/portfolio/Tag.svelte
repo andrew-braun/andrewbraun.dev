@@ -14,8 +14,7 @@
 	target="_self"
 	class="portfolio-card-tag"
 	style={hasStyles ? tagStylesString : ""}
-	sveltekit:noscroll
-	sveltekit:prefetch>{tagname}</a
+	sveltekit:noscroll>{tagname}</a
 >
 
 <style>
