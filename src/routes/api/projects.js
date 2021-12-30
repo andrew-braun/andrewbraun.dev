@@ -1,7 +1,7 @@
 import { env } from "./api-config";
 console.log(env);
 
-export async function get({ params, url }) {
+export async function get({ url }) {
 	const queryString = url.searchParams.toString().replace("-", " ");
 	const res = await fetch(`https://cms.andrewbraun.dev/projects?${queryString}`, {
 		method: "GET",
