@@ -404,6 +404,13 @@
 		padding-left: 15%;
 		padding-right: 15%;
 	}
+
+	@media screen and (max-width: 480px) {
+		.my-work-section {
+			padding-left: 5%;
+			padding-right: 5%;
+		}
+	}
 	#my-work {
 		padding: 1rem 0;
 	}

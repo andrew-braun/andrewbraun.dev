@@ -100,7 +100,6 @@
 		align-items: stretch;
 		position: relative;
 		max-width: 250px;
-
 		border-radius: 5px;
 		text-align: center;
 		margin: 1rem;
@@ -110,7 +109,7 @@
 
 	.portfolio-card-image-wrapper {
 		position: relative;
-		max-width: 250px;
+		max-width: 100%;
 		overflow: hidden;
 	}
 	.portfolio-card-image-wrapper:hover {
@@ -145,6 +144,7 @@
 		height: 150px;
 		border-radius: 5px 5px 0 0;
 	}
+
 	.portfolio-card-name {
 		display: flex;
 		justify-content: center;
@@ -175,5 +175,20 @@
 		align-items: center;
 
 		padding: 0 3% 0 3%;
+	}
+
+	@media screen and (max-width: 480px) {
+		.portfolio-card {
+			max-width: 90%;
+		}
+		.portfolio-card-image {
+			height: auto;
+		}
+		.portfolio-card-name {
+			min-height: 2rem;
+		}
+		.portfolio-card-tag-container {
+			min-height: 9rem;
+		}
 	}
 </style>
