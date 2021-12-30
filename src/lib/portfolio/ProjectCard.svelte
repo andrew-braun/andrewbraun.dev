@@ -6,7 +6,7 @@
 
 	import PortfolioModalContent from "../portfolio/PortfolioModalContent.svelte";
 	import Tag from "./Tag.svelte";
-	import "../../animations.css";
+	import "../../style/animations.css";
 
 	export let name;
 	export let slug;

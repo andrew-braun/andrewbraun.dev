@@ -1,14 +1,15 @@
 <script context="module">
 	/* Load initial project list via API call*/
-	export async function load({ page, fetch }) {
-		const url = `/api/projects`;
-		const res = await fetch(url);
+	export async function load({ url, params, fetch }) {
+		const fetchUrl = `/api/projects`;
+		const res = await fetch(fetchUrl);
 
 		if (res.ok) {
 			return {
 				props: {
 					projects: await res.json(),
-					page: page
+					url: url,
+					params: params
 				}
 			};
 		}
@@ -23,24 +24,14 @@
 
 <script>
 	import "/src/global.css";
+	import "../style/animations.css";
 	import Button from "../lib/ui/Button.svelte";
 
 	import PortfolioContainer from "../lib/portfolio/PortfolioContainer.svelte";
 
-	import { onMount, beforeUpdate } from "svelte";
-	import { fade } from "svelte/transition";
-	import { circIn } from "svelte/easing";
-
-	let init = false;
-	const delay = 400;
-	const duration = 600;
-	onMount(() => {
-		init = true;
-	});
-
 	export let projects;
-	export let page;
-	const pageData = page;
+	export let params;
+	const pageData = params;
 </script>
 
 <div class="content-container">
@@ -210,37 +201,32 @@
 			</div>
 		</div>
 		<div class="hero-info-container global-top-section">
-			{#if init}
-				<div
-					class="hero-info-text"
-					transition:fade={{ duration: duration, delay: delay, easing: circIn }}
-				>
-					<!-- Add links to socials on hover-->
+			<div class="hero-info-text">
+				<!-- Add links to socials on hover-->
 
-					<p>
-						I'm <span class="extra-info-text">Andrew Braun</span>
-					</p>
+				<p>
+					I'm <span class="extra-info-text">Andrew Braun</span>
+				</p>
 
-					<!--Add list of languages on hover-->
-					<p>
-						I write <span class="extra-info-text">code</span>,
-					</p>
-					<!--Add links on hover-->
-					<p>
-						build <span class="extra-info-text">websites</span>,
-					</p>
-					<!--Other links-->
-					<p>
-						and do other <span class="extra-info-text">nerd things</span>
-					</p>
+				<!--Add list of languages on hover-->
+				<p>
+					I write <span class="extra-info-text">code</span>,
+				</p>
+				<!--Add links on hover-->
+				<p>
+					build <span class="extra-info-text">websites</span>,
+				</p>
+				<!--Other links-->
+				<p>
+					and do other <span class="extra-info-text">nerd things</span>
+				</p>
 
-					<div class="hero-cta">
-						<Button link="mailto:andrew@andrewbraun.dev" width="80%" prefetch={false}>
-							Do nerd things for me</Button
-						>
-					</div>
+				<div class="hero-cta">
+					<Button link="mailto:andrew@andrewbraun.dev" width="80%" prefetch={false}>
+						Do nerd things for me</Button
+					>
 				</div>
-			{/if}
+			</div>
 		</div>
 	</section>
 	<section class="my-work-section page-section">
@@ -347,7 +333,9 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
-
+		opacity: 0;
+		animation: fadeIn 0.5s linear forwards;
+		animation-delay: 0.5s;
 		z-index: 75;
 	}
 	.hero-info-text {

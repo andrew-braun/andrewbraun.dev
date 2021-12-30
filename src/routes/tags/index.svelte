@@ -1,7 +1,7 @@
 <script context="module">
-	export async function load({ page, fetch, session, stuff }) {
-		const url = `/api/tags`;
-		const res = await fetch(url);
+	export async function load({ fetch }) {
+		const fetchUrl = `/api/tags`;
+		const res = await fetch(fetchUrl);
 
 		if (res.ok) {
 			return {
