@@ -3,16 +3,8 @@
 	import Logo from "../branding/Logo.svelte";
 	import scrollUp from "../../helpers/scrollUp";
 	import "../../global.css";
+	import "../../style/animations.css";
 	let y;
-
-	/* Animation for intro */
-	import { onMount } from "svelte";
-	import { fade } from "svelte/transition";
-	import { circIn } from "svelte/easing";
-	let init = false;
-	onMount(() => {
-		init = true;
-	});
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -29,14 +21,7 @@
 				<Logo background={true} />
 			</div>
 
-			{#if init}
-				<p
-					class={`site-title ${y > 50 ? "site-title-scrolled" : ""}`}
-					transition:fade={{ duration: 600, delay: 400, easing: circIn }}
-				>
-					AndrewBraun.dev
-				</p>
-			{/if}
+			<p class={`site-title ${y > 50 ? "site-title-scrolled" : ""}`}>AndrewBraun.dev</p>
 		</a>
 	</div>
 	<Nav />
@@ -86,6 +71,9 @@
 	}
 	.site-title {
 		font-size: 1.25rem;
+		opacity: 0;
+		animation: fadeIn 0.5s linear forwards;
+		animation-delay: 0.5s;
 	}
 	.site-title-scrolled {
 		font-size: 1.2rem;
