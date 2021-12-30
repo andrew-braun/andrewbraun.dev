@@ -1,13 +1,13 @@
 <script context="module">
-	export async function load({ page, fetch, session, stuff }) {
-		const url = `/api/projects?tags.tagname_contains=${page.params.tag}`;
-		const res = await fetch(url);
+	export async function load({ url, params, fetch }) {
+		const fetchUrl = `/api/projects?tags.tagname_contains=${params.tag}`;
+		const res = await fetch(fetchUrl);
 
 		if (res.ok) {
 			return {
 				props: {
 					tagData: await res.json(),
-					slug: page.params.tag
+					slug: params.tag
 				}
 			};
 		}
