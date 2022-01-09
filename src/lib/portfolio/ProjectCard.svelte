@@ -36,7 +36,7 @@
 		const index = string.indexOf(" ", maxLength);
 		return index === -1 ? string : `${string.substring(0, index)}...`;
 	}
-	const excerpt = truncateString(description, 180);
+	const excerpt = truncateString(description, 160);
 
 	let isModalActive = false;
 
@@ -131,7 +131,7 @@
 	}
 	.portfolio-card-overlay p {
 		margin: 0rem;
-		padding: 0.5rem;
+		padding: 0.8rem;
 		text-align: left;
 		font-size: 0.9rem;
 	}
@@ -189,6 +189,9 @@
 		}
 		.portfolio-card-tag-container {
 			min-height: 9rem;
+		}
+		.portfolio-card-overlay p {
+			font-size: 0.8rem;
 		}
 	}
 </style>

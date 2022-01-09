@@ -23,7 +23,7 @@
 </script>
 
 <script>
-	import "/src/global.css";
+	import "/src/style/global.css";
 	import "../style/animations.css";
 	import Button from "../lib/ui/Button.svelte";
 
@@ -365,8 +365,11 @@
 		.hero-info-container {
 			color: white;
 		}
+		.hero-info-text {
+			padding: 0 1rem;
+		}
 		.hero-cta {
-			margin-top: 15%;
+			padding-bottom: 5%;
 		}
 		.hero-flavor-container {
 			position: absolute;

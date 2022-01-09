@@ -1,6 +1,6 @@
 <script>
 	import Icon from "../icons/icons.svelte";
-	import "../../global.css";
+	import "../../style/global.css";
 </script>
 
 <section role="navigation" class="tab-bar">
