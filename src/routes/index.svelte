@@ -351,7 +351,8 @@
 	.hero-cta {
 		display: flex;
 		justify-content: center;
-		margin-top: 15%;
+		margin-top: 10%;
+		margin-bottom: 8%;
 	}
 	@media screen and (max-width: 768px) {
 		.hero-section {
@@ -368,9 +369,7 @@
 		.hero-info-text {
 			padding: 0 1rem;
 		}
-		.hero-cta {
-			padding-bottom: 5%;
-		}
+
 		.hero-flavor-container {
 			position: absolute;
 			top: 0;

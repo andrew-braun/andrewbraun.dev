@@ -57,8 +57,4 @@
 		padding: 5%;
 		background: var(--dark-background-1);
 	}
-	@media screen (max-width: 480px) {
-		padding-left: 5%;
-		padding-right: 5%;
-	}
 </style>
