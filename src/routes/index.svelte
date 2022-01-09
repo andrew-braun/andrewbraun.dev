@@ -230,7 +230,7 @@
 		</div>
 	</section>
 	<section class="my-work-section page-section">
-		<h2 id="my-work">My Work</h2>
+		<h2 id="my-work" class="global-heading">My Work</h2>
 		<div class="my-work-portfolio-items">
 			{#if projects}
 				{#key projects}
@@ -241,7 +241,7 @@
 	</section>
 
 	<!-- <section class="about-section page-section">
-		<h2 id="about">About</h2>
+		<h2 id="about" class="global-heading">About</h2>
 
 		<p>
 			Ex estupido mientras se senalada so correcta madrugar. Trovador ay gracioso se eh sostengo
@@ -260,7 +260,7 @@
 		</p>
 	</section> -->
 	<!-- <section class="contact-section page-section">
-		<h2 id="contact">Contact</h2>
+		<h2 id="contact" class="global-heading">Contact</h2>
 		<p>
 			Ganado correo operas cuerpo sirvio la manera lo es. En lacrimoso pelagatos insomnios ha ti
 			expresion el. Que rapidisimo caballeros escopetazo exclamaron don son forasteros amabilidad
@@ -289,7 +289,6 @@
 	.content-container {
 		/* padding: 7rem calc(1.5rem + 4vw) 0 calc(2.5rem + 4vw); */
 	}
-
 	.page-section {
 		padding: 1rem calc(1.5rem + 4vw) 1rem calc(2.5rem + 4vw);
 	}

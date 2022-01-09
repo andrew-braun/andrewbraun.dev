@@ -82,7 +82,7 @@
 			{/if}
 		</div>
 	</div>
-	<Button {link}>Visit Site</Button>
+	<Button {link} borderRadius="0 0 5px 5px">Visit Site</Button>
 	<Modal bind:isOpen={isModalActive}
 		><span slot="content"
 			><PortfolioModalContent
@@ -154,6 +154,7 @@
 		justify-content: center;
 		align-items: center;
 		min-height: 4rem;
+		padding: 0 0.5rem;
 		color: var(--dark-background-text);
 		font-weight: bold;
 		font-size: 1.3rem;

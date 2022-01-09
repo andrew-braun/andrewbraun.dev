@@ -36,7 +36,7 @@
 
 <section class="tagged-projects-section global-top-section global-center-content">
 	<div class="tagged-projects-container">
-		<h2 class="tag-title">{slug}</h2>
+		<h2 class="tag-title global-heading">{slug}</h2>
 		{#key tagData}
 			<PortfolioContainer projects={tagData} />
 		{/key}

@@ -3,6 +3,7 @@
 	export let className = "";
 	export let textColor = "var(--dark-text-1)";
 	export let fontSize = "1.4rem";
+	export let borderRadius = "5px";
 	export let link = false;
 	export let onClick = (event) => console.log(event.target);
 	export let noRouteChange = true;
@@ -16,6 +17,8 @@
 		color: ${textColor}; 
 		width: ${width};
 		font-size: ${fontSize};
+		border-radius: ${borderRadius};
+		
 	`;
 
 	const returnedStyles = isStyled ? (isStyled ? buttonStyles : "") : null;
@@ -50,7 +53,7 @@
 
 		padding: 0.75rem;
 		border: none;
-		border-radius: 5px;
+
 		background: var(--color-1);
 		font-size: 1.25rem;
 		font-weight: 600;

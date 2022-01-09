@@ -91,3 +91,9 @@ p {
 	padding-right: calc(1.5rem + 4vw);
 	padding-left: calc(2.5rem + 4vw);
 }
+
+@media screen and (max-width: 768px) {
+	.global-heading {
+		text-align: center;
+	}
+}
