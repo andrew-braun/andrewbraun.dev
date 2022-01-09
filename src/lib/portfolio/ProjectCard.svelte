@@ -130,7 +130,6 @@
 		opacity: 0;
 		height: 96%;
 		width: 100%;
-
 		background: hsla(0, 0%, 0%, 0.7);
 		transform: translateY(-200px);
 	}
@@ -179,7 +178,7 @@
 		flex-wrap: wrap;
 		align-items: center;
 
-		padding: 0 3% 0 3%;
+		padding: 3%;
 	}
 
 	@media screen and (max-width: 480px) {

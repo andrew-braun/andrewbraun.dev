@@ -426,10 +426,6 @@
 		.extra-info-text {
 			font-size: 1.8rem;
 		}
-		.my-work-section {
-			padding-left: 5%;
-			padding-right: 5%;
-		}
 	}
 	#my-work {
 		padding: 1rem 2rem;
@@ -441,5 +437,14 @@
 	}
 	.contact-section {
 		background: var(--dark-background-2);
+	}
+	@media screen and (max-width: 480px) {
+		#my-work {
+			padding: 0;
+		}
+		.my-work-section {
+			padding-left: 2%;
+			padding-right: 2%;
+		}
 	}
 </style>
