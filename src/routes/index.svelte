@@ -222,7 +222,7 @@
 				</p>
 
 				<div class="hero-cta">
-					<Button link="mailto:andrew@andrewbraun.dev" width="80%" prefetch={false}>
+					<Button link="mailto:andrew@andrewbraun.dev" width="100%" prefetch={false}>
 						Do nerd things for me</Button
 					>
 				</div>
@@ -294,6 +294,7 @@
 		padding: 1rem calc(1.5rem + 4vw) 1rem calc(2.5rem + 4vw);
 	}
 	.hero-section {
+		position: relative;
 		display: grid;
 		grid-template-columns: 2fr 5fr;
 		grid-template-areas: "flavor info";
@@ -308,7 +309,7 @@
 		grid-area: flavor;
 		padding-top: 3rem;
 		background: var(--dark-background-2);
-		min-height: 50vh;
+		min-height: 100%;
 		min-width: 20rem;
 	}
 	.hero-flavor-image {
@@ -344,6 +345,9 @@
 		background: var(--dark-background-1-trans);
 		font-size: 1.5rem;
 	}
+	.hero-info-text p {
+		margin: 0.5rem 0;
+	}
 	.extra-info-text {
 		font-size: 1.5em;
 		font-weight: 700;
@@ -376,7 +380,6 @@
 			left: 0;
 			right: 0;
 			z-index: 1;
-			min-height: 80vh;
 		}
 		.hero-flavor-container::after {
 			position: absolute;
@@ -411,13 +414,25 @@
 	}
 
 	@media screen and (max-width: 480px) {
+		.hero-section {
+			min-height: 70vh;
+		}
+		.hero-info-text {
+			width: 100%;
+		}
+		.hero-info-text p {
+			margin: 1.5rem 0;
+		}
+		.extra-info-text {
+			font-size: 1.8rem;
+		}
 		.my-work-section {
 			padding-left: 5%;
 			padding-right: 5%;
 		}
 	}
 	#my-work {
-		padding: 1rem 0;
+		padding: 1rem 2rem;
 	}
 	.my-work-portfolio-items {
 	}
