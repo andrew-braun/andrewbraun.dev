@@ -58,6 +58,7 @@
 		max-width: 3.5rem;
 		max-height: auto;
 	}
+
 	.header-logo-scrolled {
 		max-width: 2.5rem;
 	}
@@ -68,7 +69,9 @@
 		flex-wrap: wrap;
 		flex-grow: 1;
 		width: clamp(10rem, 25%, 15rem);
+		border: none;
 	}
+
 	.site-title {
 		font-size: 1.25rem;
 		opacity: 0;

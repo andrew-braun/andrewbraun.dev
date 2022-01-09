@@ -8,7 +8,7 @@
 	export let link;
 	export let repo;
 	export let tags;
-	export let excerpt;
+
 	export let description;
 </script>
 
@@ -131,6 +131,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		width: 100%;
 		padding: 3% 5%;
 	}
 	.portfolio-modal-tags {
@@ -156,6 +157,7 @@
 	}
 
 	.github-corner {
+		position: absolute;
 		z-index: 100;
 	}
 	.github-corner:hover .octo-arm {

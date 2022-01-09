@@ -44,8 +44,7 @@
 
 <style>
 	.tagged-projects-section {
-		padding-left: 10%;
-		padding-right: 10%;
+		padding: 0 10%;
 	}
 	.tag-title {
 		padding: 1rem 0;
@@ -56,5 +55,13 @@
 		flex-wrap: wrap;
 		padding: 5%;
 		background: var(--dark-background-1);
+	}
+	@media screen and (max-width: 480px) {
+		.tagged-projects-section {
+			padding: 0;
+		}
+		.tagged-projects-container {
+			padding: 0;
+		}
 	}
 </style>
