@@ -24,6 +24,7 @@
 	// import { page } from "$app/stores";
 	import { afterUpdate, beforeUpdate, onMount } from "svelte";
 	import PortfolioContainer from "../../lib/portfolio/PortfolioContainer.svelte";
+	import "../../style/global.css";
 
 	// onMount(() => {
 	// 	projects = tagData;
@@ -34,8 +35,8 @@
 </script>
 
 <section class="tagged-projects-section global-top-section global-center-content">
-	<h2 class="tag-title">{slug}</h2>
 	<div class="tagged-projects-container">
+		<h2 class="tag-title">{slug}</h2>
 		{#key tagData}
 			<PortfolioContainer projects={tagData} />
 		{/key}
@@ -44,21 +45,29 @@
 
 <style>
 	.tagged-projects-section {
-		padding: 0 10%;
+		display: flex;
+		justify-content: center;
 	}
 	.tag-title {
-		padding: 1rem 0;
+		width: 100%;
 		text-transform: uppercase;
+		padding-left: 5%;
 	}
 	.tagged-projects-container {
 		display: flex;
 		flex-wrap: wrap;
-		padding: 5%;
-		background: var(--dark-background-1);
+		justify-content: center;
+		padding-bottom: 15%;
+	}
+	@media screen and (max-width: 768px) {
+		.tag-title {
+			text-align: center;
+			padding-left: 0;
+		}
 	}
 	@media screen and (max-width: 480px) {
 		.tagged-projects-section {
-			padding: 0;
+			padding: 5rem 0;
 		}
 		.tagged-projects-container {
 			padding: 0;
