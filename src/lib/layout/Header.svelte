@@ -18,7 +18,7 @@
 	>
 		<a href="/" target="_self" class="logo-link">
 			<div class={`header-logo ${y > 50 ? "header-logo-scrolled" : ""}`}>
-				<Logo background={true} />
+				<Logo />
 			</div>
 
 			<p class={`site-title ${y > 50 ? "site-title-scrolled" : ""}`}>AndrewBraun.dev</p>

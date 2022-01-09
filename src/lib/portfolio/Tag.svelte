@@ -1,8 +1,8 @@
 <script>
 	export let tagname;
 	export let slug;
-	export let backgroundColor;
-	export let fontWeight;
+	export let backgroundColor = "var(--color-5)";
+	export let fontWeight = "500";
 
 	const tagStyles = [`background: ${backgroundColor};`, `font-weight: ${fontWeight};`];
 	const hasStyles = backgroundColor || fontWeight;

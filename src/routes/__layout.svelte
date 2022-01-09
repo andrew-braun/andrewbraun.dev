@@ -11,7 +11,7 @@
 	<Header />
 	<section class="layout-grid">
 		<aside class="vertical-sidebar left-bar">
-			<VerticalSidebar class="left-vertical-sidebar" side="left" content={socialLinks} />
+			<VerticalSidebar side="left" content={socialLinks} />
 		</aside>
 		<main class="layout-content">
 			<slot />

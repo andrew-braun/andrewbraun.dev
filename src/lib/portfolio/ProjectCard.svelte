@@ -71,7 +71,12 @@
 				{/each}
 			{/if}
 			{#if tags && tags.length >= 8}
-				<Button className="tags-read-more open-modal" onClick={toggleModal} fontSize="0.85rem"
+				<Button
+					className="tags-read-more open-modal"
+					onClick={toggleModal}
+					width="6rem"
+					fontSize="0.85rem"
+					background="linear-gradient(to right, var(--color-2), var(--color-3));"
 					>...and more</Button
 				>
 			{/if}

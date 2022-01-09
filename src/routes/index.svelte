@@ -393,6 +393,9 @@
 			max-width: 280px;
 			max-height: 280px;
 		}
+		.my-work-section {
+			padding-bottom: 5%;
+		}
 	}
 	@media screen and (max-width: 480px) {
 		.hero-info-container {

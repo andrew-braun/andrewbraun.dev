@@ -50,7 +50,6 @@
 					`[data-list-position='${lastRenderedProjectPosition + 1}']`
 				);
 
-				console.log(scrollToProject);
 				scrollToProject
 					? scrollToProject.scrollIntoView({ behavior: "smooth", block: "center" })
 					: "";

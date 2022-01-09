@@ -1,13 +1,13 @@
 <script>
-	export let background;
-	export let className;
-	export let textColor;
-	export let fontSize;
-	export let link;
-	export let onClick;
+	export let background = "var(--color-1)";
+	export let className = "";
+	export let textColor = "var(--dark-text-1)";
+	export let fontSize = "1.4rem";
+	export let link = false;
+	export let onClick = (event) => console.log(event.target);
 	export let noRouteChange = true;
-	export let noScroll = true;
-	export let width;
+	// export let noScroll = true;
+	export let width = "100%";
 	export let prefetch = true;
 
 	const isStyled = background || textColor || width || fontSize;
@@ -29,7 +29,7 @@
 		class="button link {className ? className : ''}"
 		style={returnedStyles}
 		rel={noRouteChange ? (noRouteChange ? "external" : "") : ""}
-		sveltekit:prefetch={prefetch}
+		sveltekit:prefetch={prefetch ? true : undefined}
 	>
 		<slot />
 	</a>

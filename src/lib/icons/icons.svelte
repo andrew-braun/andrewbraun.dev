@@ -1,11 +1,11 @@
 <script>
 	export let name;
-	export let width = "1.8rem";
-	export let height = "1.8rem";
+	export let width = "28px";
+	export let height = "28px";
 	export let strokeColor = "black";
 	export let fillColor = "var(--color-2)";
 	export let hoverColor;
-	export let noFill = false;
+	// export let noFill = false;
 	export let strokeWidth = "1";
 	export let focusable = false;
 	export let strokeLinecap = "round";
