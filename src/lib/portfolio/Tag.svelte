@@ -1,7 +1,7 @@
 <script>
 	export let tagname;
 	export let slug;
-	export let backgroundColor = "var(--color-5)";
+	export let backgroundColor = "transparent";
 	export let fontWeight = "500";
 
 	const tagStyles = [`background: ${backgroundColor};`, `font-weight: ${fontWeight};`];
@@ -26,8 +26,12 @@
 		padding: 0.3rem;
 		margin: 0.2rem;
 		border-radius: 5px;
-		background: var(--dark-background-1);
-		font-size: 0.75rem;
+		border-color: var(--color-3);
+		border-style: solid;
+		border-width: 0.5px 0.5px 1.5px 1.5px;
+		background: transparent;
+		font-size: 0.76rem;
+		font-weight: 600;
 		color: var(--dark-background-text);
 		transition-duration: var(--transition-duration-very-long);
 		transition-timing-function: ease-in-out;

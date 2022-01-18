@@ -67,6 +67,7 @@
 		cursor: pointer;
 		box-shadow: inset 30rem 0 0 0 var(--color-3);
 	}
+
 	.button.link:hover {
 		cursor: pointer;
 		box-shadow: inset 30rem 0 0 0 var(--color-3);

@@ -131,14 +131,13 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 100%;
-		padding: 3% 5%;
+		width: 80%;
+		padding: 4% 0;
 	}
 	.portfolio-modal-tags {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		padding: 0 3% 3% 3%;
 	}
 	.portfolio-modal-description {
 		padding: 2rem;

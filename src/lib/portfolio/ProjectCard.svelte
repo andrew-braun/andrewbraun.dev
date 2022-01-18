@@ -82,7 +82,9 @@
 			{/if}
 		</div>
 	</div>
-	<Button {link} borderRadius="0 0 5px 5px">Visit Site</Button>
+
+	<Button {link} borderRadius="0 0 5px 5px" background="var(--color-2)">Visit Site</Button>
+
 	<Modal bind:isOpen={isModalActive}
 		><span slot="content"
 			><PortfolioModalContent
@@ -103,13 +105,15 @@
 		display: flex;
 		flex-direction: column;
 		align-items: stretch;
+		justify-content: space-between;
 		position: relative;
 		max-width: 250px;
 		border-radius: 5px;
 		text-align: center;
 		margin: 1rem;
-		background: linear-gradient(180deg, var(--color-2) 40%, transparent);
+		background: linear-gradient(180deg, var(--color-3-trans), 60%, transparent);
 		transition: all 0.3s ease-in-out;
+		box-shadow: 1px 1px 2px 1px var(--color-3-trans);
 	}
 
 	.portfolio-card-image-wrapper {
@@ -130,7 +134,7 @@
 		opacity: 0;
 		height: 96%;
 		width: 100%;
-		background: hsla(0, 0%, 0%, 0.7);
+		background: hsla(0, 0%, 0%, 0.85);
 		transform: translateY(-200px);
 	}
 	.portfolio-card-overlay p {
@@ -157,7 +161,7 @@
 		padding: 0 0.5rem;
 		color: var(--dark-background-text);
 		font-weight: bold;
-		font-size: 1.3rem;
+		font-size: 1.5rem;
 	}
 	.portfolio-card-name:hover {
 		cursor: pointer;
@@ -172,14 +176,14 @@
 		min-height: 11rem;
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
+		padding: 1% 0;
 	}
 	.portfolio-card-tags {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-
-		padding: 3%;
+		padding: 0 3%;
 	}
 
 	@media screen and (max-width: 480px) {
