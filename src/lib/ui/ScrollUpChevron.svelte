@@ -1,5 +1,4 @@
 <script>
-	import Icon from "../icons/icons.svelte";
 	import scrollUp from "../../helpers/scrollUp";
 </script>
 
@@ -12,7 +11,6 @@
 		stroke="var(--color-4)"
 		viewbox="0 0 24 24"><polyline points="18 15 12 9 6 15" /></svg
 	>
-	<!-- <Icon name="upChevron" hoverColor="transparent" class="up-chevron-icon" /> -->
 </div>
 
 <style>

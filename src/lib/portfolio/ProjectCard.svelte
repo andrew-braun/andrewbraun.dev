@@ -83,7 +83,9 @@
 		</div>
 	</div>
 
-	<Button {link} borderRadius="0 0 5px 5px" background="var(--color-2)">Visit Site</Button>
+	<Button {link} prefetch={false} borderRadius="0 0 5px 5px" background="var(--color-2)"
+		>Visit Site</Button
+	>
 
 	<Modal bind:isOpen={isModalActive}
 		><span slot="content"
@@ -166,7 +168,7 @@
 	.portfolio-card-name:hover {
 		cursor: pointer;
 	}
-	.portfolio-card-link,
+
 	.portfolio-card-name:hover {
 		text-decoration: none;
 		border-bottom: none;
