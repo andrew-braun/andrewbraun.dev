@@ -10,6 +10,10 @@
 	export let tags;
 
 	export let description;
+
+	const imgSrc = featuredImageUrl.medium.url.includes("cloudinary")
+		? `https://res.cloudinary.com/andrewbraun-dev/image/upload/f_auto/v1642848312/${featuredImageUrl.medium.provider_metadata.public_id}`
+		: `https://cms.andrewbraun.dev${featuredImageUrl.medium.url}`;
 </script>
 
 <div class="portfolio-modal-content-container">
@@ -36,12 +40,7 @@
 	{/if}
 	<div class="portfolio-modal-column column-1">
 		<div class="portfolio-modal-image-wrapper">
-			<img
-				src="https://cms.andrewbraun.dev{featuredImageUrl.large.url}"
-				class="portfolio-modal-image"
-				alt="Screenshot of {name}"
-				transition:fade
-			/>
+			<img src={imgSrc} class="portfolio-modal-image" alt="Screenshot of {name}" transition:fade />
 			<a href={link} class="portfolio-modal-image-overlay">
 				<p>Visit Site</p>
 			</a>
