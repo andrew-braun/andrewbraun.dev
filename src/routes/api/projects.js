@@ -13,5 +13,4 @@ export async function get({ url }) {
 	const data = await res.json();
 
 	return { body: data };
-	// return { body: query };
 }

@@ -30,8 +30,6 @@
 	import PortfolioContainer from "../lib/portfolio/PortfolioContainer.svelte";
 
 	export let projects;
-	export let params;
-	const pageData = params;
 </script>
 
 <div class="content-container">
@@ -286,9 +284,6 @@
 </div>
 
 <style>
-	.content-container {
-		/* padding: 7rem calc(1.5rem + 4vw) 0 calc(2.5rem + 4vw); */
-	}
 	.page-section {
 		padding: 1rem calc(1.5rem + 4vw) 1rem calc(2.5rem + 4vw);
 	}
@@ -428,8 +423,6 @@
 	}
 	#my-work {
 		padding: 1rem 2rem;
-	}
-	.my-work-portfolio-items {
 	}
 	.about-section {
 		background: var(--dark-background-1);

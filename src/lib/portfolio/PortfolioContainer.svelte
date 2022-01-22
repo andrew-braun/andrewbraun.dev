@@ -61,7 +61,7 @@
 
 <div class="portfolio-container" bind:this={projectList}>
 	<div class="project-list">
-		{#if projects}
+		{#if sortedProjects}
 			{#each sortedProjects as project, index}
 				{#if index <= projectsToDisplay}
 					<ProjectCard
