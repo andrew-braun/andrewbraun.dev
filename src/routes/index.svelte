@@ -30,6 +30,7 @@
 	import PortfolioContainer from "../lib/portfolio/PortfolioContainer.svelte";
 
 	export let projects;
+	console.log(projects);
 </script>
 
 <div class="content-container">
