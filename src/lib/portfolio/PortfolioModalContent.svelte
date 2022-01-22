@@ -12,7 +12,7 @@
 	export let description;
 
 	const imgSrc = featuredImageUrl.medium.url.includes("cloudinary")
-		? `https://res.cloudinary.com/andrewbraun-dev/image/upload/f_auto/v1642848312/${featuredImageUrl.medium.provider_metadata.public_id}`
+		? `https://res.cloudinary.com/andrewbraun-dev/image/upload/f_auto,q_auto:best/v1642848312/${featuredImageUrl.medium.provider_metadata.public_id}`
 		: `https://cms.andrewbraun.dev${featuredImageUrl.medium.url}`;
 </script>
 

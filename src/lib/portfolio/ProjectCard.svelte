@@ -45,7 +45,7 @@
 		isModalActive = !isModalActive;
 	};
 	const imgSrc = featuredImageUrl.small.url.includes("cloudinary")
-		? `https://res.cloudinary.com/andrewbraun-dev/image/upload/f_auto/v1642848312/${featuredImageUrl.small.provider_metadata.public_id}`
+		? `https://res.cloudinary.com/andrewbraun-dev/image/upload/f_auto,q_auto:best/v1642848312/${featuredImageUrl.small.provider_metadata.public_id}`
 		: `https://cms.andrewbraun.dev${featuredImageUrl.small.url}`;
 </script>
 
@@ -156,7 +156,7 @@
 	}
 	.portfolio-card-image {
 		width: 100%;
-		height: 150px;
+		height: 140px;
 		border-radius: 5px 5px 0 0;
 	}
 
