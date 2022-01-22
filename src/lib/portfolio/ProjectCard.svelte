@@ -44,6 +44,9 @@
 		event.preventDefault();
 		isModalActive = !isModalActive;
 	};
+	const imgSrc = featuredImageUrl.small.url.includes("cloudinary")
+		? `https://res.cloudinary.com/andrewbraun-dev/image/upload/f_auto/v1642848312/${featuredImageUrl.small.provider_metadata.public_id}`
+		: `https://cms.andrewbraun.dev${featuredImageUrl.small.url}`;
 </script>
 
 <article
@@ -54,7 +57,7 @@
 >
 	<div class="portfolio-card-image-wrapper" on:click={toggleModal}>
 		<img
-			src="https://cms.andrewbraun.dev{featuredImageUrl.small.url}"
+			src={imgSrc}
 			class="portfolio-card-image"
 			alt="Screenshot of {name}"
 			width="100%"
