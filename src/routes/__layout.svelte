@@ -46,10 +46,7 @@
 		border-top: 1px solid black;
 		border-bottom: 1px solid black;
 	}
-	.layout-footer {
-		display: flex;
-		justify-content: center;
-	}
+
 	@media only screen and (max-width: 480px) {
 		.layout-content {
 			min-height: 100vh;
