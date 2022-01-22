@@ -4,7 +4,15 @@
 </script>
 
 <div class="scroll-up-chevron" on:click={scrollUp}>
-	<Icon name="upChevron" hoverColor="transparent" class="up-chevron-icon" />
+	<svg
+		class="up-chevron-icon"
+		width="28px"
+		height="28px"
+		fill="transparent"
+		stroke="var(--color-4)"
+		viewbox="0 0 24 24"><polyline points="18 15 12 9 6 15" /></svg
+	>
+	<!-- <Icon name="upChevron" hoverColor="transparent" class="up-chevron-icon" /> -->
 </div>
 
 <style>
@@ -12,6 +20,10 @@
 		position: fixed;
 		bottom: 2rem;
 		right: 2vw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-bottom: 2px;
 		width: 2.2rem;
 		height: 2.2rem;
 		background: var(--color-3);

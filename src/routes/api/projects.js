@@ -1,5 +1,4 @@
 import { env } from "./api-config";
-console.log(env);
 
 export async function get({ url }) {
 	const queryString = url.searchParams.toString().replace("-", " ");
