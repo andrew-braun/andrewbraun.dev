@@ -7,7 +7,9 @@
 			return {
 				props: {
 					tagData: await res.json(),
-					slug: params.tag
+					slug: params.tag,
+					url: url,
+					params: params
 				}
 			};
 		}
@@ -21,14 +23,8 @@
 </script>
 
 <script>
-	// import { page } from "$app/stores";
-	import { afterUpdate, beforeUpdate, onMount } from "svelte";
 	import PortfolioContainer from "../../lib/portfolio/PortfolioContainer.svelte";
 	import "../../style/global.css";
-
-	// onMount(() => {
-	// 	projects = tagData;
-	// });
 
 	export let slug;
 	export let tagData;
