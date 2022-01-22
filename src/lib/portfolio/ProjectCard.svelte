@@ -57,6 +57,8 @@
 			src="https://cms.andrewbraun.dev{featuredImageUrl.small.url}"
 			class="portfolio-card-image"
 			alt="Screenshot of {name}"
+			width="100%"
+			height="100%"
 		/>
 		<div class="portfolio-card-overlay"><p>{excerpt}</p></div>
 	</div>
