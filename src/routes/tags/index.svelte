@@ -1,12 +1,14 @@
 <script context="module">
-	export async function load({ fetch }) {
+	export async function load({ url, params, fetch }) {
 		const fetchUrl = `/api/tags`;
 		const res = await fetch(fetchUrl);
 
 		if (res.ok) {
 			return {
 				props: {
-					tags: await res.json()
+					tags: await res.json(),
+					url: url,
+					params: params
 				}
 			};
 		}
@@ -41,7 +43,5 @@
 	.page-title {
 		padding: 1rem 0;
 		text-transform: uppercase;
-	}
-	.tag-container {
 	}
 </style>
