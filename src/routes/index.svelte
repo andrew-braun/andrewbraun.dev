@@ -220,7 +220,7 @@
 				</p>
 
 				<div class="hero-cta">
-					<Button link="mailto:andrew@andrewbraun.dev" width="100%" prefetch={false}>
+					<Button link="mailto:andrew@andrewbraun.dev" prefetch={false}>
 						Do nerd things for me</Button
 					>
 				</div>

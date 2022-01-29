@@ -54,7 +54,9 @@
 				{/if}
 			</div>
 		</div>
-		<Button {link} width="80%">Visit Site</Button>
+		<div class="visit-site-button-container">
+			<Button {link}>Visit Site</Button>
+		</div>
 	</div>
 	<div class="portfolio-modal-column column-2">
 		<h2 class="portfolio-modal-name">{name}</h2>
@@ -136,6 +138,10 @@
 	.portfolio-modal-description {
 		padding: 2rem;
 		text-align: left;
+	}
+	.visit-site-button-container {
+		max-width: 30rem;
+		min-width: 25rem;
 	}
 	@media screen and (max-width: 768px) {
 		.portfolio-modal-content-container {

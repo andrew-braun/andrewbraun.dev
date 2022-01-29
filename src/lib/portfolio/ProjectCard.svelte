@@ -76,21 +76,12 @@
 				{/each}
 			{/if}
 			{#if tags && tags.length >= 8}
-				<Button
-					className="tags-read-more open-modal"
-					onClick={toggleModal}
-					width="6rem"
-					fontSize="0.85rem"
-					background="linear-gradient(to right, var(--color-2), var(--color-3));"
-					>...and more</Button
-				>
+				<Button classNames="tags-read-more open-modal" onClick={toggleModal}>...and more</Button>
 			{/if}
 		</div>
 	</div>
 
-	<Button {link} prefetch={false} borderRadius="0 0 5px 5px" background="var(--color-2)"
-		>Visit Site</Button
-	>
+	<Button {link} prefetch={false}>Visit Site</Button>
 
 	<Modal bind:isOpen={isModalActive}
 		><span slot="content"

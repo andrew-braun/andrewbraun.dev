@@ -80,8 +80,10 @@
 		{/if}
 	</div>
 	{#if projects.length > 6 && projectsToDisplay < projects.length}
-		<div class="show-more-button-wrapper">
-			<Button width="20rem" onClick={handleShowMore}>Show More</Button>
+		<div class="show-more-button-container">
+			<div class="show-more-button-wrapper">
+				<Button onClick={handleShowMore}>Show More</Button>
+			</div>
 		</div>
 	{/if}
 </div>
@@ -96,8 +98,13 @@
 		flex-wrap: wrap;
 		justify-content: center;
 	}
-	.show-more-button-wrapper {
+	.show-more-button-container {
 		display: flex;
 		justify-content: center;
+		width: 100%;
+	}
+	.show-more-button-wrapper {
+		min-width: 20rem;
+		max-width: 30rem;
 	}
 </style>
