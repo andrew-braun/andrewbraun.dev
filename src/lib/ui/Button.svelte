@@ -57,4 +57,8 @@
 		padding: 0.5rem;
 		background: linear-gradient(to right, var(--color-2), var(--color-3));
 	}
+
+	.visit-site-button {
+		background: var(--color-2);
+	}
 </style>
