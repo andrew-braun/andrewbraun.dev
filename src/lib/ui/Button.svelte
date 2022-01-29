@@ -1,6 +1,6 @@
 <script>
 	export let background = "var(--color-1)";
-	export let className = "";
+	export let classNames = "";
 	export let textColor = "var(--dark-text-1)";
 	export let fontSize = "1.4rem";
 	export let borderRadius = "5px";
@@ -29,7 +29,7 @@
 		href={link}
 		sveltekit:noscroll
 		sveltekit:keepfocus
-		class="button link {className ? className : ''}"
+		class="button link {classNames ? classNames : ''}"
 		style={returnedStyles}
 		rel={noRouteChange ? (noRouteChange ? "external" : "") : ""}
 		sveltekit:prefetch={prefetch ? true : undefined}
@@ -38,7 +38,7 @@
 	</a>
 {:else}
 	<button
-		class="button internal {className ? className : ''}"
+		class="button internal {classNames ? classNames : ''}"
 		style={returnedStyles}
 		on:click={onClick}
 	>
