@@ -263,8 +263,13 @@
 	</section> -->
 	<section class="contact-section page-section">
 		<h2 id="contact" class="global-heading">Contact</h2>
+
 		<div class="contact-section-container">
 			<div class="contact-form-container">
+				<p class="contact-text">
+					I'm here to help! Send me an email or use any one of my many other platforms to contact
+					me. I don't bite--but I do byte!
+				</p>
 				<ContactForm />
 			</div>
 			<div class="social-container">
@@ -345,6 +350,9 @@
 		margin-bottom: 8%;
 	}
 	@media screen and (max-width: 768px) {
+		.page-section {
+			padding: 0;
+		}
 		.hero-section {
 			display: flex;
 			flex-direction: column;
@@ -411,9 +419,7 @@
 			font-size: 1.8rem;
 		}
 	}
-	#my-work {
-		padding: 1rem 2rem;
-	}
+
 	.about-section {
 		background: var(--dark-background-1);
 	}
@@ -422,18 +428,31 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		padding: 5% 0;
+		padding: 2% 5%;
 		background: var(--dark-background-2);
 	}
 	.contact-form-container {
 		width: 50%;
 		min-width: 320px;
+		padding: 0 5%;
+	}
+
+	.contact-text {
+		margin: 0;
+		padding: 0;
+		font-size: 0.9rem;
+		font-style: italic;
 	}
 
 	.social-container {
-		width: 50%;
-		min-width: 320px;
-		max-width: 400px;
+		width: clamp(50%, 320px, 400px);
+		padding: 0 5%;
+	}
+
+	@media screen and (max-width: 768px) {
+		.contact-section-container {
+			padding: 0;
+		}
 	}
 	@media screen and (max-width: 480px) {
 		#my-work {

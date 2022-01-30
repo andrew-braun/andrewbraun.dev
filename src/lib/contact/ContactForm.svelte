@@ -11,8 +11,16 @@
 		<label class="contact-form-label" for="contact-email">Email</label>
 		<input id="contact-email" name="contact-email" class="contact-form-field" type="email" />
 	</div>
-	<!-- <input class="contact-form-submit-button" type="submit" value="submit" />
-     -->
+	<div class="input-container">
+		<label class="contact-form-label" for="contact-message">Message</label>
+		<textarea
+			id="contact-message"
+			name="contact-message"
+			class="contact-form-field contact-form-textarea"
+			type="email"
+		/>
+	</div>
+
 	<div class="submit-button-container">
 		<Button type="submit" classNames="submit-form-button">Submit</Button>
 	</div>
@@ -20,7 +28,7 @@
 
 <style>
 	.contact-form {
-		width: clamp(20rem, 100%, 25rem);
+		width: clamp(18rem, 100%, 25rem);
 	}
 	.input-container {
 		display: flex;
@@ -40,6 +48,9 @@
 		background: hsla(0, 0%, 100%, 0.15);
 		color: var(--dark-text-1);
 		transition: all 0.3s ease-in-out;
+	}
+	.contact-form-textarea {
+		height: 10rem;
 	}
 	.contact-form-field:hover,
 	.contact-form-field:active,

@@ -27,11 +27,13 @@
 	.social-icons {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 	.social-icon {
 		margin: 1rem;
 		text-decoration: none;
 		border: none;
+		transition: all 0.3s ease-in-out;
 	}
 	.social-icon:hover {
 		text-decoration: none;
