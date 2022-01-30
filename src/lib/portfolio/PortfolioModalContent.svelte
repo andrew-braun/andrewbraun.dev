@@ -141,7 +141,7 @@
 	}
 	.visit-site-button-container {
 		max-width: 30rem;
-		min-width: 25rem;
+		min-width: 18rem;
 	}
 	@media screen and (max-width: 768px) {
 		.portfolio-modal-content-container {
