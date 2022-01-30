@@ -88,6 +88,7 @@
 	{focusable}
 	{width}
 	{height}
+	style="border: none;"
 	stroke={strokeColor}
 	fill={fillColor}
 	hoverColor
@@ -101,3 +102,14 @@
 	on:blur={handleMouseOut}
 	>{@html displayIcon.svg}
 </svg>
+
+<style>
+	svg {
+		border: none;
+		text-decoration: none;
+	}
+	svg:hover {
+		border: none;
+		text-decoration: none;
+	}
+</style>
