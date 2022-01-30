@@ -29,6 +29,8 @@
 
 	import { socialLinks } from "../data/social-links";
 	import SocialIcons from "../lib/social/SocialIcons.svelte";
+	import ContactForm from "../lib/contact/ContactForm.svelte";
+
 	import PortfolioContainer from "../lib/portfolio/PortfolioContainer.svelte";
 
 	export let projects;
@@ -261,9 +263,13 @@
 	</section> -->
 	<section class="contact-section page-section">
 		<h2 id="contact" class="global-heading">Contact</h2>
-		<div class="contact-form-container" />
-		<div class="social-container">
-			<SocialIcons content={socialLinks} />
+		<div class="contact-section-container">
+			<div class="contact-form-container">
+				<ContactForm />
+			</div>
+			<div class="social-container">
+				<SocialIcons content={socialLinks} />
+			</div>
 		</div>
 	</section>
 </div>
@@ -411,13 +417,23 @@
 	.about-section {
 		background: var(--dark-background-1);
 	}
-	.contact-section {
+
+	.contact-section-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 5% 0;
 		background: var(--dark-background-2);
+	}
+	.contact-form-container {
+		width: 50%;
+		min-width: 320px;
 	}
 
 	.social-container {
 		width: 50%;
 		min-width: 320px;
+		max-width: 400px;
 	}
 	@media screen and (max-width: 480px) {
 		#my-work {

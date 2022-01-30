@@ -2,6 +2,7 @@
 	export let classNames = "";
 	export let link = false;
 	export let onClick = (event) => console.log(event.target);
+	export let type = "button";
 	export let noRouteChange = true;
 	export let prefetch = true;
 </script>
@@ -11,6 +12,7 @@
 		href={link}
 		sveltekit:noscroll
 		sveltekit:keepfocus
+		{type}
 		class="button link {classNames ? classNames : ''}"
 		rel={noRouteChange ? (noRouteChange ? "external" : "") : ""}
 		sveltekit:prefetch={prefetch ? true : undefined}
@@ -18,7 +20,7 @@
 		<slot />
 	</a>
 {:else}
-	<button class="button internal {classNames ? classNames : ''}" on:click={onClick}>
+	<button class="button internal {classNames ? classNames : ''}" on:click={onClick} {type}>
 		<slot />
 	</button>
 {/if}
@@ -60,5 +62,10 @@
 
 	.visit-site-button {
 		background: var(--color-2);
+	}
+	.submit-form-button {
+		width: 80%;
+		max-width: 15rem;
+		padding: 0.5rem;
 	}
 </style>
