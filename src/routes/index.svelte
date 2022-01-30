@@ -257,35 +257,16 @@
 			solo debo sofa en ch sexo.
 		</p>
 	</section> -->
-	<!-- <section class="contact-section page-section">
+	<section class="contact-section page-section">
 		<h2 id="contact" class="global-heading">Contact</h2>
-		<p>
-			Ganado correo operas cuerpo sirvio la manera lo es. En lacrimoso pelagatos insomnios ha ti
-			expresion el. Que rapidisimo caballeros escopetazo exclamaron don son forasteros amabilidad
-			los. Dias gr hago lema baja toco moza eh en. Dos corrian iba declaro sentido nos exigian pre
-			ceguera. Cogio rio sus hay angel senas sabra feo arena. Explico pistola cuantos fuertes mal
-			muy pequeno andando. Esposo evitar crespo es ya esposa al cuerda.
-		</p>
-
-		<p>
-			Alta es esto va dira odio tu pues anos da. Volviera incienso doncella iba sea pensados.
-			Estuviera el aparejada eh terminada disimulos dulcisima yo so. Ti se la miradas tendian id
-			importa. Mia encerrada dar lamentaba les una universal. Mil tio tristisimo aseguraban
-			agradecido. Ovaciones eso suponerle las vestibulo cortesias esplendor.
-		</p>
-
-		<p>
-			Ido dos escondite tentativa eso protegida miserable. Fuente hurano senora eso uso amable
-			asusta con pedazo. Mar los lengua maloso vestia graves plazos. Arrastro ocupaban haciendo
-			memorias nerviosa un ni. Un santiago el yo encogido sorpresa de. Superiores costumbres ch
-			fantastico convertido el sacamuelas le. Esa tuvo van gris anos paje algo para.
-		</p>
-	</section> -->
+		<div class="contact-form-container" />
+	</section>
 </div>
 
 <style>
 	.page-section {
-		padding: 1rem calc(1.5rem + 4vw) 1rem calc(2.5rem + 4vw);
+		/* padding: 1rem calc(1.5rem + 4vw) 1rem calc(2.5rem + 4vw);*/
+		padding: 0 15%;
 	}
 	.hero-section {
 		position: relative;
@@ -403,8 +384,6 @@
 
 	.my-work-section {
 		background: var(--dark-background-2);
-		padding-left: 15%;
-		padding-right: 15%;
 	}
 
 	@media screen and (max-width: 480px) {
