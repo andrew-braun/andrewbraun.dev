@@ -432,8 +432,12 @@
 		background: var(--dark-background-2);
 	}
 	.contact-form-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		width: 50%;
 		min-width: 320px;
+		flex-grow: 1;
 		padding: 0 5%;
 	}
 
@@ -445,7 +449,8 @@
 	}
 
 	.social-container {
-		width: clamp(50%, 320px, 400px);
+		width: clamp(320px, 50%, 400px);
+		flex-grow: 1;
 		padding: 0 5%;
 	}
 
