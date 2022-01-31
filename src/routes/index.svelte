@@ -261,7 +261,7 @@
 			solo debo sofa en ch sexo.
 		</p>
 	</section> -->
-	<section class="contact-section page-section">
+	<section class="contact-section page-section" style="display:none">
 		<h2 id="contact" class="global-heading">Contact</h2>
 
 		<div class="contact-section-container">
