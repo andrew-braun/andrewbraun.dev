@@ -21,7 +21,11 @@ exports.handler = async function (event, context) {
 		});
 	} catch (error) {
 		console.log(error);
-		return { statusCode: 500, body: JSON.stringify(error) };
+		return {
+			statusCode: 500,
+			body: JSON.stringify(error),
+			domain: process.env.VITE_MAILGUN_DOMAIN
+		};
 	}
 
 	// You can see a record of this email in your logs: https://app.mailgun.com/app/logs.
