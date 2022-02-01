@@ -1,12 +1,12 @@
 exports.handler = async function (event, context) {
 	const mailgun = require("mailgun-js");
-	const DOMAIN = import.meta.env.VITE_MAILGUN_DOMAIN;
+	const DOMAIN = process.env.VITE_MAILGUN_DOMAIN;
 	const mg = mailgun({
-		apiKey: import.meta.env.VITE_MAILGUN_KEY,
+		apiKey: process.env.VITE_MAILGUN_KEY,
 		domain: DOMAIN
 	});
 	const data = {
-		from: `Mailgun Sandbox <postmaster@${import.meta.env.VITE_MAILGUN_DOMAIN}>`,
+		from: `Mailgun Sandbox <postmaster@${process.env.VITE_MAILGUN_DOMAIN}>`,
 		to: "andrew@andrewbraun.dev",
 		subject: "Hello",
 		text: "Testing some Mailgun awesomness!"
