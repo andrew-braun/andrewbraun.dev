@@ -1,18 +1,19 @@
 exports.handler = async function (event, context) {
-	const mailgun = require("mailgun-js");
-	const DOMAIN = process.env.VITE_MAILGUN_DOMAIN;
-	const mg = mailgun({
-		apiKey: process.env.VITE_MAILGUN_KEY,
-		domain: DOMAIN
-	});
-	const data = {
-		from: `Mailgun Sandbox <postmaster@${process.env.VITE_MAILGUN_DOMAIN}>`,
-		to: "andrew@andrewbraun.dev",
-		subject: "Hello",
-		text: "Testing some Mailgun awesomness!"
-	};
+	const mailgun = require("mailgun.js");
 
 	try {
+		const DOMAIN = process.env.VITE_MAILGUN_DOMAIN;
+		const mg = mailgun({
+			apiKey: process.env.VITE_MAILGUN_KEY,
+			domain: DOMAIN
+		});
+		const data = {
+			from: `Mailgun Sandbox <postmaster@${process.env.VITE_MAILGUN_DOMAIN}>`,
+			to: "andrew@andrewbraun.dev",
+			subject: "Hello",
+			text: "Testing some Mailgun awesomness!"
+		};
+
 		mg.messages().send(data, function (error, body) {
 			return { statusCode: 200, body: JSON.stringify({ message: body }) };
 			// console.log(body);
