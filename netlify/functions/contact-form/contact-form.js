@@ -14,10 +14,11 @@ exports.handler = async function (event, context) {
 
 	try {
 		mg.messages().send(data, function (error, body) {
-			console.log(body);
+			return { statusCode: 200, body: JSON.stringify({ message: body }) };
+			// console.log(body);
 		});
 	} catch (error) {
-		return { statusCode: 400, body: JSON.stringify(error) };
+		return { statusCode: 400, body: JSON.stringify({ error: error }) };
 	}
 
 	// You can see a record of this email in your logs: https://app.mailgun.com/app/logs.
