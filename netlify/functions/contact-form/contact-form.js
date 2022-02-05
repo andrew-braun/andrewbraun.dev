@@ -6,7 +6,7 @@ exports.handler = async function (event, context) {
 	/* Get form data from frontend */
 	const { name, email, message } = JSON.parse(event.body);
 
-	/* Set up Mialgun connection */
+	/* Set up Mailgun connection */
 	const domain = process.env.VITE_MAILGUN_DOMAIN;
 	const apiKey = process.env.VITE_MAILGUN_KEY;
 

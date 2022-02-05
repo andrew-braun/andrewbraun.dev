@@ -17,7 +17,6 @@ export default {
 	kit: {
 		adapter: adapter({
 			split: false
-		}), // currently the adapter does not take any options
-		target: "#svelte"
+		}) // currently the adapter does not take any options
 	}
 };
