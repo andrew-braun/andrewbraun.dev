@@ -2,6 +2,11 @@ const Mailgun = require("mailgun.js");
 const formData = require("form-data");
 
 exports.handler = async function (event, context) {
+	console.log(event.body);
+	/* Get form data from frontend */
+	const { name, email, message } = JSON.parse(event.body);
+
+	/* Set up Mialgun connection */
 	const domain = process.env.VITE_MAILGUN_DOMAIN;
 	const apiKey = process.env.VITE_MAILGUN_KEY;
 
@@ -14,18 +19,17 @@ exports.handler = async function (event, context) {
 	});
 
 	const data = {
-		from: `Andrew Braun <andrew@mail.andrewbraun.dev>`,
+		from: `${name} <${email}>`,
 		to: "andrew@andrewbraun.dev",
-		subject: "Hello",
-		text: "Testing some Mailgun awesomness!"
+		subject: `Contact Form Message from ${name}`,
+		text: message
 	};
 
 	try {
 		await mg.messages.create(domain, data);
-
-		return { statusCode: 200, body: "Success!" };
+		return { statusCode: 200, body: "Successfully sent email!" };
 	} catch (error) {
-		console.log(error);
+		// console.log(error);
 		return {
 			statusCode: 500,
 			body: JSON.stringify(error)
