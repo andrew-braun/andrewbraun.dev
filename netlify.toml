@@ -7,6 +7,6 @@
   command = "svelte-kit dev"
   functions = "netlify/functions/"
 [functions]
-    directory = "functions"
+    directory = "netlify/functions"
     node_bundler = "esbuild"
     external_node_modules = ["@sveltejs/kit/ssr"]
