@@ -1,5 +1,5 @@
 exports.handler = async function (event, context) {
-	const mailgun = require("mailgun.js");
+	const mailgun = require("mailgun-js");
 
 	try {
 		const DOMAIN = process.env.VITE_MAILGUN_DOMAIN;
