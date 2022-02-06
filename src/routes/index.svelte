@@ -262,10 +262,12 @@
 		</p>
 	</section> -->
 	<section class="contact-section page-section">
-		<h2 id="contact" class="global-heading">Contact Me</h2>
-		<p style="font-size: .7rem; font-style: italic; margin: 0 0 0 .5rem; padding: 0;">
-			I don't bite--I byte!
-		</p>
+		<div class="global-heading">
+			<h2 id="contact" class="">Contact Me</h2>
+			<p style="font-size: .7rem; font-style: italic; margin: 0 0 0 .4rem; padding: 0;">
+				I don't bite--I byte!
+			</p>
+		</div>
 
 		<div class="contact-section-container">
 			<div class="contact-form-container">
