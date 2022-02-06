@@ -5,13 +5,13 @@
 
 <section role="navigation" class="tab-bar">
 	<nav class="main-nav">
-		<a class="nav-link" id="my-work-link" href="#my-work" target="_self"
+		<a class="nav-link" id="my-work-link" href="/#my-work" target="_self"
 			><Icon name="tool" hoverColor="transparent" />My Work</a
 		>
-		<a class="nav-link" id="about-link" href="#" target="_self"
+		<a class="nav-link" id="about-link" href="/#" target="_self"
 			><Icon name="info" hoverColor="transparent" />About</a
 		>
-		<a class="nav-link" id="contact-link" href="#contact" target="_self"
+		<a class="nav-link" id="contact-link" href="/#contact" target="_self"
 			><Icon name="message" hoverColor="transparent" />Contact</a
 		>
 	</nav>
