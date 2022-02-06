@@ -25,9 +25,15 @@ exports.handler = async function (event, context) {
 		text: message
 	};
 
+	const headers = {
+		"Access-Control-Allow-Origin": "andrewbraun.dev",
+		"Access-Control-Allow-Headers": "Content-Type",
+		"Access-Control-Allow-Methods": "POST"
+	};
+
 	try {
 		await mg.messages.create(domain, data);
-		return { statusCode: 200, body: "Successfully sent email!" };
+		return { statusCode: 200, headers, body: "Successfully sent email!" };
 	} catch (error) {
 		// console.log(error);
 		return {
