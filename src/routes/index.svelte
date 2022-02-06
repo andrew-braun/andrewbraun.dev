@@ -261,15 +261,18 @@
 			solo debo sofa en ch sexo.
 		</p>
 	</section> -->
-	<section class="contact-section page-section" style="display:none">
-		<h2 id="contact" class="global-heading">Contact</h2>
+	<section class="contact-section page-section">
+		<h2 id="contact" class="global-heading">Contact Me</h2>
+		<p style="font-size: .7rem; font-style: italic; margin: 0 0 0 .5rem; padding: 0;">
+			I don't bite--I byte!
+		</p>
 
 		<div class="contact-section-container">
 			<div class="contact-form-container">
-				<p class="contact-text">
+				<!-- <p class="contact-text">
 					I'm here to help! Send me an email or use any one of my many other platforms to contact
 					me. I don't bite--but I do byte!
-				</p>
+				</p> -->
 				<ContactForm />
 			</div>
 			<div class="social-container">
@@ -282,7 +285,7 @@
 <style>
 	.page-section {
 		/* padding: 1rem calc(1.5rem + 4vw) 1rem calc(2.5rem + 4vw);*/
-		padding: 0 15%;
+		padding: 0 15% 4% 15%;
 	}
 	.hero-section {
 		position: relative;
@@ -457,6 +460,12 @@
 	@media screen and (max-width: 768px) {
 		.contact-section-container {
 			padding: 0;
+		}
+		.social-container {
+			padding: 5%;
+		}
+		.contact-text {
+			max-width: 400px;
 		}
 	}
 	@media screen and (max-width: 480px) {

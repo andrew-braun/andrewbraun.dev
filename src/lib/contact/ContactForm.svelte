@@ -1,15 +1,43 @@
 <script>
 	import Button from "../ui/Button.svelte";
+
+	let formName = "";
+	let formEmail = "";
+	let formMessage = "";
+
+	const contactFormHandler = async () => {
+		fetch("https://andrewbraun.dev/.netlify/functions/contact-form", {
+			method: "POST",
+			body: JSON.stringify({
+				name: formName,
+				email: formEmail,
+				message: formMessage
+			})
+		});
+	};
 </script>
 
-<form class="contact-form">
+<form class="contact-form" on:submit|preventDefault={contactFormHandler}>
 	<div class="input-container">
 		<label class="contact-form-label" for="contact-name">Name</label>
-		<input id="contact-name" name="contact-name" class="contact-form-field" type="text" />
+		<input
+			id="contact-name"
+			name="contact-name"
+			class="contact-form-field"
+			type="text"
+			bind:value={formName}
+			required
+		/>
 	</div>
 	<div class="input-container">
 		<label class="contact-form-label" for="contact-email">Email</label>
-		<input id="contact-email" name="contact-email" class="contact-form-field" type="email" />
+		<input
+			id="contact-email"
+			name="contact-email"
+			class="contact-form-field"
+			type="email"
+			bind:value={formEmail}
+		/>
 	</div>
 	<div class="input-container">
 		<label class="contact-form-label" for="contact-message">Message</label>
@@ -18,6 +46,7 @@
 			name="contact-message"
 			class="contact-form-field contact-form-textarea"
 			type="email"
+			bind:value={formMessage}
 		/>
 	</div>
 
@@ -36,10 +65,17 @@
 		margin: 0.5rem 0;
 	}
 	.contact-form-label {
-		margin-bottom: -0.55rem;
+		max-width: max-content;
+
+		margin-bottom: -0.57rem;
 		margin-left: 1rem;
+		padding: 0.2rem 0.5rem 0.15rem 0.5rem;
+		line-height: 1;
+		/* border: 1px solid hsla(0, 0%, 100%, 0.15); */
+		border-radius: 3px;
 		font-size: 0.8rem;
 		z-index: 10;
+		background: var(--dark-background-2);
 	}
 	.contact-form-field {
 		padding: 0.8rem 0.5rem 0.6rem 0.5rem;
