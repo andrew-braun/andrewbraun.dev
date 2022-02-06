@@ -4,16 +4,31 @@
 	let formName = "";
 	let formEmail = "";
 	let formMessage = "";
+	let submitButtonText = "Send Message";
 
 	const contactFormHandler = async () => {
-		fetch("https://andrewbraun.dev/.netlify/functions/contact-form", {
-			method: "POST",
-			body: JSON.stringify({
-				name: formName,
-				email: formEmail,
-				message: formMessage
-			})
-		});
+		try {
+			fetch("https://andrewbraun.dev/.netlify/functions/contact-form", {
+				method: "POST",
+				body: JSON.stringify({
+					name: formName,
+					email: formEmail,
+					message: formMessage
+				})
+			});
+
+			formName = "";
+			formEmail = "";
+			formMessage = "";
+
+			submitButtonText = "Message Sent!";
+
+			setTimeout(() => {
+				submitButtonText = "Send Message";
+			}, 3000);
+		} catch (error) {
+			console.log(error);
+		}
 	};
 </script>
 
@@ -51,7 +66,7 @@
 	</div>
 
 	<div class="submit-button-container">
-		<Button type="submit" classNames="submit-form-button">Submit</Button>
+		<Button type="submit" classNames="submit-form-button">{submitButtonText}</Button>
 	</div>
 </form>
 
