@@ -242,25 +242,51 @@
 		</div>
 	</section>
 
-	<!-- <section class="about-section page-section">
+	<section class="about-section page-section">
 		<h2 id="about" class="global-heading">About</h2>
-
-		<p>
-			Ex estupido mientras se senalada so correcta madrugar. Trovador ay gracioso se eh sostengo
-			ofrecido. Sitio es duros otros il focos. Si implacable escuchando misteriosa excelentes tu
-			movimiento. Iba politica hablaban lagrimas mil les suo instante. Escapo rigido estilo asi ido
-			bucles mal del aludio herido. Estaba orilla terror al no vacias. Senor eso aca lugar opera
-			letra etc.
-		</p>
-
-		<p>
-			Alumbraban chabacanos castrillos deliciosos un ma al. Ninguno anemica echaron escudos se
-			palabra la. Primer ha buscar da es ribera de region dinero ultimo. Eran ello es se flor quel
-			raza. Ocultar dificil lo su estaban. Lastima pedirme ese parecer ley. Fantasia llevarse ti
-			hojuelas mejillas al cuestion trovador de. Decir esa las ricos usted ellas trato. Al fijo debe
-			solo debo sofa en ch sexo.
-		</p>
-	</section> -->
+		<div class="about-section-container">
+			<div class="about-text-container">
+				<p>
+					My family's first computer ran Windows 95. The modem actually made those weird 90s noises
+					and blocked the phone lines. That was the soundtrack to the awakening of my inner computer
+					nerd.
+				</p>
+				<p>
+					I went through several other nerd phases--literature, history, theater, economics--but I
+					was never able to escape my destiny: "person who is good with computers". So, I worked in
+					the tech department in university and kept working as a web developer there after I
+					graduated in 2014.
+				</p>
+				<p>
+					I took a break from tech to teach English in South Korea and briefly pursued a graduate
+					degree in economics, but after learning Python to analyze economic data, I finally
+					realized that I enjoyed programming more than anything else I'd ever done... so by 2019 I
+					had started learning web development.
+				</p>
+				<p>
+					A year later, I was building websites for multiple clients, devouring all the tech
+					knowledge I could in my spare time, and feeling great--and that's pretty much what I'm
+					still doing!
+				</p>
+				<p>
+					My computer runs Windows 10 now, and it doesn't make cool noises when I go online (I'd at
+					least like the option!), but I'm still basically that computer geek. Time never goes by
+					faster for me than when I'm solving problems and making new things. Luckily, my studies
+					and varied career choices have left me with the communication skills and independent
+					motivation I need to run a business where I can do my favorite things for people who need
+					my skills! If you want to hire me for web stuff, or just ask a few quick questions, get in
+					touch! I'd love to hear from you.
+				</p>
+			</div>
+			<div class="about-image-container">
+				<img
+					src="https://res.cloudinary.com/andrewbraun-dev/image/upload/v1644650135/profile_pic_lights_6b392d17cb.png"
+					class="about-image"
+					alt="Headshot of Andrew Braun against a blurred city light background"
+				/>
+			</div>
+		</div>
+	</section>
 	<section class="contact-section page-section">
 		<div class="global-heading">
 			<h2 id="contact" class="">Contact Me</h2>
@@ -271,10 +297,6 @@
 
 		<div class="contact-section-container">
 			<div class="contact-form-container">
-				<!-- <p class="contact-text">
-					I'm here to help! Send me an email or use any one of my many other platforms to contact
-					me. I don't bite--but I do byte!
-				</p> -->
 				<ContactForm />
 			</div>
 			<div class="social-container">
@@ -478,5 +500,29 @@
 			padding-left: 2%;
 			padding-right: 2%;
 		}
+	}
+
+	.about-section {
+		padding-top: 1rem;
+	}
+
+	.about-section-container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.about-text-container {
+		flex: 1 1 300px;
+		width: 60%;
+		padding: 1rem;
+	}
+	.about-image-container {
+		flex: 1 1 200px;
+		width: clamp(200px, 50%, 320px);
+		text-align: center;
+	}
+	.about-image {
+		width: 100%;
+		max-width: 320px;
 	}
 </style>
