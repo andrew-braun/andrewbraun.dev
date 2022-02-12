@@ -26,3 +26,11 @@
 		<slot isTitle={false} isContent={true} />
 	</div>
 </div>
+
+<style>
+	.tabs {
+		display: flex;
+		justify-content: center;
+		border-bottom: 1px solid var(--color-3);
+	}
+</style>

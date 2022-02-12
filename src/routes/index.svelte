@@ -129,6 +129,7 @@
 			<div class="about-text-container">
 				<Tabs let:isTitle let:isContent>
 					<Tab id="0" {isTitle} {isContent}>
+						<span slot="title">Life Story Mode</span>
 						<p>
 							My family's first computer ran Windows 95. The modem actually made those weird 90s
 							noises and blocked the phone lines. That was the soundtrack to the awakening of my
@@ -154,14 +155,21 @@
 						<p>
 							My computer runs Windows 10 now, and it doesn't make cool noises when I go online (I'd
 							at least like the option!), but I'm still basically that computer geek. Time never
-							goes by faster for me than when I'm solving problems and making new things. Luckily,
-							my studies and varied career choices have left me with the communication skills and
-							independent motivation I need to run a business where I can do my favorite things for
-							people who need my skills! If you want to hire me for web stuff, or just ask a few
-							quick questions, get in touch! I'd love to hear from you.
+							goes by faster for me than when I'm solving problems and making new things.
+						</p>
+						<p>
+							Luckily, my studies and varied career choices have left me with the communication
+							skills and independent motivation I need to run a business where I can do my favorite
+							things for people who need my skills! If you want to hire me for web stuff, or just
+							ask a few quick questions, get in touch! I'd love to hear from you.
 						</p>
 					</Tab>
-					<Tab id="1" {isTitle} {isContent}>
+					<Tab id="2" {isTitle} {isContent}>
+						<span slot="title">Professional Mode</span>
+						<p>Tab 1</p>
+					</Tab>
+					<Tab id="3" {isTitle} {isContent}>
+						<span slot="title">Techy Mode</span>
 						<p>Tab 1</p>
 					</Tab>
 				</Tabs>
@@ -265,8 +273,8 @@
 		margin-bottom: 8%;
 	}
 	@media screen and (max-width: 768px) {
-		.page-section {
-			padding: 0;
+		.my-work-section {
+			padding: 1.2rem;
 		}
 		.hero-section {
 			display: flex;
@@ -391,17 +399,17 @@
 	}
 
 	.about-section {
-		padding-top: 1rem;
+		padding: 1rem 10%;
 	}
 
 	.about-section-container {
 		display: flex;
-		flex-wrap: wrap;
+		flex-wrap: wrap-reverse;
 	}
 
 	.about-text-container {
-		flex: 1 1 300px;
-		width: 60%;
+		flex: 1 1 400px;
+		width: clamp(320px, 60%, 600px);
 		padding: 1rem;
 	}
 	.about-image-container {
@@ -412,5 +420,10 @@
 	.about-image {
 		width: 100%;
 		max-width: 320px;
+	}
+	@media screen and (max-width: 480px) {
+		.about-text-container {
+			padding: 0;
+		}
 	}
 </style>
