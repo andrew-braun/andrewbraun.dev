@@ -186,7 +186,7 @@
 	<section class="contact-section page-section">
 		<div class="global-heading">
 			<h2 id="contact" class="">Contact Me</h2>
-			<p style="font-size: .7rem; font-style: italic; margin: 0 0 0 .4rem; padding: 0;">
+			<p style="font-size: .7rem; font-style: italic; margin: 0; padding: 0;">
 				I don't bite--I byte!
 			</p>
 		</div>
@@ -351,7 +351,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		padding: 2% 5%;
+		padding: 2% 0%;
 		background: var(--dark-background-2);
 	}
 	.contact-form-container {
@@ -361,11 +361,10 @@
 		width: 50%;
 		min-width: 320px;
 		flex-grow: 1;
-		padding: 0 5%;
+		padding: 0 0;
 	}
 
 	.contact-text {
-		margin: 0;
 		padding: 0;
 		font-size: 0.9rem;
 		font-style: italic;
@@ -410,7 +409,7 @@
 	.about-text-container {
 		flex: 1 1 400px;
 		width: clamp(320px, 60%, 600px);
-		padding: 1rem;
+		padding: 1rem 0;
 	}
 	.about-image-container {
 		flex: 1 1 200px;
