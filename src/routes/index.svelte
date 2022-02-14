@@ -129,7 +129,39 @@
 			<div class="about-text-container">
 				<Tabs let:isTitle let:isContent>
 					<Tab id="0" {isTitle} {isContent}>
-						<span slot="title">Life Story Mode</span>
+						<span slot="title">Professional Mode</span>
+						<h3>What do you do?</h3>
+						<p>
+							My name is Andrew Braun, and I'm an American full-stack web developer. I build new
+							websites from the ground up, overhaul old systems, and fix issues when they arise. I'm
+							flexible, friendly, and, most importantly, I am <i>excellent</i> at Googling things.
+						</p>
+						<p>
+							If you want to know all about the technologies I use, check out the "Techy Mode" tab.
+							Here, I'll simply say that I work a lot with the following:
+						</p>
+						<ul>
+							<li>JavaScript - runs a lot of the modern web</li>
+							<li>CSS - a lot of visual problems are CSS problems</li>
+							<li>WordPress - powers 43% of the internet</li>
+						</ul>
+						<h3>What does working together look like?</h3>
+						<p>Obviously, every project is different--but the process generally goes like this:</p>
+						<ol>
+							<li>You contact me with general details about a project.</li>
+							<li>I look into it and assess whether I can handle it.</li>
+						</ol>
+						<h3>How long have you been a web developer?</h3>
+						<p>
+							I've been working as a web developer on and off since graduating from university in
+							2014, though I also held jobs as a writer and an English teacher for several years. I
+							don't do much of that anymore, but I believe my past work has made me an effective
+							communicator--and I still love teaching about my favorite subject: code!
+						</p>
+						<p />
+					</Tab>
+					<Tab id="2" {isTitle} {isContent}>
+						<span slot="title">Personal Mode</span>
 						<p>
 							My family's first computer ran Windows 95. The modem actually made those weird 90s
 							noises and blocked the phone lines. That was the soundtrack to the awakening of my
@@ -163,10 +195,6 @@
 							things for people who need my skills! If you want to hire me for web stuff, or just
 							ask a few quick questions, get in touch! I'd love to hear from you.
 						</p>
-					</Tab>
-					<Tab id="2" {isTitle} {isContent}>
-						<span slot="title">Professional Mode</span>
-						<p>Tab 1</p>
 					</Tab>
 					<Tab id="3" {isTitle} {isContent}>
 						<span slot="title">Techy Mode</span>
