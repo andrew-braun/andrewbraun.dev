@@ -33,4 +33,7 @@
 		justify-content: center;
 		border-bottom: 1px solid var(--color-3);
 	}
+	.tab-content {
+		padding: 4% 2%;
+	}
 </style>

@@ -37,43 +37,6 @@
 	import PortfolioContainer from "../lib/portfolio/PortfolioContainer.svelte";
 
 	export let projects;
-
-	const aboutTabs = [
-		{
-			title: "Life Story Mode",
-			content: `<p>
-					My family's first computer ran Windows 95. The modem actually made those weird 90s noises
-					and blocked the phone lines. That was the soundtrack to the awakening of my inner computer
-					nerd.
-				</p>
-				<p>
-					I went through several other nerd phases--literature, history, theater, economics--but I
-					was never able to escape my destiny: "person who is good with computers". So, I worked in
-					the tech department in university and kept working as a web developer there after I
-					graduated in 2014.
-				</p>
-				<p>
-					I took a break from tech to teach English in South Korea and briefly pursued a graduate
-					degree in economics, but after learning Python to analyze economic data, I finally
-					realized that I enjoyed programming more than anything else I'd ever done... so by 2019 I
-					had started learning web development.
-				</p>
-				<p>
-					A year later, I was building websites for multiple clients, devouring all the tech
-					knowledge I could in my spare time, and feeling great--and that's pretty much what I'm
-					still doing!
-				</p>
-				<p>
-					My computer runs Windows 10 now, and it doesn't make cool noises when I go online (I'd at
-					least like the option!), but I'm still basically that computer geek. Time never goes by
-					faster for me than when I'm solving problems and making new things. Luckily, my studies
-					and varied career choices have left me with the communication skills and independent
-					motivation I need to run a business where I can do my favorite things for people who need
-					my skills! If you want to hire me for web stuff, or just ask a few quick questions, get in
-					touch! I'd love to hear from you.
-				</p>`
-		}
-	];
 </script>
 
 <div class="content-container">
@@ -149,7 +112,24 @@
 						<p>Obviously, every project is different--but the process generally goes like this:</p>
 						<ol>
 							<li>You contact me with general details about a project.</li>
-							<li>I look into it and assess whether I can handle it.</li>
+							<li>
+								I look into it and assess whether I can handle it. I may have some follow-up
+								questions!
+							</li>
+							<li>
+								If I have the skills and bandwidth to take on the project, I'll give you a rough
+								estimate of how many hours it will take to finish and when I think I can complete
+								it.
+							</li>
+							<li>
+								During the project, I'll keep track of my tasks using an app like Trello and
+								routinely communicate with progress updates and questions.
+							</li>
+							<li>
+								On project completion, I offer ongoing maintenance and support at my hourly rate.
+								Smaller sites will likely need just an hour or two of maintenance per month, while
+								more complex sites may require me to commit more time and be on call for issues.
+							</li>
 						</ol>
 						<h3>How long have you been a web developer?</h3>
 						<p>
@@ -198,7 +178,114 @@
 					</Tab>
 					<Tab id="3" {isTitle} {isContent}>
 						<span slot="title">Techy Mode</span>
-						<p>Tab 1</p>
+						<p>
+							If you went straight to this tab, congratulations--you're probably a developer and/or
+							a nerd. If you don't identify as either of those things, you might not know exactly
+							what all this means, but it could potentially sound impressive, so maybe give it a
+							quick scan anyway and hopefully you'll end up thinking I'm brilliant.
+						</p>
+						<p>
+							At some point, I'll likely add a scale measuring how comfortable I am with all of
+							these, but for now, inclusion on this list merely implies that I've worked enough with
+							a technology at least enough to know what to Google.
+						</p>
+						<h2>Front-end Tech</h2>
+						<ul>
+							<li>
+								Languages
+								<ul>
+									<li>HTML</li>
+									<li>CSS</li>
+									<li>JavaScript (Vanilla JS)</li>
+								</ul>
+							</li>
+							<li>
+								Frameworks
+								<ul>
+									<li>
+										React <ul>
+											<li>Next.js</li>
+											<li>Gatsby</li>
+										</ul>
+									</li>
+									<li>
+										Svelte
+										<ul>
+											<li>SvelteKit</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<h2>Back-end Tech</h2>
+						<ul>
+							<li>
+								Languages
+								<ul>
+									<li>JavaScript (Node.js)</li>
+									<li>PHP</li>
+									<li>Python</li>
+								</ul>
+							</li>
+							<li>
+								Frameworks
+								<ul>
+									<li>Express.js</li>
+								</ul>
+							</li>
+							<li>
+								Content Management Systems
+								<ul>
+									<li>WordPress</li>
+									<li>Strapi</li>
+									<li>NetlifyCMS</li>
+								</ul>
+							</li>
+							<li>
+								Databases <ul>
+									<li>PostgreSQL</li>
+									<li>MySQL</li>
+									<li>Firebase</li>
+									<li>MongoDB</li>
+								</ul>
+							</li>
+							<li>
+								Deployment <ul>
+									<li>Netlify</li>
+									<li>Vercel</li>
+									<li>Github Pages</li>
+									<li>Managed WordPress (SiteGround, WPEngine, Flywheel, etc.)</li>
+									<li>Custom-provisioned VPS</li>
+									<li>AWS</li>
+								</ul>
+							</li>
+							<li>
+								Server Stuff
+								<ul>
+									<li>Ubuntu</li>
+									<li>Nginx</li>
+									<li>Apache</li>
+								</ul>
+							</li>
+						</ul>
+						<h2>Tools and Concepts</h2>
+						<ul>
+							<li>
+								Version Control
+								<ul>
+									<li>Git</li>
+									<li>GitHub</li>
+								</ul>
+							</li>
+							<li>
+								Editors/IDEs
+								<ul>
+									<li>VS Code (HTML/CSS/JS)</li>
+									<li>PyCharm (Python)</li>
+									<li>Spyder (Python)</li>
+								</ul>
+							</li>
+						</ul>
 					</Tab>
 				</Tabs>
 			</div>
