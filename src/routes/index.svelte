@@ -100,7 +100,7 @@
 							flexible, friendly, and, most importantly, I am <i>excellent</i> at Googling things.
 						</p>
 						<p>
-							If you want to know all about the technologies I use, check out the "Techy Mode" tab.
+							If you want to know all about the technologies I use, check out the "Nerd Mode" tab.
 							Here, I'll simply say that I work a lot with the following:
 						</p>
 						<ul>
@@ -140,7 +140,7 @@
 						</p>
 						<p />
 					</Tab>
-					<Tab id="2" {isTitle} {isContent}>
+					<Tab id="1" {isTitle} {isContent}>
 						<span slot="title">Personal Mode</span>
 						<p>
 							My family's first computer ran Windows 95. The modem actually made those weird 90s
@@ -176,8 +176,8 @@
 							ask a few quick questions, get in touch! I'd love to hear from you.
 						</p>
 					</Tab>
-					<Tab id="3" {isTitle} {isContent}>
-						<span slot="title">Techy Mode</span>
+					<Tab id="2" {isTitle} {isContent}>
+						<span slot="title">Nerd Mode</span>
 						<p>
 							If you went straight to this tab, congratulations--you're probably a developer and/or
 							a nerd. If you don't identify as either of those things, you might not know exactly

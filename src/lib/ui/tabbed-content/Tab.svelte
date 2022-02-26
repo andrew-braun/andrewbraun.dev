@@ -2,6 +2,8 @@
 	import { tabsKey } from "./Tabs.svelte";
 
 	import { getContext, onMount } from "svelte";
+	import { slide, fly, fade, crossfade } from "svelte/transition";
+	import { flip } from "svelte/animate";
 
 	export let id;
 	export let isTitle;
@@ -11,21 +13,37 @@
 	$tabs = $tabs.some((tab) => tab == id) ? $tabs : [...$tabs, id];
 
 	$: isSelected = id == $selectedTab;
+	let isTransitioning = false;
 </script>
 
 {#if isTitle}
 	<button
 		type="button"
-		class="tab-button"
+		class={`tab-button`}
 		class:selected={isSelected}
-		on:click={() => ($selectedTab = id)}
+		id={`tab-button-${id}`}
+		on:click={() => {
+			isTransitioning = true;
+			$selectedTab = id;
+			setTimeout(() => {
+				isTransitioning = false;
+			});
+		}}
 	>
 		<slot name="title" />
 	</button>
 {/if}
 
 {#if isContent && isSelected}
-	<slot />
+	<div
+		class:fadeOut={isTransitioning}
+		class="tab-content-box"
+		in:fly|local={{ x: -500, duration: 500, delay: 500 }}
+		out:fly|local={{ x: 500, duration: 500 }}
+		id={`tab-content-${id}`}
+	>
+		<slot />
+	</div>
 {/if}
 
 <style>
@@ -47,5 +65,15 @@
 	}
 	.selected {
 		background: linear-gradient(to right, var(--color-2), var(--color-3));
+	}
+	.tab-content-box {
+		position: relative;
+	}
+	.selectedContent {
+		animation: slideInLeft 0.5s ease-in-out forwards;
+		animation-delay: 500;
+	}
+	.fadeOut {
+		animation: slideOutRight 0.5s ease-in;
 	}
 </style>

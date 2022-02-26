@@ -3,7 +3,6 @@
 	import ProjectCard from "./ProjectCard.svelte";
 	import Button from "../ui/Button.svelte";
 	export let projects;
-	console.log(projects);
 
 	$: sortedProjects = projects;
 

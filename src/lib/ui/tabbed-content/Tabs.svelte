@@ -16,6 +16,8 @@
 	onMount(() => {
 		if ($tabs.length > 0) $selectedTab = $tabs[0];
 	});
+
+	let tabContentVisible = true;
 </script>
 
 <div class="tabs-container">
@@ -34,6 +36,10 @@
 		border-bottom: 1px solid var(--color-3);
 	}
 	.tab-content {
+		position: relative;
+		/* left: -150%; */
+		/* opacity: 0; */
 		padding: 4% 2%;
+		/* animation: slideInLeft 0.3s ease-in-out; */
 	}
 </style>
