@@ -13,7 +13,6 @@
 	$tabs = $tabs.some((tab) => tab == id) ? $tabs : [...$tabs, id];
 
 	$: isSelected = id == $selectedTab;
-	let isTransitioning = false;
 </script>
 
 {#if isTitle}
@@ -23,11 +22,7 @@
 		class:selected={isSelected}
 		id={`tab-button-${id}`}
 		on:click={() => {
-			isTransitioning = true;
 			$selectedTab = id;
-			setTimeout(() => {
-				isTransitioning = false;
-			});
 		}}
 	>
 		<slot name="title" />
@@ -36,16 +31,25 @@
 
 {#if isContent && isSelected}
 	<div
-		class:fadeOut={isTransitioning}
 		class="tab-content-box"
-		in:fly|local={{ x: -500, duration: 500, delay: 500 }}
-		out:fly|local={{ x: 500, duration: 500 }}
+		in:fly={{ x: -500, duration: 700, delay: 500 }}
+		out:fly={{ x: 500, duration: 700 }}
 		id={`tab-content-${id}`}
 	>
 		<slot />
 	</div>
 {/if}
 
+<!-- {#if isContent && isSelected}
+	<div
+		class="tab-content-box"
+		in:fly={{ x: -500, duration: 20000, delay: 20000 }}
+		out:fly={{ x: 500, duration: 20000 }}
+		id={`tab-content-${id}`}
+	>
+		<slot />
+	</div>
+{/if} -->
 <style>
 	.tab-button {
 		flex: 1 1 auto;
@@ -68,12 +72,13 @@
 	}
 	.tab-content-box {
 		position: relative;
+		opacity: 1;
 	}
-	.selectedContent {
+	/* .selectedContent {
 		animation: slideInLeft 0.5s ease-in-out forwards;
 		animation-delay: 500;
 	}
 	.fadeOut {
 		animation: slideOutRight 0.5s ease-in;
-	}
+	} */
 </style>

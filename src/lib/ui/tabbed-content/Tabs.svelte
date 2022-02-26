@@ -37,9 +37,6 @@
 	}
 	.tab-content {
 		position: relative;
-		/* left: -150%; */
-		/* opacity: 0; */
 		padding: 4% 2%;
-		/* animation: slideInLeft 0.3s ease-in-out; */
 	}
 </style>
