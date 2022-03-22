@@ -463,6 +463,7 @@
 
 	.about-section {
 		background: var(--dark-background-1);
+		overflow: hidden;
 	}
 
 	.contact-section-container {

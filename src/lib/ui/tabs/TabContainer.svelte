@@ -13,5 +13,8 @@
 			<Tab {tab} {index} bind:activeTab />
 		{/each}
 	</div>
-	<Content tab={tabs[activeTab]} />
+	<Content {tabs} {activeTab} />
 </div>
+
+<style>
+</style>
