@@ -26,8 +26,8 @@
 	import "/src/style/global.css";
 	import "../style/animations.css";
 	import Button from "../lib/ui/Button.svelte";
-	import Tab from "../lib/ui/tabbed-content/Tab.svelte";
-	import Tabs from "../lib/ui/tabbed-content/Tabs.svelte";
+	import TabContainer from "../lib/ui/tabs/TabContainer.svelte";
+
 	import HeroImage from "../lib/layout/HeroImage.svelte";
 
 	import { socialLinks } from "../data/social-links";
@@ -37,63 +37,11 @@
 	import PortfolioContainer from "../lib/portfolio/PortfolioContainer.svelte";
 
 	export let projects;
-</script>
 
-<div class="content-container">
-	<section class="hero-section">
-		<div class="hero-flavor-container">
-			<div class="hero-flavor-image">
-				<HeroImage />
-			</div>
-		</div>
-		<div class="hero-info-container global-top-section">
-			<div class="hero-info-text">
-				<!-- Add links to socials on hover-->
-
-				<p>
-					I'm <span class="extra-info-text">Andrew Braun</span>
-				</p>
-
-				<!--Add list of languages on hover-->
-				<p>
-					I write <span class="extra-info-text">code</span>,
-				</p>
-				<!--Add links on hover-->
-				<p>
-					build <span class="extra-info-text">websites</span>,
-				</p>
-				<!--Other links-->
-				<p>
-					and do other <span class="extra-info-text">nerd things</span>
-				</p>
-
-				<div class="hero-cta">
-					<Button link="mailto:andrew@andrewbraun.dev" prefetch={false}>
-						Do nerd things for me</Button
-					>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="my-work-section page-section">
-		<h2 id="my-work" class="global-heading">My Work</h2>
-		<div class="my-work-portfolio-items">
-			{#if projects}
-				{#key projects}
-					<PortfolioContainer {projects} />
-				{/key}
-			{/if}
-		</div>
-	</section>
-
-	<section class="about-section page-section">
-		<h2 id="about" class="global-heading">About</h2>
-		<div class="about-section-container">
-			<div class="about-text-container">
-				<Tabs let:isTitle let:isContent>
-					<Tab id="0" {isTitle} {isContent}>
-						<span slot="title">Professional Mode</span>
-						<h3>What do you do?</h3>
+	const tabs = [
+		{
+			title: "Professional Mode",
+			content: `<h3>What do you do?</h3>
 						<p>
 							My name is Andrew Braun, and I'm an American full-stack web developer. I build new
 							websites from the ground up, overhaul old systems, and fix issues when they arise. I'm
@@ -137,12 +85,11 @@
 							2014, though I also held jobs as a writer and an English teacher for several years. I
 							don't do much of that anymore, but I believe my past work has made me an effective
 							communicator--and I still love teaching about my favorite subject: code!
-						</p>
-						<p />
-					</Tab>
-					<Tab id="1" {isTitle} {isContent}>
-						<span slot="title">Personal Mode</span>
-						<p>
+						</p>`
+		},
+		{
+			title: "Personal Mode",
+			content: `<p>
 							My family's first computer ran Windows 95. The modem actually made those weird 90s
 							noises and blocked the phone lines. That was the soundtrack to the awakening of my
 							inner computer nerd.
@@ -174,10 +121,11 @@
 							skills and independent motivation I need to run a business where I can do my favorite
 							things for people who need my skills! If you want to hire me for web stuff, or just
 							ask a few quick questions, get in touch! I'd love to hear from you.
-						</p>
-					</Tab>
-					<Tab id="2" {isTitle} {isContent}>
-						<span slot="title">Nerd Mode</span>
+						</p>`
+		},
+		{
+			title: "Nerd Mode",
+			content: `						<span slot="title">Nerd Mode</span>
 						<p>
 							If you went straight to this tab, congratulations--you're probably a developer and/or
 							a nerd. If you don't identify as either of those things, you might not know exactly
@@ -286,8 +234,63 @@
 								</ul>
 							</li>
 						</ul>
-					</Tab>
-				</Tabs>
+`
+		}
+	];
+</script>
+
+<div class="content-container">
+	<section class="hero-section">
+		<div class="hero-flavor-container">
+			<div class="hero-flavor-image">
+				<HeroImage />
+			</div>
+		</div>
+		<div class="hero-info-container global-top-section">
+			<div class="hero-info-text">
+				<!-- Add links to socials on hover-->
+
+				<p>
+					I'm <span class="extra-info-text">Andrew Braun</span>
+				</p>
+
+				<!--Add list of languages on hover-->
+				<p>
+					I write <span class="extra-info-text">code</span>,
+				</p>
+				<!--Add links on hover-->
+				<p>
+					build <span class="extra-info-text">websites</span>,
+				</p>
+				<!--Other links-->
+				<p>
+					and do other <span class="extra-info-text">nerd things</span>
+				</p>
+
+				<div class="hero-cta">
+					<Button link="mailto:andrew@andrewbraun.dev" prefetch={false}>
+						Do nerd things for me</Button
+					>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="my-work-section page-section">
+		<h2 id="my-work" class="global-heading">My Work</h2>
+		<div class="my-work-portfolio-items">
+			{#if projects}
+				{#key projects}
+					<PortfolioContainer {projects} />
+				{/key}
+			{/if}
+		</div>
+	</section>
+
+	<section class="about-section page-section">
+		<h2 id="about" class="global-heading">About</h2>
+		<div class="about-section-container">
+			<div class="about-text-container">
+				<TabContainer {tabs} />
 			</div>
 			<div class="about-image-container">
 				<img

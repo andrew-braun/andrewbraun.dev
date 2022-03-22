@@ -23,6 +23,9 @@
 		id={`tab-button-${id}`}
 		on:click={() => {
 			$selectedTab = id;
+			// setTimeout(() => {
+			// 	this.style.animation = "flyOut 1s linear";
+			// }, 1000);
 		}}
 	>
 		<slot name="title" />
@@ -43,8 +46,8 @@
 <!-- {#if isContent && isSelected}
 	<div
 		class="tab-content-box"
-		in:fly={{ x: -500, duration: 20000, delay: 20000 }}
-		out:fly={{ x: 500, duration: 20000 }}
+		class:selectedContent={isSelected}
+		in:fly={{ x: -500, duration: 1000, delay: 1000 }}
 		id={`tab-content-${id}`}
 	>
 		<slot />
@@ -81,4 +84,13 @@
 	.fadeOut {
 		animation: slideOutRight 0.5s ease-in;
 	} */
+
+	@keyframes flyOut {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(500px);
+		}
+	}
 </style>

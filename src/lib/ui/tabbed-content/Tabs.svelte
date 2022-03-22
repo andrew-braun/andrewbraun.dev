@@ -16,8 +16,6 @@
 	onMount(() => {
 		if ($tabs.length > 0) $selectedTab = $tabs[0];
 	});
-
-	let tabContentVisible = true;
 </script>
 
 <div class="tabs-container">
