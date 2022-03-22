@@ -1,10 +1,7 @@
 <script>
-	import { onMount } from "svelte";
-	import { fly } from "svelte/transition";
 	export let tabs;
 	export let activeTab;
 
-	let contentContainer;
 	let isTransitioning = false;
 
 	let currentTabContent = tabs[0].content;
@@ -19,12 +16,7 @@
 	}
 </script>
 
-<article
-	class={`tab-content`}
-	class:slideOut={isTransitioning}
-	class:slideIn={!isTransitioning}
-	bind:this={contentContainer}
->
+<article class={`tab-content`} class:slideOut={isTransitioning} class:slideIn={!isTransitioning}>
 	{@html currentTabContent}
 </article>
 
