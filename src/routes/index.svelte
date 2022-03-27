@@ -54,7 +54,7 @@
 						<ul>
 							<li>JavaScript - runs a lot of the modern web</li>
 							<li>CSS - a lot of visual problems are CSS problems</li>
-							<li>WordPress - powers 43% of the internet</li>
+							<li>WordPress/PHP - powers 43% of the internet</li>
 						</ul>
 						<h3>What does working together look like?</h3>
 						<p>Obviously, every project is different--but the process generally goes like this:</p>
@@ -121,11 +121,28 @@
 							skills and independent motivation I need to run a business where I can do my favorite
 							things for people who need my skills! If you want to hire me for web stuff, or just
 							ask a few quick questions, get in touch! I'd love to hear from you.
-						</p>`
+						</p>
+						<h2>Random Things About Me</h2>
+						<p>You want to read MORE about me? Gosh, I'm flattered!
+							All right then, here are a few facts about me that might help you get a 
+							read on me as a person :)</p>
+							<ul>
+								<li>In the U.S I've lived in New Jersey, Pennsylvania, and Tennessee, in that order!</li>
+								<li>I currently live in Tbilisi, Georgia (<a href="https://en.wikipedia.org/wiki/Georgia_(country)">the country</a>!)</li>
+								<li>I've lived in Italy, South Korea, Thailand, and Georgia--I love to travel and am something of a digital nomad!</li>
+								<li>I'm a runner! I do half-marathons and trail runs whenever I can.</li>
+								<li>One of my favorite music genres is synthwave. Never heard of it? Check out <a href="https://open.spotify.com/playlist/1KzSadPoVihKZja0XF8gOY?si=b26cb1ea6ac54955">my playlist!<a/></li>
+								<li>I love learning alphabets! I know Latin, Korean, Georgian, Russian, Ukrainian, and Greek so far, but that list will grow.</li>
+								<li>My favorite board games are Not Alone, Betrayal, Pandemic, Dominion, and more!</li>
+								<li>Top three video games: Mass Effect, Bioshock, Civilization</li>
+								<li>Sometimes I make mead</li>
+								<li>I make an excellent green curry pasta--it's weird but it works!</li>
+							</ul>
+						`
 		},
 		{
 			title: "Nerd Mode",
-			content: `						<span slot="title">Nerd Mode</span>
+			content: `						
 						<p>
 							If you went straight to this tab, congratulations--you're probably a developer and/or
 							a nerd. If you don't identify as either of those things, you might not know exactly

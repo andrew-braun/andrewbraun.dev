@@ -21,4 +21,7 @@
 </article>
 
 <style>
+	.tab-content {
+		padding-top: 1rem;
+	}
 </style>
