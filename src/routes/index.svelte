@@ -137,6 +137,7 @@
 								<li>Top three video games: Mass Effect, Bioshock, Civilization</li>
 								<li>Sometimes I make mead</li>
 								<li>I make an excellent green curry pasta--it's weird but it works!</li>
+								<li>I love playing electric guitar--neoclassical metal!</li>
 							</ul>
 						`
 		},
