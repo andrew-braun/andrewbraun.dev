@@ -21,31 +21,4 @@
 </article>
 
 <style>
-	.slideIn {
-		animation: slideIn 0.4s linear forwards;
-	}
-	@keyframes slideIn {
-		from {
-			transform: translate(-75%);
-			opacity: 0;
-		}
-		to {
-			transform: translate(0%);
-			opacity: 1;
-		}
-	}
-
-	.slideOut {
-		animation: slideOut 0.4s linear forwards;
-	}
-	@keyframes slideOut {
-		from {
-			transform: translate(0%);
-			opacity: 1;
-		}
-		to {
-			transform: translate(75%);
-			opacity: 0;
-		}
-	}
 </style>
