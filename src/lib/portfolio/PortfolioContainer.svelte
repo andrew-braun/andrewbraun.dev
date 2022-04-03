@@ -4,7 +4,7 @@
 	import Button from "../ui/Button.svelte";
 	export let projects;
 
-	$: sortedProjects = projects;
+	$: sortedProjects = Array.isArray(projects) ? projects : [];
 
 	// const sortedProjects = projects
 	// 	? projects.sort((projectA, projectB) => projectA.order_priority > projectB.order_priority)
@@ -57,6 +57,8 @@
 		};
 		scrollToNextProject();
 	});
+
+	console.log(projects);
 </script>
 
 <div class="portfolio-container" bind:this={projectList}>
