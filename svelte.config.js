@@ -1,3 +1,5 @@
+import { mdsvex } from "mdsvex";
+import mdsvexConfig from "./mdsvex.config.js";
 // import adapter from "@sveltejs/adapter-netlify";
 
 // /** @type {import('@sveltejs/kit').Config} */
@@ -14,9 +16,13 @@
 import adapter from "@sveltejs/adapter-netlify";
 
 export default {
+	extensions: [".svelte", ...mdsvexConfig.extensions],
+
 	kit: {
 		adapter: adapter({
 			split: false
 		}) // currently the adapter does not take any options
-	}
+	},
+
+	preprocess: [mdsvex(mdsvexConfig)]
 };

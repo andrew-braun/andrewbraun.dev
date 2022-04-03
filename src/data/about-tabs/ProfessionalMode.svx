@@ -1,0 +1,53 @@
+---
+title: Nerd Mode
+---
+
+<script>
+import Icon from '@iconify/svelte';
+</script>
+
+<h3>What do you do?</h3>
+<p>
+    My name is Andrew Braun, and I'm an American full-stack web developer. I build new
+    websites from the ground up, overhaul old systems, and fix issues when they arise. I'm
+    flexible, friendly, and, most importantly, I am <i>excellent</i> at Googling things.
+</p>
+<p>
+    If you want to know all about the technologies I use, check out the "Nerd Mode" tab.
+    Here, I'll simply say that I work a lot with the following:
+</p>
+<ul>
+    <li>JavaScript - runs a lot of the modern web</li>
+    <li>CSS - a lot of visual problems are CSS problems</li>
+    <li>WordPress/PHP - powers 43% of the internet</li>
+</ul>
+<h3>What does working together look like?</h3>
+<p>Obviously, every project is different--but the process generally goes like this:</p>
+<ol>
+    <li>You contact me with general details about a project.</li>
+    <li>
+        I look into it and assess whether I can handle it. I may have some follow-up
+        questions!
+    </li>
+    <li>
+        If I have the skills and bandwidth to take on the project, I'll give you a rough
+        estimate of how many hours it will take to finish and when I think I can complete
+        it.
+    </li>
+    <li>
+        During the project, I'll keep track of my tasks using an app like Trello and
+        routinely communicate with progress updates and questions.
+    </li>
+    <li>
+        On project completion, I offer ongoing maintenance and support at my hourly rate.
+        Smaller sites will likely need just an hour or two of maintenance per month, while
+        more complex sites may require me to commit more time and be on call for issues.
+    </li>
+</ol>
+<h3>How long have you been a web developer?</h3>
+<p>
+    I've been working as a web developer on and off since graduating from university in
+    2014, though I also held jobs as a writer and an English teacher for several years. I
+    don't do much of that anymore, but I believe my past work has made me an effective
+    communicator--and I still love teaching about my favorite subject: code!
+</p>

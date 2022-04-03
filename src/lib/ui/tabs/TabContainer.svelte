@@ -1,7 +1,7 @@
 <script>
 	import Tab from "./Tab.svelte";
 	import Content from "./Content.svelte";
-	/* Expects array of objects with title and content properties */
+	/* Expects array of objects containing a title and a Svelte .svx component */
 	export let tabs;
 
 	let activeTab = 0;

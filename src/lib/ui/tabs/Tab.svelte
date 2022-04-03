@@ -6,6 +6,8 @@
 	const handleTabClick = (event) => {
 		activeTab = index;
 	};
+
+	console.log(tab);
 </script>
 
 <button class="tab-button" class:selected={activeTab === index} on:click={handleTabClick}

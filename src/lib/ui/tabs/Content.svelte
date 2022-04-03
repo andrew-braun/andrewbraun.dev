@@ -16,7 +16,7 @@
 </script>
 
 <article class={`tab-content`} class:slideOut={isTransitioning} class:slideIn={!isTransitioning}>
-	{@html currentTabContent}
+	<svelte:component this={currentTabContent} />
 </article>
 
 <style>
