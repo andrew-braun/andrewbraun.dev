@@ -5,7 +5,6 @@
 	let isTransitioning = false;
 
 	let currentTabContent = tabs[0].content;
-	console.log(tabs);
 
 	$: {
 		isTransitioning = true;

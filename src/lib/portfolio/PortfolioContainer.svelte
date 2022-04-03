@@ -57,8 +57,6 @@
 		};
 		scrollToNextProject();
 	});
-
-	console.log(projects);
 </script>
 
 <div class="portfolio-container" bind:this={projectList}>
