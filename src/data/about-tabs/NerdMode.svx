@@ -24,10 +24,11 @@ import Icon from '@iconify/svelte';
 <ul>
     <li>
         Languages
-        <ul>
-            <li><Icon icon="ant-design:html5-filled" color="#f06529" width="50px" height="50px" alt="html5" /></li>
-            <li>CSS</li>
-            <li>JavaScript (Vanilla JS)</li>
+        <ul class="icon-sub-menu">
+            <li><Icon icon="vscode-icons:file-type-html" width="50px" height="50px" alt="HTML5"/></li>
+            <li><Icon icon="vscode-icons:file-type-css" width="50px" height="50px" alt="CSS3"/></li>
+            <li><Icon icon="vscode-icons:file-type-js-official" width="50px" height="50px" alt="JavaScript"/></li>
+            <li><Icon icon="vscode-icons:file-type-php3" width="50px" height="50px" alt="PHP"/></li>
         </ul>
     </li>
     <li>
@@ -117,3 +118,14 @@ import Icon from '@iconify/svelte';
         </ul>
     </li>
 </ul>
+
+<style>
+    .icon-sub-menu {
+        display: flex;
+
+    }
+
+    .icon-sub-menu li {
+        list-style: none;
+    }
+</style>
