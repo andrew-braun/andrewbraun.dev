@@ -5,6 +5,9 @@ title: Nerd Mode
 <script>
 
 import Icon from '@iconify/svelte';
+import IconifyIcon from "../../lib/icons/IconifyIcon.svelte"
+
+import IconList from "../../lib/icons/IconList.svelte"
 
 </script>
 
@@ -21,16 +24,14 @@ import Icon from '@iconify/svelte';
 </p>
 <h2>Front-end Tech</h2>
 
+<IconList title="Languages">
+    <IconifyIcon name="vscode-icons:file-type-html" subtitle="HTML"/>
+    <IconifyIcon name="vscode-icons:file-type-css" subtitle="CSS"/>
+    <IconifyIcon name="vscode-icons:file-type-js-official" subtitle="JavaScript"/>
+    <IconifyIcon name="vscode-icons:file-type-php3" subtitle="PHP"/>
+    <IconifyIcon name="vscode-icons:file-type-python" subtitle="Python"/>
+</IconList>
 <ul>
-    <li>
-        Languages
-        <ul class="icon-sub-menu">
-            <li><Icon icon="vscode-icons:file-type-html" width="50px" height="50px" alt="HTML5"/></li>
-            <li><Icon icon="vscode-icons:file-type-css" width="50px" height="50px" alt="CSS3"/></li>
-            <li><Icon icon="vscode-icons:file-type-js-official" width="50px" height="50px" alt="JavaScript"/></li>
-            <li><Icon icon="vscode-icons:file-type-php3" width="50px" height="50px" alt="PHP"/></li>
-        </ul>
-    </li>
     <li>
         Frameworks
         <ul>
@@ -128,4 +129,5 @@ import Icon from '@iconify/svelte';
     .icon-sub-menu li {
         list-style: none;
     }
+
 </style>
