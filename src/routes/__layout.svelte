@@ -8,6 +8,10 @@
 </script>
 
 <svelte:head>
+	<meta
+		property="og:image"
+		content="https://res.cloudinary.com/andrewbraun-dev/image/upload/v1642848309/project_andrewbraundev_screenshot_acb6930561.jpg"
+	/>
 	<!-- Matomo -->
 	<script>
 		var _paq = (window._paq = window._paq || []);
