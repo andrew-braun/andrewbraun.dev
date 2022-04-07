@@ -28,97 +28,61 @@ import IconList from "../../lib/icons/IconList.svelte"
     <IconifyIcon name="vscode-icons:file-type-html" subtitle="HTML"/>
     <IconifyIcon name="vscode-icons:file-type-css" subtitle="CSS"/>
     <IconifyIcon name="vscode-icons:file-type-js-official" subtitle="JavaScript"/>
+</IconList>
+<IconList title="Frameworks">
+    <IconifyIcon name="vscode-icons:file-type-reactjs" subtitle="React"/>
+    <IconifyIcon name="vscode-icons:file-type-next" subtitle="Next.js"/>
+    <IconifyIcon name="vscode-icons:file-type-gatsby" subtitle="Gatsby"/>
+    <IconifyIcon name="vscode-icons:file-type-svelte" subtitle="Svelte"/>
+    <IconifyIcon name="vscode-icons:file-type-svelte" subtitle="SvelteKit"/>
+</IconList>
+
+<h2>Back-end Tech</h2>
+<IconList title="Languages">
+    <IconifyIcon name="vscode-icons:file-type-node" subtitle="Node.js"/>
     <IconifyIcon name="vscode-icons:file-type-php3" subtitle="PHP"/>
     <IconifyIcon name="vscode-icons:file-type-python" subtitle="Python"/>
 </IconList>
-<ul>
-    <li>
-        Frameworks
-        <ul>
-            <li>
-                React <ul>
-                    <li>Next.js</li>
-                    <li>Gatsby</li>
-                </ul>
-            </li>
-            <li>
-                Svelte
-                <ul>
-                    <li>SvelteKit</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-</ul>
-<h2>Back-end Tech</h2>
-<ul>
-    <li>
-        Languages
-        <ul>
-            <li>JavaScript (Node.js)</li>
-            <li>PHP</li>
-            <li>Python</li>
-        </ul>
-    </li>
-    <li>
-        Frameworks
-        <ul>
-            <li>Express.js</li>
-        </ul>
-    </li>
-    <li>
-        Content Management Systems
-        <ul>
-            <li>WordPress</li>
-            <li>Strapi</li>
-            <li>NetlifyCMS</li>
-        </ul>
-    </li>
-    <li>
-        Databases <ul>
-            <li>PostgreSQL</li>
-            <li>MySQL</li>
-            <li>Firebase</li>
-            <li>MongoDB</li>
-        </ul>
-    </li>
-    <li>
-        Deployment <ul>
-            <li>Netlify</li>
-            <li>Vercel</li>
-            <li>Github Pages</li>
-            <li>Managed WordPress (SiteGround, WPEngine, Flywheel, etc.)</li>
-            <li>Custom-provisioned VPS</li>
-            <li>AWS</li>
-        </ul>
-    </li>
-    <li>
-        Server Stuff
-        <ul>
-            <li>Ubuntu</li>
-            <li>Nginx</li>
-            <li>Apache</li>
-        </ul>
-    </li>
-</ul>
+<IconList title="Frameworks">
+    <IconifyIcon name="vscode-icons:file-type-jsmap" subtitle="Express.js"/>
+</IconList>
+<IconList title="Content Management Systems">
+    <IconifyIcon name="brandico:wordpress" subtitle="WordPress"/>
+    <IconifyIcon name="logos:strapi-icon" subtitle="Strapi"/>
+    <IconifyIcon name="vscode-icons:file-type-netlify" subtitle="NetlifyCMS"/>
+</IconList>
+<IconList title="Databases">
+    <IconifyIcon name="vscode-icons:file-type-pgsql" subtitle="PostgreSQL"/>
+    <IconifyIcon name="vscode-icons:file-type-mysql" subtitle="MySQL"/>
+    <IconifyIcon name="vscode-icons:file-type-mariadb" subtitle="MariaDB"/>
+    <IconifyIcon name="vscode-icons:file-type-sqlite" subtitle="SQLite"/>
+    <IconifyIcon name="vscode-icons:file-type-firebase" subtitle="Firebase"/>
+    <IconifyIcon name="vscode-icons:file-type-mongo" subtitle="MongoDB"/>
+    <IconifyIcon name="vscode-icons:file-type-graphql" subtitle="GraphQL"/>
+</IconList>
+<IconList title="Deployment">
+    <IconifyIcon name="vscode-icons:file-type-netlify" subtitle="Netlify"/>
+    <IconifyIcon name="logos:vercel-icon" subtitle="Vercel" color="white" background="white-background-circle" size=""/>
+    <IconifyIcon name="bi:github" subtitle="Github Pages"/>
+    <IconifyIcon name="brandico:wordpress" subtitle="Managed WordPress"/>
+    <IconifyIcon name="bx:server" subtitle="Custom VPS"/>
+    <IconifyIcon name="vscode-icons:file-type-aws" subtitle="AWS"/>
+</IconList>
+<IconList title="Server">
+    <IconifyIcon name="logos:ubuntu" subtitle="Ubuntu"/>
+    <IconifyIcon name="vscode-icons:file-type-nginx" subtitle="Nginx"/>
+    <IconifyIcon name="vscode-icons:file-type-apache" subtitle="Apache"/>
+</IconList>
 <h2>Tools and Concepts</h2>
-<ul>
-    <li>
-        Version Control
-        <ul>
-            <li>Git</li>
-            <li>GitHub</li>
-        </ul>
-    </li>
-    <li>
-        Editors/IDEs
-        <ul>
-            <li>VS Code (HTML/CSS/JS)</li>
-            <li>PyCharm (Python)</li>
-            <li>Spyder (Python)</li>
-        </ul>
-    </li>
-</ul>
+<IconList title="Tools and Concepts">
+    <IconifyIcon name="vscode-icons:file-type-git" subtitle="Git"/>
+    <IconifyIcon name="bi:github" subtitle="GitHub"/>
+</IconList>
+<IconList title="Editors/IDEs">
+    <IconifyIcon name="vscode-icons:file-type-vscode" subtitle="VS Code"/>
+    <IconifyIcon name="logos:pycharm" subtitle="Pycharm"/>
+        <IconifyIcon name="simple-icons:spyderide" subtitle="Spyder" />
+</IconList>
 
 <style>
     .icon-sub-menu {
