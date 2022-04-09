@@ -12,14 +12,19 @@
 <style>
 	.icon-list-container {
 		max-width: 90%;
-		padding: 0.5rem 1rem;
+		padding: 0 1rem 1rem 1rem;
+		margin: 1rem 0;
+		border-style: solid;
+		border-color: var(--color-3);
+		border-width: 0 0 0 1px;
 	}
 	.icon-list-title {
-		margin-bottom: 0.5rem;
+		margin-bottom: 1rem;
+		color: var(--color-3);
 	}
 	.icon-list {
 		display: flex;
-		justify-content: space-evenly;
+		/* justify-content: space-evenly; */
 		flex-wrap: wrap;
 		max-width: 80%;
 		margin: auto;

@@ -73,10 +73,17 @@ import IconList from "../../lib/icons/IconList.svelte"
     <IconifyIcon name="vscode-icons:file-type-nginx" subtitle="Nginx"/>
     <IconifyIcon name="vscode-icons:file-type-apache" subtitle="Apache"/>
 </IconList>
-<h2>Tools and Concepts</h2>
+<h2>Tools</h2>
 <IconList title="Tools and Concepts">
     <IconifyIcon name="vscode-icons:file-type-git" subtitle="Git"/>
     <IconifyIcon name="bi:github" subtitle="GitHub"/>
+    <IconifyIcon name="vscode-icons:file-type-webpack" subtitle="Webpack"/>
+    <IconifyIcon name="logos:parcel-icon" subtitle="Parcel"/>
+    <IconifyIcon name="file-icons:snowpack" subtitle="Snowpack"/>
+    <IconifyIcon name="logos:postman-icon" subtitle="Postman"/>
+    <IconifyIcon name="openmoji:raspberry-pi" subtitle="Raspberry Pi"/>
+    <IconifyIcon name="logos:zapier-icon" subtitle="Zapier"/>
+    <IconifyIcon name="simple-icons:integromat" subtitle="Integromat"/>
 </IconList>
 <IconList title="Editors/IDEs">
     <IconifyIcon name="vscode-icons:file-type-vscode" subtitle="VS Code"/>

@@ -18,6 +18,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		max-width: 80px;
+		margin: 1rem;
 	}
 	.icon-list-icon {
 		display: flex;
@@ -29,11 +31,14 @@
 		justify-content: center;
 		width: 60px;
 		height: 60px;
+		margin: 0.5rem 0.5rem 0 0.5rem;
 		padding: 0.25rem;
 		text-align: center;
 	}
 	.icon-subtitle {
 		margin: 0;
+		line-height: 1.3em;
+		text-align: center;
 	}
 
 	:global(svg.iconify) {
