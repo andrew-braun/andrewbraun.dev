@@ -4,11 +4,11 @@
 	import Button from "../ui/Button.svelte";
 	export let projects;
 
-	$: sortedProjects = Array.isArray(projects) ? projects : [];
+	// const sortedProjects = Array.isArray(projects) ? projects : [];
 
-	// const sortedProjects = projects
-	// 	? projects.sort((projectA, projectB) => projectA.order_priority > projectB.order_priority)
-	// 	: "";
+	const sortedProjects = projects
+		? projects.sort((projectA, projectB) => projectA.order_priority > projectB.order_priority)
+		: "";
 
 	// Get list of project objects as props
 	let projectList;
