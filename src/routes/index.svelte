@@ -105,7 +105,7 @@
 			</div>
 			<div class="about-image-container">
 				<img
-					src="https://res.cloudinary.com/andrewbraun-dev/image/upload/v1644650135/profile_pic_lights_6b392d17cb.png"
+					src="https://res.cloudinary.com/andrewbraun-dev/image/upload/f_auto,q_auto:best/v1644650135/profile_pic_lights_6b392d17cb.png"
 					class="about-image"
 					alt="Headshot of Andrew Braun against a blurred city light background"
 				/>
