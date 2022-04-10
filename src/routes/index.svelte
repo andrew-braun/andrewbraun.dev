@@ -246,6 +246,9 @@
 		}
 	}
 	@media screen and (max-width: 480px) {
+		.page-section {
+			padding: 0 5%;
+		}
 		.hero-info-container {
 			padding-top: 40%;
 			padding-right: 5%;
@@ -289,7 +292,7 @@
 		flex-direction: column;
 		align-items: center;
 		width: 50%;
-		min-width: 320px;
+		min-width: 280px;
 		flex-grow: 1;
 		padding: 0 0;
 	}

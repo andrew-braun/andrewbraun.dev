@@ -17,4 +17,8 @@
 </div>
 
 <style>
+	.tab-bar {
+		width: 100%;
+		text-align: center;
+	}
 </style>

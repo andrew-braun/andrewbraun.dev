@@ -60,4 +60,11 @@
 		position: relative;
 		z-index: 1000;
 	}
+	@media only screen and (max-width: 480px) {
+		.tab-button {
+			width: 100%;
+			border-width: 1px 1px 1px 1px;
+			border-radius: 5px;
+		}
+	}
 </style>

@@ -31,7 +31,7 @@
 		justify-content: center;
 		width: 60px;
 		height: 60px;
-		margin: 0.5rem 0.5rem 0 0.5rem;
+
 		padding: 0.25rem;
 		text-align: center;
 	}

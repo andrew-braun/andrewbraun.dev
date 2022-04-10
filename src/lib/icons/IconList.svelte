@@ -11,7 +11,6 @@
 
 <style>
 	.icon-list-container {
-		max-width: 90%;
 		padding: 0 1rem 1rem 1rem;
 		margin: 1rem 0;
 		border-style: solid;
@@ -26,7 +25,12 @@
 		display: flex;
 		/* justify-content: space-evenly; */
 		flex-wrap: wrap;
-		max-width: 80%;
+
 		margin: auto;
+	}
+	@media only screen and (max-width: 480px) {
+		.icon-list {
+			justify-content: center;
+		}
 	}
 </style>
