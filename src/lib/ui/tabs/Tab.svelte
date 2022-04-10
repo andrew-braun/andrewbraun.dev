@@ -28,7 +28,6 @@
 		font-weight: 600;
 		text-transform: uppercase;
 		color: var(--dark-text-1);
-		z-index: 100;
 		overflow: hidden;
 	}
 	.tab-button:hover {
@@ -37,8 +36,6 @@
 
 	.selected {
 		position: relative;
-		/* /* background: linear-gradient(to right, var(--color-2), var(--color-3)); */
-		/* transition: background 3s ease-in; */
 	}
 
 	.selected::before {
@@ -52,13 +49,11 @@
 		height: 100%;
 		background: linear-gradient(to right, var(--color-2), var(--color-3));
 		transition: background 3s ease-in;
-		z-index: 5;
 		animation: slideInVisible 0.6s ease-in-out forwards;
 	}
 
 	.tab-title {
 		position: relative;
-		z-index: 1000;
 	}
 	@media only screen and (max-width: 480px) {
 		.tab-button {
