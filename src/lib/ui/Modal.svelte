@@ -37,14 +37,15 @@
 	}
 	.modal-close-button {
 		position: absolute;
-		top: 0.4rem;
-		right: 0.5rem;
+		top: 0rem;
+		right: 0rem;
 		padding: 0 0.6rem;
-		border: 0;
-		border-radius: 10px;
-		background: var(--dark-background-2-semi-trans);
+		border-width: 0 0 1px 1px;
+		border-color: var(--color-6);
+		border-radius: 0 0 0 10px;
+		background: transparent;
 		font-size: 1.7rem;
-		color: var(--color-2);
+		color: var(--color-6);
 		z-index: 1000;
 		cursor: pointer;
 		transition: all 0.3s ease-in-out;
