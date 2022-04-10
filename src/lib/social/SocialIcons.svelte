@@ -9,8 +9,8 @@
 			<a href={item.link} class="social-icon">
 				<Icon
 					name={item.name}
-					width="4rem"
-					height="4rem"
+					width="60px"
+					height="60px"
 					strokeWidth="0.02rem"
 					fillColor="var(--color-2)"
 					hoverColor={["email", "codepen", "polywork"].includes(item.name) ? "white" : null}
