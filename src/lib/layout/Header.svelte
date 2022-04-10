@@ -11,6 +11,7 @@
 <header class={`layout-header ${y > 50 ? "layout-header-scrolled shrink" : "grow"}`}>
 	<a
 		href="https://github.com/andrew-braun/andrewbraun.dev"
+		target="_blank"
 		class="github-corner"
 		aria-label="View source on GitHub"
 		><svg
