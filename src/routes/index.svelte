@@ -77,9 +77,7 @@
 				</p>
 
 				<div class="hero-cta">
-					<Button link="mailto:andrew@andrewbraun.dev" prefetch={false}>
-						Do nerd things for me</Button
-					>
+					<Button link="#contact" prefetch={false}>Do nerd things for me</Button>
 				</div>
 			</div>
 		</div>
@@ -280,6 +278,9 @@
 		overflow: hidden;
 	}
 
+	.contact-section {
+		padding-top: 1rem;
+	}
 	.contact-section-container {
 		display: flex;
 		flex-wrap: wrap;
