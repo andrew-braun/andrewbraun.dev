@@ -132,7 +132,7 @@
 <style>
 	.page-section {
 		/* padding: 1rem calc(1.5rem + 4vw) 1rem calc(2.5rem + 4vw);*/
-		padding: 0 15% 4% 15%;
+		padding: 1rem 10%;
 	}
 	.hero-section {
 		position: relative;
