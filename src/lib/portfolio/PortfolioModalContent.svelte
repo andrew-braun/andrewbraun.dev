@@ -18,7 +18,7 @@
 
 <div class="portfolio-modal-content-container">
 	{#if repo}
-		<a href={repo} class="github-corner" aria-label="View source on GitHub"
+		<a href={repo} target="_blank" class="github-corner" aria-label="View source on GitHub"
 			><svg
 				width="80"
 				height="80"
@@ -41,7 +41,7 @@
 	<div class="portfolio-modal-column column-1">
 		<div class="portfolio-modal-image-wrapper">
 			<img src={imgSrc} class="portfolio-modal-image" alt="Screenshot of {name}" transition:fade />
-			<a href={link} class="portfolio-modal-image-overlay">
+			<a href={link} target="_blank" class="portfolio-modal-image-overlay">
 				<p>Visit Site</p>
 			</a>
 		</div>
@@ -55,7 +55,7 @@
 			</div>
 		</div>
 		<div class="visit-site-button-container">
-			<Button {link}>Visit Site</Button>
+			<Button {link} target="_blank">Visit Site</Button>
 		</div>
 	</div>
 	<div class="portfolio-modal-column column-2">

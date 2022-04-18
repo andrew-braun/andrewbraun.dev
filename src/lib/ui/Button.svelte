@@ -1,6 +1,7 @@
 <script>
 	export let classNames = "";
 	export let link = false;
+	export let target;
 	export let onClick = (event) => console.log(event.target);
 	export let type = "button";
 	export let noRouteChange = true;
@@ -10,6 +11,7 @@
 {#if link}
 	<a
 		href={link}
+		{target}
 		sveltekit:noscroll
 		sveltekit:keepfocus
 		{type}

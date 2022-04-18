@@ -81,7 +81,7 @@
 		</div>
 	</div>
 
-	<Button {link} prefetch={false} classNames="visit-site-button">Visit Site</Button>
+	<Button {link} target="_blank" prefetch={false} classNames="visit-site-button">Visit Site</Button>
 
 	<Modal bind:isOpen={isModalActive}
 		><span slot="content"

@@ -32,6 +32,7 @@
 		height: clamp(400px, 80vh, 600px);
 		border-radius: 10px;
 		background: var(--dark-background-1-semi-trans);
+		box-shadow: 0px 2px 2px 0px var(--color-3);
 		overflow: hidden;
 		z-index: 1000;
 	}
