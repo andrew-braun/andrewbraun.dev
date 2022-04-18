@@ -72,7 +72,8 @@
 		grid-template-columns: 1fr 1fr;
 		width: 100%;
 		height: 100%;
-		overflow: auto;
+		overflow-x: hidden;
+		overflow-y: auto;
 	}
 	.portfolio-modal-column {
 		position: relative;
@@ -85,6 +86,7 @@
 	}
 	.column-2 {
 		grid-column: 2;
+
 		padding: 4% 2% 4% 0%;
 	}
 	.portfolio-modal-image-wrapper {

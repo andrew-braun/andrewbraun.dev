@@ -18,7 +18,9 @@
 		on:click_outside={closeModal}
 	>
 		<button on:click={closeModal} class="modal-close-button">X</button>
-		<slot name="content" />
+		<div class="modal-content-slot">
+			<slot name="content" />
+		</div>
 	</aside>
 {/if}
 
@@ -33,7 +35,7 @@
 		border-radius: 10px;
 		background: var(--dark-background-1-semi-trans);
 		box-shadow: 0px 2px 2px 0px var(--color-3);
-		overflow: hidden;
+		overflow: auto;
 		z-index: 1000;
 	}
 	.modal-close-button {
