@@ -79,9 +79,10 @@
 <style>
 	.layout-header {
 		position: fixed;
-		height: calc(4rem + 10vh);
+		display: flex;
+		height: calc(4rem + 5vh);
 		min-width: 100%;
-		padding: 5% 2%;
+		padding: 3% 2%;
 		opacity: 0;
 		z-index: 100;
 	}

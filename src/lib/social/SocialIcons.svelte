@@ -6,7 +6,7 @@
 <div class="social-icons">
 	{#each content as item}
 		{#if item.icon}
-			<a href={item.link} class="social-icon">
+			<a href={item.link} target="_blank" class="social-icon">
 				<Icon
 					name={item.name}
 					width="60px"

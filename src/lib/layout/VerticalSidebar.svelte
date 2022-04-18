@@ -8,7 +8,7 @@
 	{#if side === "left"}
 		{#each content as item}
 			{#if item.icon}
-				<a href={item.link}>
+				<a href={item.link} target="_blank">
 					<Icon
 						name={item.name}
 						strokeWidth={item.name === "polywork" ? "0.02rem" : "0.04rem"}
