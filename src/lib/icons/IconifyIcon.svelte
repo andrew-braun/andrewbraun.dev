@@ -8,9 +8,11 @@
 
 <div class={`icon-container`}>
 	<div class={`icon ${background ? background : ""}`}>
-		<Icon icon={name} alt={subtitle} />
+		<Icon icon={name} alt={subtitle ? subtitle : name} />
 	</div>
-	<p class="icon-subtitle">{subtitle}</p>
+	{#if subtitle}
+		<p class="icon-subtitle">{subtitle}</p>
+	{/if}
 </div>
 
 <style>
