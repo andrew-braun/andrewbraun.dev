@@ -1,11 +1,13 @@
-import { env } from "../api-config";
+import { env, getStrapiJWT } from "../api-config";
 export async function GET({ params }) {
 	const { tagname } = params;
-	const res = await fetch(`https://cms.andrewbraun.dev/tags?slug=${tagname}`, {
+	const strapiJWT = await getStrapiJWT();
+
+	const res = await fetch(`${import.meta.env.VITE_API_URL}/tags?slug=${tagname}`, {
 		method: "GET",
 		headers: {
 			"CONTENT-TYPE": "application/json",
-			Authorization: env.strapiKey
+			Authorization: `Bearer ${strapiJWT}`
 		}
 	});
 	const data = await res.json();
