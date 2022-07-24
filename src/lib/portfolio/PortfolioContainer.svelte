@@ -6,6 +6,7 @@
 
 	// const sortedProjects = Array.isArray(projects) ? projects : [];
 
+	// console.log(projects);
 	const sortedProjects = projects
 		? projects.sort((projectA, projectB) => projectA.order_priority > projectB.order_priority)
 		: "";
