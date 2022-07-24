@@ -1,5 +1,5 @@
 import { env } from "../api-config";
-export async function get({ params }) {
+export async function GET({ params }) {
 	const { tagname } = params;
 	const res = await fetch(`https://cms.andrewbraun.dev/tags?slug=${tagname}`, {
 		method: "GET",

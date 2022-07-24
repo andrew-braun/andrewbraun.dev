@@ -1,5 +1,5 @@
 import { env } from "../api-config";
-export async function get() {
+export async function GET() {
 	const res = await fetch(`https://cms.andrewbraun.dev/tags`, {
 		method: "GET",
 		headers: {
