@@ -2,7 +2,7 @@
 	import { afterUpdate, beforeUpdate } from "svelte";
 	import ProjectCard from "./ProjectCard.svelte";
 	import Button from "../ui/Button.svelte";
-	export let projects = [];
+	export let projects;
 
 	// const sortedProjects = Array.isArray(projects) ? projects : [];
 
