@@ -1,5 +1,5 @@
 import { env, getStrapiJWT } from "../api-config";
-export async function get({ params }) {
+export async function GET({ params }) {
 	const { tagname } = params;
 	const strapiJWT = await getStrapiJWT();
 
