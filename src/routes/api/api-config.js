@@ -1,8 +1,3 @@
-export const env = {
-	strapiKey: import.meta.env.VITE_STRAPI_JWT
-	// strapiKey: process.env.VITE_STRAPI_JWT
-};
-
 export async function getStrapiJWT() {
 	const requestData = {
 		identifier: import.meta.env.VITE_ABDEV_STRAPI_USER,
