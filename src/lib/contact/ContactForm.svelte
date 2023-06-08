@@ -8,7 +8,7 @@
 
 	const contactFormHandler = async () => {
 		try {
-			fetch("https://andrewbraun.dev/.netlify/functions/contact-form", {
+			fetch("https://www.andrewbraun.dev/.netlify/functions/contact-form", {
 				method: "POST",
 				body: JSON.stringify({
 					name: formName,
